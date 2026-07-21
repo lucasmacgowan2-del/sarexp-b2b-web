@@ -41,6 +41,8 @@ Para no contaminar bases de datos ni generar alertas de cumplimiento aduanero, l
 ---
 
 ## 3. Propuesta del Sitio Web B2B (Landing Page Única)
+*   **Live Demo (GitHub Pages):** `https://lucasmacgowan2-del.github.io/sarexp-b2b-web/`
+*   **Repositorio GitHub:** `https://github.com/lucasmacgowan2-del/sarexp-b2b-web`
 
 El objetivo de SAREXP es vender su capacidad de depósito, consolidación y forwarding en Miami a empresas corporativas, tiendas e-commerce y otros couriers locales en Latinoamérica (Chile, Uruguay, Paraguay, Colombia, etc.), excluyendo el canal masivo en Argentina (donde ya opera Shipairglobal).
 
