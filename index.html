@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAREXP | B2B Forwarding & Logistics Miami Hub</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style System -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         1. CORPORATE HEADER
+         ════════════════════════════════════════════════════════════════ -->
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo">
+                <!-- Premium Flat Swallow Mascot SVG -->
+                <svg viewBox="0 0 100 100" style="height:44px; width:44px; fill:var(--accent);">
+                    <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
+                </svg>
+                <span class="logo-text">SAREXP</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#features" class="nav-link" data-trans="nav-features">Servicios B2B</a>
+                <a href="#pallet-sim" class="nav-link" data-trans="nav-pallet">Simulador 3D</a>
+                <a href="#contact" class="nav-link" data-trans="nav-contact">Contacto</a>
+                <!-- Language Toggle -->
+                <button class="lang-btn" onclick="toggleLanguage()">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="lang-toggle-text">EN</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         2. HERO SECTION
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-badge" data-trans="hero-badge">Forwarding & Logística Miami Hub</span>
+                <h1 data-trans="hero-title">Conectá tu negocio con el mundo desde Miami</h1>
+                <p data-trans="hero-desc">Ofrecemos consolidación, fulfillment de e-commerce y forwarding aéreo y marítimo premium para empresas en Latinoamérica. Despachá tu mercadería sin intermediarios y optimizá tu cadena logística.</p>
+                <div style="display:flex; gap:16px;">
+                    <a href="#contact" class="btn btn-primary" data-trans="btn-cta">Cotizar Carga</a>
+                    <a href="#pallet-sim" class="btn btn-secondary" data-trans="btn-secondary">Ver Simulador</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Isometric Flat Vector Visual Representative of Miami warehouse loading hub -->
+                <div style="position:relative; width:100%; height:320px; background:#f1f5f9; border-radius:var(--radius-md); overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                    <svg viewBox="0 0 200 200" style="width:75%; height:auto;">
+                        <!-- Isometric Base Ground -->
+                        <polygon points="100,50 170,85 100,120 30,85" fill="#e2e8f0"/>
+                        <!-- Cargo Flight Container Outline -->
+                        <polygon points="100,60 150,85 150,135 100,110" fill="rgba(37,99,235,0.05)" stroke="var(--accent)" stroke-width="1.5"/>
+                        <polygon points="100,60 50,85 50,135 100,110" fill="rgba(37,99,235,0.1)" stroke="var(--accent)" stroke-width="1.5"/>
+                        <polygon points="100,60 150,85 100,110 50,85" fill="rgba(37,99,235,0.15)" stroke="var(--accent)" stroke-width="1.5"/>
+                        <!-- Isometric Boxes -->
+                        <polygon points="100,110 120,120 120,135 100,125" fill="#f59e0b"/>
+                        <polygon points="100,110 80,120 80,135 100,125" fill="#d97706"/>
+                        <polygon points="100,95 120,105 120,120 100,110" fill="#fbbf24"/>
+                        <!-- Flying Arrow / Globe overlay representing forwarding -->
+                        <path d="M 40,110 Q 100,20 160,110" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="160,110 153,103 162,103" fill="var(--cyan)"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         3. B2B SERVICES SECTION
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="services" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-trans="nav-features">Servicios B2B</h2>
+                <p data-trans="services-subtitle">Soluciones corporativas de última milla y almacenamiento en Florida.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Fulfillment -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </div>
+                    <h3 data-trans="serv1-title">Almacenamiento & Fulfillment</h3>
+                    <p data-trans="serv1-desc">Freeshops y depósitos en Miami listos para recibir stock. Verificación fotográfica, re-empaque y control de calidad.</p>
+                </div>
+                
+                <!-- Consolidación -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-boxes-packing"></i>
+                    </div>
+                    <h3 data-trans="serv2-title">Consolidación & Co-Loading</h3>
+                    <p data-trans="serv2-desc">Minimizá costos de envío volumétrico. Agrupamos paquetes múltiples en sacas selladas listas para despacho consolidado.</p>
+                </div>
+                
+                <!-- Forwarding -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 data-trans="serv3-title">Despacho Multimodal</h3>
+                    <p data-trans="serv3-desc">Forwarding aéreo y marítimo directo a puertos y terminales fiscales de destino en toda Latinoamérica.</p>
+                </div>
+                
+                <!-- API Tech -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 data-trans="serv4-title">Integración Tecnológica</h3>
+                    <p data-trans="serv4-desc">Automatización total vía webhooks y APIs. Sincronizá alertas de arribo directamente en los sistemas de tu empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         4. PALLETIZER SIMULATOR DEMO
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="simulation-section" id="pallet-sim">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-trans="sim-title">Optimización de Espacio Aéreo en 3D</h2>
+                <p data-trans="sim-subtitle">Comprobá cómo optimizamos tus costos de flete volumétrico estibando tus bultos en palets aéreos estandarizados.</p>
+            </div>
+            
+            <div class="sim-container">
+                <!-- Isometric Canvas Canvas Box -->
+                <div class="sim-viewer">
+                    <canvas id="pallet-canvas"></canvas>
+                </div>
+                
+                <div class="sim-sidebar">
+                    <div class="sim-control-group">
+                        <label data-trans="sim-lbl-type">Tipo de Contenedor</label>
+                        <select id="cont-type" class="sim-input" onchange="drawContainerStack()">
+                            <option value="AKE">AKE (ULD Contenedor Aéreo Estándar)</option>
+                            <option value="LD7">LD7 (Palet Aéreo Grande Plano)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="sim-control-group">
+                        <label data-trans="sim-lbl-qty">Cantidad de Cajas</label>
+                        <input type="number" id="box-qty" class="sim-input" value="32" min="1" max="150" oninput="drawContainerStack()">
+                    </div>
+                    
+                    <div class="sim-control-group">
+                        <label data-trans="sim-lbl-size">Tamaño de Caja</label>
+                        <select id="box-size" class="sim-input" onchange="drawContainerStack()">
+                            <option value="small">Small (30x30x24 cm)</option>
+                            <option value="med">Medium (36x36x28 cm)</option>
+                            <option value="large">Large (46x46x36 cm)</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block" style="width:100%;" onclick="drawContainerStack()" data-trans="sim-btn-pack">
+                        Estibar Contenedor
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         5. B2B CONTACT FORM
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2 data-trans="contact-title">Impulsá tu canal de importación</h2>
+                <p data-trans="contact-desc" style="margin-bottom:30px;">Completá tus datos corporativos. Un oficial de cuentas se pondrá en contacto para armar un tarifario personalizado según tu volumen.</p>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot contact-item-icon"></i>
+                    <div>
+                        <strong data-trans="contact-hq">Depósito Miami (HQ)</strong>
+                        <p style="font-size:14px; color:var(--text-secondary);">8300 NW 30th Terrace, Suite 28, Doral, FL 33122</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope contact-item-icon"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <p style="font-size:14px; color:var(--text-secondary);">commercial@sarexp.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-panel">
+                <h3 style="margin-bottom:24px; font-size:22px;" data-trans="contact-form-title">Solicitud de Alianza B2B</h3>
+                
+                <form id="lead-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label data-trans="lbl-name">Nombre de Contacto</label>
+                        <input type="text" id="lead-name" class="form-input" required data-placeholder="lbl-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label data-trans="lbl-company">Empresa</label>
+                        <input type="text" id="lead-company" class="form-input" required data-placeholder="lbl-company">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-trans="lbl-email">Correo Corporativo</label>
+                            <input type="email" id="lead-email" class="form-input" required data-placeholder="lbl-email">
+                        </div>
+                        <div class="form-group">
+                            <label data-trans="lbl-phone">Teléfono</label>
+                            <input type="tel" id="lead-phone" class="form-input" required placeholder="+54 11 9999-9999">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-trans="lbl-country">País de Destino</label>
+                            <select id="lead-country" class="form-input" required>
+                                <option value="" data-trans="opt-select">— Seleccionar País —</option>
+                                <option value="Chile" data-trans="opt-chile">Chile</option>
+                                <option value="Uruguay" data-trans="opt-uruguay">Uruguay</option>
+                                <option value="Paraguay" data-trans="opt-paraguay">Paraguay</option>
+                                <option value="Colombia" data-trans="opt-colombia">Colombia</option>
+                                <option value="Peru" data-trans="opt-peru">Perú</option>
+                                <option value="Other" data-trans="opt-other">Otro / Global</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-trans="lbl-volume">Volumen Mensual Estimado</label>
+                            <select id="lead-volume" class="form-input">
+                                <option value="50-200">50 - 200 kg</option>
+                                <option value="200-1000">200 - 1.000 kg</option>
+                                <option value="1000+">1.000+ kg (Carga Aérea/Contenedor)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" style="width:100%; margin-top:10px;" data-trans="btn-submit">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         6. FOOTER
+         ════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="logo">
+                    <!-- Same Swallow Logo Footer -->
+                    <svg viewBox="0 0 100 100" style="height:32px; width:32px; fill:#ffffff;">
+                        <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
+                    </svg>
+                    <span class="logo-text" style="color:#ffffff;">SAREXP</span>
+                </div>
+                <div style="font-size:12px; color:#64748b;">
+                    Miami HQ: 8300 NW 30th Terrace, Suite 28, Doral, FL 33122
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 SAREXP World Courier LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
