@@ -49,13 +49,14 @@ El objetivo de SAREXP es vender su capacidad de depósito, consolidación y forw
 ### Estructura de la Web (Single Page):
 1.  **Hero Section:** Propuesta de valor clara. Tu depósito y puerta de salida corporativa en Miami hacia todo el mundo.
 2.  **Bilingual Switcher (ES / EN):** Traducción instantánea y fluida sin recargas de página.
-3.  **Servicios B2B:**
-    *   *Fulfillment & Warehousing (Miami Hub):* Estiba, control de stock, fotos de carga, y re-empaque.
-    *   *Consolidación de Carga & Co-Loading:* Optimización de espacio físico y cubicaje.
-    *   *Despacho Multimodal:* Conexiones aéreas y marítimas rápidas.
-    *   *Integraciones API:* Conectividad en tiempo real (webhooks para alertas automáticas).
-4.  **Simulador de Paletización 3D (Demostración de Eficiencia):** Muestra digital interactiva de cómo se optimiza el espacio de carga en contenedores aéreos AKE/LD7 reduciendo costos logísticos volumétricos.
-5.  **Formulario de Contacto Corporativo:** Captura de Leads empresariales (nombre, empresa, país, volumen de carga estimado).
+3.  **Flujo Operativo en 6 Pasos:**
+    *   *1. Recepción y Clasificación:* Clasificación inmediata del stock en Miami.
+    *   *2. Control de Daños y Devoluciones:* Gestión de retornos a proveedores de EE.UU. por bultos dañados.
+    *   *3. Reembalaje y Verificación:* Consolidaciones especiales y re-empaque para bajar flete volumétrico.
+    *   *4. Recolección (Pick-up):* Retiros físicos directos desde el proveedor.
+    *   *5. Despacho Aéreo Global:* Envío internacional vía MIA Airport.
+    *   *6. Expertos en Importaciones:* Asistencia aduanera experta para liberar en destino.
+4.  **Formulario de Contacto B2B:** Captura de Leads corporativos sincronizados con n8n.
 
 ---
 
