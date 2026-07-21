@@ -2,35 +2,53 @@
 // SAREXP B2B LANDING PAGE - TRANSLATION DICTIONARY & CLIENT LOGIC
 // ==========================================================================
 
-// Translation Database
 const translations = {
     es: {
-        "nav-features": "Servicios B2B",
-        "nav-pallet": "Simulador 3D",
-        "nav-contact": "Contacto",
-        "hero-badge": "Forwarding & Logística Miami Hub",
-        "hero-title": "Conectá tu negocio con el mundo desde Miami",
-        "hero-desc": "Ofrecemos consolidación, fulfillment de e-commerce y forwarding aéreo y marítimo premium para empresas en Latinoamérica. Despachá tu mercadería sin intermediarios y optimizá tu cadena logística.",
-        "btn-cta": "Cotizar Carga",
-        "btn-secondary": "Ver Simulador",
-        "services-subtitle": "Soluciones corporativas de última milla y almacenamiento en Florida.",
-        "serv1-title": "Almacenamiento & Fulfillment",
-        "serv1-desc": "Freeshops y depósitos en Miami listos para recibir stock. Verificación fotográfica, re-empaque y control de calidad.",
-        "serv2-title": "Consolidación & Co-Loading",
-        "serv2-desc": "Minimizá costos de envío volumétrico. Agrupamos paquetes múltiples en sacas selladas listas para despacho consolidado.",
-        "serv3-title": "Despacho Multimodal",
-        "serv3-desc": " Forwarding aéreo y marítimo directo a puertos y terminales fiscales de destino en toda Latinoamérica.",
-        "serv4-title": "Integración Tecnológica",
-        "serv4-desc": "Automatización total vía webhooks y APIs. Sincronizá alertas de arribo directamente en los sistemas de tu empresa.",
-        "sim-title": "Optimización de Espacio Aéreo en 3D",
-        "sim-subtitle": "Comprobá cómo optimizamos tus costos de flete volumétrico estibando tus bultos en palets aéreos estandarizados.",
-        "sim-lbl-type": "Tipo de Contenedor",
-        "sim-lbl-qty": "Cantidad de Cajas",
-        "sim-lbl-size": "Tamaño de Caja",
-        "sim-btn-pack": "Estibar Contenedor",
-        "contact-title": "Impulsá tu canal de importación",
-        "contact-desc": "Completá tus datos corporativos. Un oficial de cuentas se pondrá en contacto para armar un tarifario personalizado según tu volumen.",
-        "contact-hq": "Depósito Miami (HQ)",
+        "nav-features": "Nuestro Servicio",
+        "nav-why": "Por Qué Elegirnos",
+        "nav-contact": "Contacto B2B",
+        "hero-badge": "USA Cargo Forwarding & Hub",
+        "hero-title": "Tu depósito y gestor de carga en Miami para el mundo",
+        "hero-desc": "Recibimos, clasificamos, inspeccionamos y despachamos tu mercadería desde Miami hacia cualquier país de Latinoamérica y el mundo. Un servicio logístico corporativo transparente de punta a punta.",
+        "btn-cta": "Contactar un Asesor",
+        "btn-secondary": "Ver Flujo de Trabajo",
+        
+        // Workflow Steps
+        "workflow-title": "Cómo Gestionamos tu Carga en Miami",
+        "workflow-subtitle": "Un proceso simple, riguroso y transparente diseñado para empresas y couriers de Latinoamérica.",
+        
+        "step1-title": "1. Recepción y Clasificación",
+        "step1-desc": "Recibimos tu mercadería en nuestro depósito de Miami y la clasificamos inmediatamente en nuestro inventario digital.",
+        
+        "step2-title": "2. Control de Daños y Devoluciones",
+        "step2-desc": "Inspeccionamos el estado físico. Si tu mercadería llega dañada, rota o incorrecta, gestionamos la devolución al proveedor en EE.UU. por vos. Si está en óptimas condiciones, continúa el proceso.",
+        
+        "step3-title": "3. Reembalaje y Verificación Especial",
+        "step3-desc": "Si lo solicitás, abrimos la caja para verificar contenidos, retirar embalajes innecesarios o consolidar múltiples paquetes en una sola caja para reducir el volumen y optimizar el flete.",
+        
+        "step4-title": "4. Recolección de Mercadería (Pick-up)",
+        "step4-desc": "Si tu proveedor en EE.UU. no realiza envíos domésticos, coordinamos la recolección física de la mercadería y su traslado seguro a nuestras dependencias en Miami.",
+        
+        "step5-title": "5. Despacho Aéreo Global",
+        "step5-desc": "Trasladamos tu carga consolidada al Aeropuerto Internacional de Miami (MIA) y coordinamos el despacho aéreo directo hacia el país de Latinoamérica o el mundo que necesites.",
+        
+        "step6-title": "6. Asesoría Aduanera Experta",
+        "step6-desc": "Contamos con expertos en importaciones que te asisten con la documentación comercial y aduanera para garantizar un ingreso fluido de tu mercadería en el país de destino.",
+
+        // Why choose us
+        "why-title": "Logística eficiente sin complicaciones",
+        "why-subtitle": "Hacemos que exportar desde EE.UU. sea tan simple como un envío local.",
+        "why-item1-title": "Soporte 24/7 en tu Idioma",
+        "why-item1-desc": "Atención corporativa personalizada por oficiales de cuenta especializados en comercio exterior.",
+        "why-item2-title": "Especialistas en Importaciones",
+        "why-item2-desc": "Te ayudamos a elegir el mejor régimen (Courier Simplificado o Carga General) según tu país y tipo de mercadería.",
+        "why-item3-title": "Despacho Seguro e Inspección",
+        "why-item3-desc": "Minimizamos el riesgo de recibir mercadería defectuosa en destino gracias a nuestros controles en Miami.",
+
+        // Contact
+        "contact-title": "Conectemos tu cadena de suministros",
+        "contact-desc": "Completá tus datos de contacto corporativo. Un oficial comercial se comunicará contigo en menos de 24 horas para armar un tarifario a tu medida.",
+        "contact-hq": "Miami Warehouse (HQ)",
         "contact-form-title": "Solicitud de Alianza B2B",
         "lbl-name": "Nombre de Contacto",
         "lbl-company": "Empresa",
@@ -49,31 +67,50 @@ const translations = {
         "toast-success": "✓ Solicitud recibida. Un oficial de cuentas se comunicará con tu empresa en las próximas 24 horas."
     },
     en: {
-        "nav-features": "B2B Services",
-        "nav-pallet": "3D Simulator",
-        "nav-contact": "Contact",
-        "hero-badge": "Forwarding & Logistics Miami Hub",
-        "hero-title": "Connect Your Business to the World via Miami",
-        "hero-desc": "Premium cargo consolidation, e-commerce fulfillment, and global air/ocean forwarding tailored for companies in Latin America. Ship direct and optimize your supply chain costs.",
-        "btn-cta": "Get Cargo Quote",
-        "btn-secondary": "View Simulator",
-        "services-subtitle": "Corporate warehousing and cargo dispatch solutions based in Florida.",
-        "serv1-title": "Warehousing & Fulfillment",
-        "serv1-desc": "Miami-based warehouse space ready for stock management. Digital photo verification, repacking, and quality control.",
-        "serv2-title": "Consolidación & Co-Loading",
-        "serv2-desc": "Minimize volumetric shipping costs. We aggregate multiple items into sealed sacks ready for consolidations.",
-        "serv3-title": "Multimodal Dispatch",
-        "serv3-desc": "Direct air and ocean cargo forwarding to customs terminals and fiscal depots throughout Latin America.",
-        "serv4-title": "Technology Integrations",
-        "serv4-desc": "Complete automation via APIs and webhooks. Sync arrival notifications directly into your ERP systems.",
-        "sim-title": "3D Cargo Space Optimization",
-        "sim-subtitle": "See how we optimize volumetric freight rates by securely packing your boxes into standardized air containers.",
-        "sim-lbl-type": "Container Type",
-        "sim-lbl-qty": "Number of Boxes",
-        "sim-lbl-size": "Box Dimensions",
-        "sim-btn-pack": "Calculate Stacking",
-        "contact-title": "Accelerate Your Logistics Pipeline",
-        "contact-desc": "Provide your corporate details. A B2B account representative will contact you with custom tariffs matching your monthly volume.",
+        "nav-features": "Our Service",
+        "nav-why": "Why Choose Us",
+        "nav-contact": "B2B Contact",
+        "hero-badge": "USA Cargo Forwarding & Hub",
+        "hero-title": "Your Warehouse and Cargo Manager in Miami for the World",
+        "hero-desc": "We receive, classify, inspect, and ship your goods from Miami to any country in Latin America and the world. A transparent end-to-end corporate logistics service.",
+        "btn-cta": "Contact an Advisor",
+        "btn-secondary": "View Workflow",
+        
+        // Workflow Steps
+        "workflow-title": "How We Manage Your Cargo in Miami",
+        "workflow-subtitle": "A simple, rigorous, and transparent process designed for companies and couriers in Latin America.",
+        
+        "step1-title": "1. Reception and Classification",
+        "step1-desc": "We receive your merchandise at our Miami warehouse and immediately classify it in our digital inventory.",
+        
+        "step2-title": "2. Damage Control & Returns",
+        "step2-desc": "We inspect physical conditions. If your goods arrive damaged, broken, or incorrect, we manage the return to the US supplier for you. If it's perfect, it continues the process.",
+        
+        "step3-title": "3. Repacking & Special Inspection",
+        "step3-desc": "At your request, we open boxes to check contents, remove unnecessary materials, or consolidate multiple packages into a single box to reduce volume and optimize freight rates.",
+        
+        "step4-title": "4. Cargo Pick-up Services",
+        "step4-desc": "If your US supplier does not ship domestically, we coordinate the physical collection of the cargo and its secure transfer to our Miami warehouse.",
+        
+        "step5-title": "5. Global Air Dispatch",
+        "step5-desc": "We transfer your consolidated cargo to Miami International Airport (MIA) and coordinate direct air dispatch to any country in Latin America or the world.",
+        
+        "step6-title": "6. Expert Import Guidance",
+        "step6-desc": "We have import experts to assist you with commercial and customs documentation, ensuring smooth customs clearance in the destination country.",
+
+        // Why choose us
+        "why-title": "Hassle-Free Efficient Logistics",
+        "why-subtitle": "We make exporting from the USA as simple as domestic shipping.",
+        "why-item1-title": "24/7 Bilingual Support",
+        "why-item1-desc": "Personalized corporate attention by account managers specialized in foreign trade.",
+        "why-item2-title": "Import Specialists",
+        "why-item2-desc": "We help you select the best import channel (Simplified Courier or General Cargo) based on your country and cargo type.",
+        "why-item3-title": "Secure Dispatch & Inspection",
+        "why-item3-desc": "We minimize the risk of receiving defective merchandise at destination through our strict warehouse checks in Miami.",
+
+        // Contact
+        "contact-title": "Streamline Your Supply Chain",
+        "contact-desc": "Provide your corporate details. A B2B account representative will contact you within 24 hours to design a customized pricing plan.",
         "contact-hq": "Miami Warehouse (HQ)",
         "contact-form-title": "B2B Partnership Inquiry",
         "lbl-name": "Contact Name",
@@ -203,155 +240,3 @@ function showToast(message, type = 'info') {
         setTimeout(() => toast.remove(), 300);
     }, 4000);
 }
-
-// ═══════════════════════════════════════════════════════════════════════
-// CANNOT-USE-THREEJS FALLBACK: ISOMETRIC HTML5 CANVAS PALLETIZER RENDERER
-// ═══════════════════════════════════════════════════════════════════════
-let canvas, ctx;
-
-function initCanvasRenderer() {
-    canvas = document.getElementById('pallet-canvas');
-    if (!canvas) return;
-    ctx = canvas.getContext('2d');
-    
-    // Handle retina display crispiness
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = canvas.parentElement.clientWidth * dpr;
-    canvas.height = 420 * dpr;
-    canvas.style.width = canvas.parentElement.clientWidth + 'px';
-    canvas.style.height = '420px';
-    ctx.scale(dpr, dpr);
-
-    drawContainerStack();
-}
-
-// Draw Isometric Cube Projection
-function drawIsoCube(x, y, z, w, l, h, colorSides) {
-    // Convert 3D coordinates (x, y, z) to 2D isometric projection space
-    // Iso transform matrix coordinates
-    const isoX = (x - y) * Math.cos(Math.PI / 6);
-    const isoY = (x + y) * Math.sin(Math.PI / 6) - z;
-
-    // Center translation
-    const cx = canvas.width / (2 * (window.devicePixelRatio || 1));
-    const cy = canvas.height / (2 * (window.devicePixelRatio || 1)) + 60;
-    
-    const px = cx + isoX;
-    const py = cy + isoY;
-
-    // Calculate delta offsets in isometric grid directions
-    const dxWidth = w * Math.cos(Math.PI / 6);
-    const dyWidth = w * Math.sin(Math.PI / 6);
-
-    const dxLen = l * Math.cos(Math.PI / 6);
-    const dyLen = l * Math.sin(Math.PI / 6);
-
-    // Draw top face
-    ctx.beginPath();
-    ctx.moveTo(px, py - h);
-    ctx.lineTo(px + dxWidth, py - dyWidth - h);
-    ctx.lineTo(px + dxWidth - dxLen, py - dyWidth - dyLen - h);
-    ctx.lineTo(px - dxLen, py - dyLen - h);
-    ctx.closePath();
-    ctx.fillStyle = colorSides[0];
-    ctx.fill();
-    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
-    ctx.stroke();
-
-    // Draw left face
-    ctx.beginPath();
-    ctx.moveTo(px - dxLen, py - dyLen);
-    ctx.lineTo(px - dxLen, py - dyLen - h);
-    ctx.lineTo(px, py - h);
-    ctx.lineTo(px, py);
-    ctx.closePath();
-    ctx.fillStyle = colorSides[1];
-    ctx.fill();
-    ctx.stroke();
-
-    // Draw right face
-    ctx.beginPath();
-    ctx.moveTo(px, py);
-    ctx.lineTo(px, py - h);
-    ctx.lineTo(px + dxWidth, py - dyWidth - h);
-    ctx.lineTo(px + dxWidth, py - dyWidth);
-    ctx.closePath();
-    ctx.fillStyle = colorSides[2];
-    ctx.fill();
-    ctx.stroke();
-}
-
-function drawContainerStack() {
-    if (!ctx) return;
-    
-    const wLimit = canvas.width / (window.devicePixelRatio || 1);
-    const hLimit = canvas.height / (window.devicePixelRatio || 1);
-    ctx.clearRect(0, 0, wLimit, hLimit);
-
-    const contType = document.getElementById('cont-type').value;
-    const boxQty = parseInt(document.getElementById('box-qty').value) || 24;
-    const boxSize = document.getElementById('box-size').value;
-
-    let cWidth = 140;
-    let cLength = 140;
-    let cHeight = 110;
-
-    if (contType === 'LD7') {
-        cWidth = 180;
-        cLength = 180;
-        cHeight = 120;
-    }
-
-    // Draw Container Floor / Wireframe outline
-    ctx.setLineDash([4, 4]);
-    ctx.strokeStyle = 'rgba(14, 165, 233, 0.4)';
-    ctx.lineWidth = 1.5;
-    
-    // Projected base grid
-    const cx = wLimit / 2;
-    const cy = hLimit / 2 + 60;
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.lineTo(cx + cWidth * Math.cos(Math.PI/6), cy - cWidth * Math.sin(Math.PI/6));
-    ctx.lineTo(cx + cWidth * Math.cos(Math.PI/6) - cLength * Math.cos(Math.PI/6), cy - cWidth * Math.sin(Math.PI/6) - cLength * Math.sin(Math.PI/6));
-    ctx.lineTo(cx - cLength * Math.cos(Math.PI/6), cy - cLength * Math.sin(Math.PI/6));
-    ctx.closePath();
-    ctx.stroke();
-    ctx.setLineDash([]); // Reset dash
-
-    // Box dimensions
-    let bw = 30, bl = 30, bh = 24;
-    if (boxSize === 'med') {
-        bw = 36; bl = 36; bh = 28;
-    } else if (boxSize === 'large') {
-        bw = 46; bl = 46; bh = 36;
-    }
-
-    // Render Box Stacking Layers Loop
-    let boxIndex = 0;
-    const padding = 2;
-    
-    for (let zVal = 0; zVal < cHeight - bh; zVal += bh + padding) {
-        for (let yVal = 0; yVal < cLength - bl; yVal += bl + padding) {
-            for (let xVal = 0; xVal < cWidth - bw; xVal += bw + padding) {
-                if (boxIndex >= boxQty) break;
-
-                // Color palette (shades of brand cyan & blues)
-                const topCol = `hsl(${190 + (boxIndex % 20)}, 85%, 45%)`;
-                const leftCol = `hsl(${190 + (boxIndex % 20)}, 85%, 35%)`;
-                const rightCol = `hsl(${190 + (boxIndex % 20)}, 85%, 25%)`;
-
-                drawIsoCube(xVal, yVal, zVal, bw, bl, bh, [topCol, leftCol, rightCol]);
-                boxIndex++;
-            }
-            if (boxIndex >= boxQty) break;
-        }
-        if (boxIndex >= boxQty) break;
-    }
-}
-
-// Window Event Listeners
-window.addEventListener('load', () => {
-    initCanvasRenderer();
-    window.addEventListener('resize', initCanvasRenderer);
-});
