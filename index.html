@@ -15,33 +15,43 @@
 <body>
 
     <!-- ════════════════════════════════════════════════════════════════
-         1. CORPORATE HEADER
+         1. CORPORATE HEADER WITH REAL LOGO DESIGN
          ════════════════════════════════════════════════════════════════ -->
     <header>
         <div class="container header-wrap">
             <a href="#" class="logo">
-                <!-- Flat Swift Bird Mascot SVG -->
-                <svg viewBox="0 0 100 100" style="height:36px; width:36px; fill:var(--accent);">
-                    <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
-                </svg>
-                <span class="logo-text">SAR <span>EXP</span></span>
+                <span class="logo-text">
+                    <span class="logo-sar">
+                        <!-- Precise Translucent Globe Overlay SVG -->
+                        <svg class="logo-globe-bg" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="44" fill="rgba(30, 58, 138, 0.15)" stroke="rgba(30, 58, 138, 0.4)" stroke-width="2"/>
+                            <path d="M 50,6 A 44,44 0 0,0 50,94" fill="none" stroke="rgba(30, 58, 138, 0.4)" stroke-width="1.5"/>
+                            <path d="M 50,6 A 22,44 0 0,0 50,94" fill="none" stroke="rgba(30, 58, 138, 0.4)" stroke-width="1.5"/>
+                            <path d="M 6,50 A 44,22 0 0,0 94,50" fill="none" stroke="rgba(30, 58, 138, 0.4)" stroke-width="1.5"/>
+                            <path d="M 6,50 L 94,50" fill="none" stroke="rgba(30, 58, 138, 0.4)" stroke-width="1.5"/>
+                        </svg>
+                        <span class="logo-s-letter">S</span>AR
+                    </span>
+                    <span class="logo-exp">EXP</span>
+                </span>
             </a>
             
             <nav class="nav-links">
                 <a href="#services" class="nav-link" data-trans="nav-features">Nuestro Servicio</a>
                 <a href="#why-choose-us" class="nav-link" data-trans="nav-why">Por Qué Elegirnos</a>
                 <a href="#contact" class="nav-link" data-trans="nav-contact">Contacto B2B</a>
-                <!-- Language Toggle -->
-                <button class="lang-btn" onclick="toggleLanguage()">
-                    <i class="fa-solid fa-globe"></i>
-                    <span id="lang-toggle-text">EN</span>
-                </button>
+                
+                <!-- Dropdown Language Switcher -->
+                <select class="lang-select" onchange="changeLanguage(this.value)">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
             </nav>
         </div>
     </header>
 
     <!-- ════════════════════════════════════════════════════════════════
-         2. HERO SECTION WITH INTEGRATED CALCULATOR
+         2. HERO SECTION WITH HIGH-RES PLANE BACKGROUND
          ════════════════════════════════════════════════════════════════ -->
     <section class="hero">
         <div class="container hero-grid">
@@ -50,7 +60,6 @@
                 <h1 data-trans="hero-title">Tu depósito y gestor de carga en Miami para el mundo</h1>
                 <p data-trans="hero-desc">Recibimos, clasificamos, inspeccionamos y despachamos tu mercadería desde Miami hacia cualquier país de Latinoamérica y el mundo. Un servicio logístico corporativo transparente de punta a punta.</p>
                 
-                <!-- Quick Key Points -->
                 <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px;">
                     <div style="display:flex; align-items:center; gap:8px;">
                         <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
@@ -84,9 +93,8 @@
                     </select>
                 </div>
                 
-                <!-- Calculator Live Results Output -->
                 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:16px; margin:20px 0;">
-                    <div style="font-size:12px; font-weight:700; color:var(--accent); text-transform:uppercase; margin-bottom:4px;" data-trans="calc-res-title">Canal Recomendado</div>
+                    <div style="font-size:11px; font-weight:700; color:var(--accent-blue); text-transform:uppercase; margin-bottom:4px;" data-trans="calc-res-title">Canal Recomendado</div>
                     <div id="calc-res-regime" style="font-size:16px; font-weight:800; color:var(--text-primary); margin-bottom:2px;">Cargando análisis...</div>
                     <div id="calc-res-time" style="font-size:13px; font-weight:700; color:var(--text-muted); margin-bottom:8px;">Tránsito estimado: —</div>
                     <p id="calc-res-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4;">Ingresá el peso de tu carga para estimar el canal de despacho óptimo.</p>
@@ -98,7 +106,7 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         3. SERVICE FLOW SECTION (THE 6 STEPS)
+         3. SERVICE FLOW SECTION (WITH HIGH-RES STEP BANNERS)
          ════════════════════════════════════════════════════════════════ -->
     <section class="section" id="services">
         <div class="container">
@@ -110,56 +118,74 @@
             <div class="steps-grid">
                 <!-- Step 1: Reception -->
                 <div class="step-card">
-                    <div class="step-icon">
-                        <i class="fa-solid fa-boxes-packing"></i>
+                    <img class="step-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" alt="Recepción">
+                    <div class="step-body">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-boxes-packing"></i>
+                        </div>
+                        <h3 data-trans="step1-title">1. Recepción y Clasificación</h3>
+                        <p data-trans="step1-desc">Recibimos tu mercadería en nuestro depósito de Miami y la clasificamos inmediatamente en nuestro inventario digital.</p>
                     </div>
-                    <h3 data-trans="step1-title">1. Recepción y Clasificación</h3>
-                    <p data-trans="step1-desc">Recibimos tu mercadería en nuestro depósito de Miami y la clasificamos inmediatamente en nuestro inventario digital.</p>
                 </div>
                 
                 <!-- Step 2: Damage & Returns -->
                 <div class="step-card" style="border-color: rgba(239, 68, 68, 0.25);">
-                    <div class="step-icon" style="background: rgba(239, 68, 68, 0.08); color: #ef4444;">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    <img class="step-img" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600" alt="Devoluciones">
+                    <div class="step-body">
+                        <div class="step-icon" style="background: rgba(239, 68, 68, 0.08); color: #ef4444;">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h3 data-trans="step2-title">2. Control de Daños y Devoluciones</h3>
+                        <p data-trans="step2-desc">Inspeccionamos el estado físico. Si tu mercadería llega dañada, rota o incorrecta, gestionamos la devolución al proveedor en EE.UU. por vos. Si está en óptimas condiciones, continúa el proceso.</p>
                     </div>
-                    <h3 data-trans="step2-title">2. Control de Daños y Devoluciones</h3>
-                    <p data-trans="step2-desc">Inspeccionamos el estado físico. Si tu mercadería llega dañada, rota o incorrecta, gestionamos la devolución al proveedor en EE.UU. por vos. Si está en óptimas condiciones, continúa el proceso.</p>
                 </div>
                 
                 <!-- Step 3: Special Processing -->
                 <div class="step-card">
-                    <div class="step-icon">
-                        <i class="fa-solid fa-scissors"></i>
+                    <img class="step-img" src="https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=600" alt="Reembalaje">
+                    <div class="step-body">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <h3 data-trans="step3-title">3. Reembalaje y Verificación Especial</h3>
+                        <p data-trans="step3-desc">Si lo solicitás, abrimos la caja para verificar contenidos, retirar embalajes innecesarios o consolidar múltiples paquetes en una sola caja para reducir el volumen y optimizar el flete.</p>
                     </div>
-                    <h3 data-trans="step3-title">3. Reembalaje y Verificación Especial</h3>
-                    <p data-trans="step3-desc">Si lo solicitás, abrimos la caja para verificar contenidos, retirar embalajes innecesarios o consolidar múltiples paquetes en una sola caja para reducir el volumen y optimizar el flete.</p>
                 </div>
                 
                 <!-- Step 4: Pickups -->
                 <div class="step-card">
-                    <div class="step-icon">
-                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    <img class="step-img" src="https://images.unsplash.com/photo-1516546453174-5f1000625908?q=80&w=600" alt="Recolección">
+                    <div class="step-body">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <h3 data-trans="step4-title">4. Recolección de Mercadería (Pick-up)</h3>
+                        <p data-trans="step4-desc">Si tu proveedor en EE.UU. no realiza envíos domésticos, coordinamos la recolección física de la mercadería y su traslado seguro a nuestras dependencias en Miami.</p>
                     </div>
-                    <h3 data-trans="step4-title">4. Recolección de Mercadería (Pick-up)</h3>
-                    <p data-trans="step4-desc">Si tu proveedor en EE.UU. no realiza envíos domésticos, coordinamos la recolección física de la mercadería y su traslado seguro a nuestras dependencias en Miami.</p>
                 </div>
                 
                 <!-- Step 5: Global Shipping -->
                 <div class="step-card" style="border-color: rgba(14, 165, 233, 0.35);">
-                    <div class="step-icon" style="background: rgba(14, 165, 233, 0.08); color: var(--cyan);">
-                        <i class="fa-solid fa-plane-departure"></i>
+                    <img class="step-img" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600" alt="Aéreo">
+                    <div class="step-body">
+                        <div class="step-icon" style="background: rgba(14, 165, 233, 0.08); color: var(--cyan);">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h3 data-trans="step5-title">5. Despacho Aéreo Global</h3>
+                        <p data-trans="step5-desc">Trasladamos tu carga consolidada al Aeropuerto Internacional de Miami (MIA) y coordinamos el despacho aéreo directo hacia el país de Latinoamérica o el mundo que necesites.</p>
                     </div>
-                    <h3 data-trans="step5-title">5. Despacho Aéreo Global</h3>
-                    <p data-trans="step5-desc">Trasladamos tu carga consolidada al Aeropuerto Internacional de Miami (MIA) y coordinamos el despacho aéreo directo hacia el país de Latinoamérica o el mundo que necesites.</p>
                 </div>
                 
                 <!-- Step 6: Customs Expert -->
                 <div class="step-card">
-                    <div class="step-icon">
-                        <i class="fa-solid fa-user-shield"></i>
+                    <img class="step-img" src="https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600" alt="Aduana">
+                    <div class="step-body">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 data-trans="step6-title">6. Asesoría Aduanera Experta</h3>
+                        <p data-trans="step6-desc">Contamos con expertos en importaciones que te asisten con la documentación comercial y aduanera para garantizar un ingreso fluido de tu mercadería en el país de destino.</p>
                     </div>
-                    <h3 data-trans="step6-title">6. Asesoría Aduanera Experta</h3>
-                    <p data-trans="step6-desc">Contamos con expertos en importaciones que te asisten con la documentación comercial y aduanera para garantizar un ingreso fluido de tu mercadería en el país de destino.</p>
                 </div>
             </div>
         </div>
@@ -176,7 +202,7 @@
                 
                 <div style="display:flex; flex-direction:column; gap:20px;">
                     <div style="display:flex; gap:16px;">
-                        <i class="fa-solid fa-comments" style="color:var(--accent-light); font-size:20px; margin-top:4px;"></i>
+                        <i class="fa-solid fa-comments" style="color:var(--accent-blue); font-size:20px; margin-top:4px;"></i>
                         <div>
                             <h4 style="font-size:16px; margin-bottom:4px;" data-trans="why-item1-title">Soporte 24/7 en tu Idioma</h4>
                             <p style="font-size:13px; color:var(--text-secondary);" data-trans="why-item1-desc">Atención corporativa personalizada por oficiales de cuenta especializados en comercio exterior.</p>
@@ -184,7 +210,7 @@
                     </div>
                     
                     <div style="display:flex; gap:16px;">
-                        <i class="fa-solid fa-scale-balanced" style="color:var(--accent-light); font-size:20px; margin-top:4px;"></i>
+                        <i class="fa-solid fa-scale-balanced" style="color:var(--accent-blue); font-size:20px; margin-top:4px;"></i>
                         <div>
                             <h4 style="font-size:16px; margin-bottom:4px;" data-trans="why-item2-title">Especialistas en Importaciones</h4>
                             <p style="font-size:13px; color:var(--text-secondary);" data-trans="why-item2-desc">Te ayudamos a elegir el mejor régimen (Courier Simplificado o Carga General) según tu país y tipo de mercadería.</p>
@@ -193,7 +219,6 @@
                 </div>
             </div>
             
-            <!-- Statistics Block -->
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">2.500 m²</div>
@@ -298,18 +323,36 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         6. FOOTER
+         6. PRIVACY POLICY MODAL
+         ════════════════════════════════════════════════════════════════ -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('privacy-modal')">&times;</span>
+            <h3 style="margin-bottom:20px; font-size:20px;" data-trans="privacy-modal-title">Política de Privacidad y Términos B2B</h3>
+            <p style="font-size:14px; margin-bottom:16px; color:var(--text-secondary); line-height:1.5;" data-trans="privacy-txt-1"></p>
+            <p style="font-size:14px; margin-bottom:24px; color:var(--text-secondary); line-height:1.5;" data-trans="privacy-txt-2"></p>
+            <button class="btn btn-primary" onclick="closeModal('privacy-modal')" data-trans="privacy-btn-close">Cerrar Documento</button>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         7. FOOTER
          ════════════════════════════════════════════════════════════════ -->
     <footer>
         <div class="container footer-wrap">
             <div class="logo">
-                <svg viewBox="0 0 100 100" style="height:32px; width:32px; fill:#ffffff;">
+                <svg viewBox="0 0 100 100" style="height:26px; width:26px; fill:#ffffff;">
                     <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
                 </svg>
-                <span class="logo-text" style="color:#ffffff;">SAR <span>EXP</span></span>
+                <span class="logo-text" style="color:#ffffff;">SAR <span style="color:#ffffff;">EXP</span></span>
             </div>
-            <div style="font-size:12px; color:#64748b;">
-                Miami HQ: 8300 NW 30th Terrace, Suite 28, Doral, FL 33122 | &copy; 2026 SAREXP World Courier LLC.
+            
+            <div class="footer-links">
+                <span class="footer-link" onclick="openModal('privacy-modal')">Política de Privacidad / Privacy Policy</span>
+            </div>
+            
+            <div style="color:#64748b;">
+                Miami HQ: 8300 NW 30th Terrace, Suite 28, Doral, FL 33122 | &copy; 2026 SAREXP.
             </div>
         </div>
     </footer>

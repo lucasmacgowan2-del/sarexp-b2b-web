@@ -1,5 +1,5 @@
 // ==========================================================================
-// SAREXP B2B LANDING PAGE - LOGIC CONTROLLER (UPGRADED DESIGN)
+// SAREXP B2B LANDING PAGE - LOGIC CONTROLLER (UPGRADED DESIGN WITH LOGO & MODAL)
 // ==========================================================================
 
 const translations = {
@@ -18,7 +18,7 @@ const translations = {
         "calc-lbl-weight": "Peso de la Carga (KG)",
         "calc-lbl-type": "Tipo de Mercadería",
         "calc-opt-general": "Mercadería General (Electrónicos, Repuestos)",
-        "calc-opt-special": "Mercadería Especial (Químicos, Peligrosos)",
+        "calc-opt-special": "Mercadería Especial (Hazmat, Químicos)",
         "calc-btn": "Analizar Régimen de Envío",
         "calc-res-title": "Canal Recomendado",
         "calc-res-regime": "Cargando análisis...",
@@ -82,6 +82,13 @@ const translations = {
         "opt-peru": "Perú",
         "opt-other": "Otro / Global",
         "btn-submit": "Enviar Solicitud",
+        
+        // Privacy Policy Modal
+        "privacy-modal-title": "Política de Privacidad y Términos B2B",
+        "privacy-txt-1": "En SAREXP WORLD COURIER LLC valoramos la confidencialidad de tus datos comerciales. Toda la información suministrada a través de nuestro formulario de Alianza B2B y las consultas de tarifas asociadas se procesa con encriptación de nivel bancario y de conformidad con las normativas federales de los Estados Unidos.",
+        "privacy-txt-2": "Los datos capturados (nombres, teléfonos, volúmenes de carga y correos corporativos) se utilizarán exclusivamente para calificar el perfil comercial de tu empresa, emitir cotizaciones aduaneras y coordinar la logística física en nuestro depósito de Miami. SAREXP no venderá, alquilará ni distribuirá tus datos comerciales a terceros sin consentimiento explícito por escrito.",
+        "privacy-btn-close": "Cerrar Documento",
+
         "toast-success": "✓ Solicitud recibida. Un oficial de cuentas se comunicará con tu empresa en las próximas 24 horas."
     },
     en: {
@@ -163,14 +170,21 @@ const translations = {
         "opt-peru": "Peru",
         "opt-other": "Other / Global",
         "btn-submit": "Send Inquiry",
+        
+        // Privacy Policy Modal
+        "privacy-modal-title": "Privacy Policy & B2B Terms",
+        "privacy-txt-1": "At SAREXP WORLD COURIER LLC we value the confidentiality of your corporate and shipping data. All information provided via our B2B Partnership form and related pricing inquiries is processed with bank-level encryption and in compliance with United States federal privacy guidelines.",
+        "privacy-txt-2": "The details collected (names, phone numbers, estimated cargo volumes, and corporate emails) are utilized solely to evaluate your business profile, generate custom logistics quotes, and coordinate physical warehouse operations in Miami. SAREXP will never sell, rent, or distribute your corporate data to third parties without prior explicit written consent.",
+        "privacy-btn-close": "Close Document",
+
         "toast-success": "✓ Inquiry received. An account representative will contact your company within 24 hours."
     }
 };
 
 let currentLang = 'es';
 
-function toggleLanguage() {
-    currentLang = currentLang === 'es' ? 'en' : 'es';
+function changeLanguage(langVal) {
+    currentLang = langVal;
     
     // Switch text inside DOM
     document.querySelectorAll('[data-trans]').forEach(el => {
@@ -188,10 +202,6 @@ function toggleLanguage() {
         }
     });
 
-    // Update lang button text
-    document.getElementById('lang-toggle-text').textContent = currentLang === 'es' ? 'EN' : 'ES';
-    
-    // Recalculate estimator with new language text
     calculateB2BRate();
 }
 
@@ -316,6 +326,21 @@ function calculateB2BRate() {
         resDesc.textContent = currentLang === 'es' ? 
             'Óptimo para envíos comerciales de gran escala. Requiere destinación y clearance de despachante de aduanas.' : 
             'Optimal for large-scale commercial shipments. Requires formal declaration and customs broker clearance.';
+    }
+}
+
+// Modal open/close handlers
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = 'none';
     }
 }
 
