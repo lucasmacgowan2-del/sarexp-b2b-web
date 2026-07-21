@@ -47,16 +47,17 @@ Para no contaminar bases de datos ni generar alertas de cumplimiento aduanero, l
 El objetivo de SAREXP es vender su capacidad de depósito, consolidación y forwarding en Miami a empresas corporativas, tiendas e-commerce y otros couriers locales en Latinoamérica (Chile, Uruguay, Paraguay, Colombia, etc.), excluyendo el canal masivo en Argentina (donde ya opera Shipairglobal).
 
 ### Estructura de la Web (Single Page):
-1.  **Hero Section:** Propuesta de valor clara. Tu depósito y puerta de salida corporativa en Miami hacia todo el mundo.
-2.  **Bilingual Switcher (ES / EN):** Traducción instantánea y fluida sin recargas de página.
+1.  **Hero Section:** Imagen real de fondo de ala de avión comercial en las nubes con superposición oscura. Contiene el eslogan B2B, puntos clave de beneficio y el **Estimador de Canal B2B Interactivo** (calculador de regímenes por peso).
+2.  **Bilingual Switcher (ES / EN):** Traducción instantánea de todas las secciones.
 3.  **Flujo Operativo en 6 Pasos:**
-    *   *1. Recepción y Clasificación:* Clasificación inmediata del stock en Miami.
-    *   *2. Control de Daños y Devoluciones:* Gestión de retornos a proveedores de EE.UU. por bultos dañados.
-    *   *3. Reembalaje y Verificación:* Consolidaciones especiales y re-empaque para bajar flete volumétrico.
-    *   *4. Recolección (Pick-up):* Retiros físicos directos desde el proveedor.
-    *   *5. Despacho Aéreo Global:* Envío internacional vía MIA Airport.
-    *   *6. Expertos en Importaciones:* Asistencia aduanera experta para liberar en destino.
-4.  **Formulario de Contacto B2B:** Captura de Leads corporativos sincronizados con n8n.
+    *   *1. Recepción y Clasificación:* Clasificación del stock en el depósito de Miami.
+    *   *2. Control de Daños y Devoluciones:* Gestión de reembolsos y retornos domésticos en EE.UU.
+    *   *3. Reembalaje y Verificación:* Re-empaque protector y volumétrico.
+    *   *4. Recolección (Pick-up):* Coordinación de retiros en proveedores.
+    *   *5. Despacho Aéreo Global:* Forwarding internacional vía aeropuerto MIA.
+    *   *6. Expertos en Importaciones:* Guía en aduanas y destinación de carga.
+4.  **Por Qué Elegirnos & Estadísticas:** Bloques con métricas operativas (2500m² depósito, 10k+ despachos, 18+ países, 99.8% aduana).
+5.  **Formulario de Contacto B2B:** Captura de prospectos corporativos enviada a la API de n8n.
 
 ---
 
