@@ -1,5 +1,5 @@
 // ==========================================================================
-// SAREXP B2B LANDING PAGE - TRANSLATION DICTIONARY & CLIENT LOGIC
+// SAREXP B2B LANDING PAGE - LOGIC CONTROLLER (UPGRADED DESIGN)
 // ==========================================================================
 
 const translations = {
@@ -12,6 +12,18 @@ const translations = {
         "hero-desc": "Recibimos, clasificamos, inspeccionamos y despachamos tu mercadería desde Miami hacia cualquier país de Latinoamérica y el mundo. Un servicio logístico corporativo transparente de punta a punta.",
         "btn-cta": "Contactar un Asesor",
         "btn-secondary": "Ver Flujo de Trabajo",
+        
+        // Rate Estimator
+        "calc-title": "Estimador de Canal B2B",
+        "calc-lbl-weight": "Peso de la Carga (KG)",
+        "calc-lbl-type": "Tipo de Mercadería",
+        "calc-opt-general": "Mercadería General (Electrónicos, Repuestos)",
+        "calc-opt-special": "Mercadería Especial (Químicos, Peligrosos)",
+        "calc-btn": "Analizar Régimen de Envío",
+        "calc-res-title": "Canal Recomendado",
+        "calc-res-regime": "Cargando análisis...",
+        "calc-res-time": "Tránsito estimado: —",
+        "calc-res-desc": "Ingresá el peso de tu carga para estimar el canal de despacho óptimo.",
         
         // Workflow Steps
         "workflow-title": "Cómo Gestionamos tu Carga en Miami",
@@ -45,6 +57,12 @@ const translations = {
         "why-item3-title": "Despacho Seguro e Inspección",
         "why-item3-desc": "Minimizamos el riesgo de recibir mercadería defectuosa en destino gracias a nuestros controles en Miami.",
 
+        // Stats
+        "stat1-text": "M² de Depósito en Miami",
+        "stat2-text": "Envíos Internacionales Realizados",
+        "stat3-text": "Países de Destino Activos",
+        "stat4-text": "Eficiencia en Aduana",
+
         // Contact
         "contact-title": "Conectemos tu cadena de suministros",
         "contact-desc": "Completá tus datos de contacto corporativo. Un oficial comercial se comunicará contigo en menos de 24 horas para armar un tarifario a tu medida.",
@@ -76,6 +94,18 @@ const translations = {
         "btn-cta": "Contact an Advisor",
         "btn-secondary": "View Workflow",
         
+        // Rate Estimator
+        "calc-title": "B2B Channel Estimator",
+        "calc-lbl-weight": "Cargo Weight (KG)",
+        "calc-lbl-type": "Merchandise Type",
+        "calc-opt-general": "General Merchandise (Electronics, Parts)",
+        "calc-opt-special": "Hazmat / Special Cargo",
+        "calc-btn": "Analyze Shipping Channel",
+        "calc-res-title": "Recommended Channel",
+        "calc-res-regime": "Loading analysis...",
+        "calc-res-time": "Estimated transit: —",
+        "calc-res-desc": "Input cargo weight to estimate the optimal shipping channel.",
+
         // Workflow Steps
         "workflow-title": "How We Manage Your Cargo in Miami",
         "workflow-subtitle": "A simple, rigorous, and transparent process designed for companies and couriers in Latin America.",
@@ -107,6 +137,12 @@ const translations = {
         "why-item2-desc": "We help you select the best import channel (Simplified Courier or General Cargo) based on your country and cargo type.",
         "why-item3-title": "Secure Dispatch & Inspection",
         "why-item3-desc": "We minimize the risk of receiving defective merchandise at destination through our strict warehouse checks in Miami.",
+
+        // Stats
+        "stat1-text": "M² Warehouse in Miami",
+        "stat2-text": "International Shipments Dispatched",
+        "stat3-text": "Active Destination Countries",
+        "stat4-text": "Customs Clearance Rate",
 
         // Contact
         "contact-title": "Streamline Your Supply Chain",
@@ -154,6 +190,9 @@ function toggleLanguage() {
 
     // Update lang button text
     document.getElementById('lang-toggle-text').textContent = currentLang === 'es' ? 'EN' : 'ES';
+    
+    // Recalculate estimator with new language text
+    calculateB2BRate();
 }
 
 // B2B Lead Form Submit Handler
@@ -175,7 +214,6 @@ function handleContactSubmit(event) {
     // Trigger Success Toast
     showToast(translations[currentLang]["toast-success"], 'success');
     
-    // n8n Webhook connection fallback if online
     if (navigator.onLine) {
         fetch("https://auto.macgowanmaigan.site/webhook/sarexp-b2b-leads", {
             method: 'POST',
@@ -191,10 +229,9 @@ function handleContactSubmit(event) {
                 timestamp: new Date().toISOString()
             })
         }).then(res => console.log('Lead synced to n8n webhook successfully.'))
-          .catch(err => console.warn('Could not sync lead online (local development / offline).', err));
+          .catch(err => console.warn('Could not sync lead online.', err));
     }
 
-    // Reset Form
     document.getElementById('lead-form').reset();
 }
 
@@ -240,3 +277,49 @@ function showToast(message, type = 'info') {
         setTimeout(() => toast.remove(), 300);
     }, 4000);
 }
+
+// B2B Rates / Channel Estimator Logic
+function calculateB2BRate() {
+    const weightInput = document.getElementById('calc-weight');
+    const typeSelect = document.getElementById('calc-type');
+    const resRegime = document.getElementById('calc-res-regime');
+    const resTime = document.getElementById('calc-res-time');
+    const resDesc = document.getElementById('calc-res-desc');
+
+    if (!weightInput || !typeSelect || !resRegime || !resTime || !resDesc) return;
+
+    const w = parseFloat(weightInput.value) || 0;
+    const isSpecial = typeSelect.value === 'special';
+
+    if (w <= 0) {
+        resRegime.textContent = currentLang === 'es' ? 'Tránsito Aéreo' : 'Air Transit';
+        resTime.textContent = '—';
+        resDesc.textContent = currentLang === 'es' ? 'Ingresá el peso de tu carga para estimar el canal de despacho óptimo.' : 'Input cargo weight to estimate the optimal shipping channel.';
+        return;
+    }
+
+    if (isSpecial) {
+        resRegime.textContent = currentLang === 'es' ? 'Carga Aérea Especial (Hazmat)' : 'Special Air Cargo (Hazmat)';
+        resTime.textContent = currentLang === 'es' ? 'Tránsito estimado: ~5-7 días' : 'Estimated transit: ~5-7 days';
+        resDesc.textContent = currentLang === 'es' ? 
+            'Requiere tratamiento de carga aérea reglamentada por MSDS. Documentación especial y empaque homologado incluidos.' : 
+            'Requires regulated cargo treatment based on MSDS. Special documentation and certified packaging included.';
+    } else if (w < 50) {
+        resRegime.textContent = currentLang === 'es' ? 'Courier Simplificado Aéreo' : 'Simplified Courier Air';
+        resTime.textContent = currentLang === 'es' ? 'Tránsito estimado: ~3-5 días' : 'Estimated transit: ~3-5 days';
+        resDesc.textContent = currentLang === 'es' ? 
+            'El método más ágil para volúmenes pequeños o muestras. Despacho directo con liberación inmediata en aeropuertos de destino.' : 
+            'The fastest method for small volumes or samples. Direct dispatch with immediate release at destination airports.';
+    } else {
+        resRegime.textContent = currentLang === 'es' ? 'Carga Aérea General (Forwarding)' : 'General Air Cargo (Forwarding)';
+        resTime.textContent = currentLang === 'es' ? 'Tránsito estimado: ~5-7 días' : 'Estimated transit: ~5-7 days';
+        resDesc.textContent = currentLang === 'es' ? 
+            'Óptimo para envíos comerciales de gran escala. Requiere destinación y clearance de despachante de aduanas.' : 
+            'Optimal for large-scale commercial shipments. Requires formal declaration and customs broker clearance.';
+    }
+}
+
+// Initial calculation on page load
+window.addEventListener('load', () => {
+    calculateB2BRate();
+});

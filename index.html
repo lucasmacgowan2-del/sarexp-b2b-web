@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAREXP | B2B Cargo Forwarding & Miami Hub</title>
+    <title>SAR EXP | USA Cargo Forwarding & Miami Hub</title>
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom Style System -->
     <link rel="stylesheet" href="styles.css">
@@ -21,10 +21,10 @@
         <div class="container header-wrap">
             <a href="#" class="logo">
                 <!-- Flat Swift Bird Mascot SVG -->
-                <svg viewBox="0 0 100 100" style="height:44px; width:44px; fill:var(--accent);">
+                <svg viewBox="0 0 100 100" style="height:36px; width:36px; fill:var(--accent);">
                     <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
                 </svg>
-                <span class="logo-text">SAR EXP</span>
+                <span class="logo-text">SAR <span>EXP</span></span>
             </a>
             
             <nav class="nav-links">
@@ -41,7 +41,7 @@
     </header>
 
     <!-- ════════════════════════════════════════════════════════════════
-         2. HERO SECTION
+         2. HERO SECTION WITH INTEGRATED CALCULATOR
          ════════════════════════════════════════════════════════════════ -->
     <section class="hero">
         <div class="container hero-grid">
@@ -49,49 +49,68 @@
                 <span class="hero-badge" data-trans="hero-badge">USA Cargo Forwarding & Hub</span>
                 <h1 data-trans="hero-title">Tu depósito y gestor de carga en Miami para el mundo</h1>
                 <p data-trans="hero-desc">Recibimos, clasificamos, inspeccionamos y despachamos tu mercadería desde Miami hacia cualquier país de Latinoamérica y el mundo. Un servicio logístico corporativo transparente de punta a punta.</p>
-                <div style="display:flex; gap:16px;">
-                    <a href="#contact" class="btn btn-primary" data-trans="btn-cta">Contactar un Asesor</a>
-                    <a href="#services" class="btn btn-secondary" data-trans="btn-secondary">Ver Flujo de Trabajo</a>
+                
+                <!-- Quick Key Points -->
+                <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
+                        <span style="font-size:14px; font-weight:600; color:#e2e8f0;">Doral Suites Warehouse: Recepción y Estiba</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
+                        <span style="font-size:14px; font-weight:600; color:#e2e8f0;">Devolución de Carga Dañada y Control de Calidad</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
+                        <span style="font-size:14px; font-weight:600; color:#e2e8f0;">Conexiones Aéreas y Marítimas Globales</span>
+                    </div>
                 </div>
             </div>
             
-            <div class="hero-visual">
-                <!-- Visual composition representing international air forwarding -->
-                <div style="position:relative; width:100%; height:320px; background:#f1f5f9; border-radius:var(--radius-md); overflow:hidden; display:flex; align-items:center; justify-content:center;">
-                    <svg viewBox="0 0 200 200" style="width:75%; height:auto;">
-                        <!-- Isometric Base Ground representing warehouse floor -->
-                        <polygon points="100,50 170,85 100,120 30,85" fill="#e2e8f0"/>
-                        <!-- Outlined Cargo Flight Container representing Doral Warehouse Hub -->
-                        <polygon points="100,60 150,85 150,135 100,110" fill="rgba(37,99,235,0.05)" stroke="var(--accent)" stroke-width="1.5"/>
-                        <polygon points="100,60 50,85 50,135 100,110" fill="rgba(37,99,235,0.1)" stroke="var(--accent)" stroke-width="1.5"/>
-                        <polygon points="100,60 150,85 100,110 50,85" fill="rgba(37,99,235,0.15)" stroke="var(--accent)" stroke-width="1.5"/>
-                        <!-- Isometric Packages inside container -->
-                        <polygon points="100,110 120,120 120,135 100,125" fill="#f59e0b"/>
-                        <polygon points="100,110 80,120 80,135 100,125" fill="#d97706"/>
-                        <polygon points="100,95 120,105 120,120 100,110" fill="#fbbf24"/>
-                        <!-- Global plane path overlay -->
-                        <path d="M 40,110 Q 100,20 160,110" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="4,4"/>
-                        <polygon points="160,110 153,103 162,103" fill="var(--cyan)"/>
-                    </svg>
+            <!-- Dynamic Rate/Regime Estimator Card -->
+            <div class="hero-card">
+                <h3 style="font-size:20px; margin-bottom:20px;" data-trans="calc-title">Estimador de Canal B2B</h3>
+                
+                <div class="form-group">
+                    <label data-trans="calc-lbl-weight">Peso de la Carga (KG)</label>
+                    <input type="number" id="calc-weight" class="form-input" value="45" min="1" oninput="calculateB2BRate()">
                 </div>
+                
+                <div class="form-group">
+                    <label data-trans="calc-lbl-type">Tipo de Mercadería</label>
+                    <select id="calc-type" class="form-input" onchange="calculateB2BRate()">
+                        <option value="general" data-trans="calc-opt-general">Mercadería General (Electrónicos, Repuestos)</option>
+                        <option value="special" data-trans="calc-opt-special">Mercadería Especial (Hazmat, Químicos)</option>
+                    </select>
+                </div>
+                
+                <!-- Calculator Live Results Output -->
+                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:16px; margin:20px 0;">
+                    <div style="font-size:12px; font-weight:700; color:var(--accent); text-transform:uppercase; margin-bottom:4px;" data-trans="calc-res-title">Canal Recomendado</div>
+                    <div id="calc-res-regime" style="font-size:16px; font-weight:800; color:var(--text-primary); margin-bottom:2px;">Cargando análisis...</div>
+                    <div id="calc-res-time" style="font-size:13px; font-weight:700; color:var(--text-muted); margin-bottom:8px;">Tránsito estimado: —</div>
+                    <p id="calc-res-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4;">Ingresá el peso de tu carga para estimar el canal de despacho óptimo.</p>
+                </div>
+                
+                <a href="#contact" class="btn btn-primary btn-block" data-trans="btn-cta">Contactar un Asesor</a>
             </div>
         </div>
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         3. SERVICE STEPS SECTION (HOW WE MANAGE CARGO)
+         3. SERVICE FLOW SECTION (THE 6 STEPS)
          ════════════════════════════════════════════════════════════════ -->
-    <section class="services" id="services">
+    <section class="section" id="services">
         <div class="container">
             <div class="section-header">
                 <h2 data-trans="workflow-title">Cómo Gestionamos tu Carga en Miami</h2>
                 <p data-trans="workflow-subtitle">Un proceso simple, riguroso y transparente diseñado para empresas y couriers de Latinoamérica.</p>
             </div>
             
-            <div class="services-grid">
+            <div class="steps-grid">
                 <!-- Step 1: Reception -->
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="step-card">
+                    <div class="step-icon">
                         <i class="fa-solid fa-boxes-packing"></i>
                     </div>
                     <h3 data-trans="step1-title">1. Recepción y Clasificación</h3>
@@ -99,8 +118,8 @@
                 </div>
                 
                 <!-- Step 2: Damage & Returns -->
-                <div class="service-card" style="border-color: rgba(239, 68, 68, 0.2);">
-                    <div class="service-icon" style="background: rgba(239, 68, 68, 0.08); color: #ef4444;">
+                <div class="step-card" style="border-color: rgba(239, 68, 68, 0.25);">
+                    <div class="step-icon" style="background: rgba(239, 68, 68, 0.08); color: #ef4444;">
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
                     <h3 data-trans="step2-title">2. Control de Daños y Devoluciones</h3>
@@ -108,8 +127,8 @@
                 </div>
                 
                 <!-- Step 3: Special Processing -->
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="step-card">
+                    <div class="step-icon">
                         <i class="fa-solid fa-scissors"></i>
                     </div>
                     <h3 data-trans="step3-title">3. Reembalaje y Verificación Especial</h3>
@@ -117,8 +136,8 @@
                 </div>
                 
                 <!-- Step 4: Pickups -->
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="step-card">
+                    <div class="step-icon">
                         <i class="fa-solid fa-truck-ramp-box"></i>
                     </div>
                     <h3 data-trans="step4-title">4. Recolección de Mercadería (Pick-up)</h3>
@@ -126,8 +145,8 @@
                 </div>
                 
                 <!-- Step 5: Global Shipping -->
-                <div class="service-card" style="border-color: rgba(14, 165, 233, 0.3);">
-                    <div class="service-icon" style="background: rgba(14, 165, 233, 0.08); color: var(--cyan);">
+                <div class="step-card" style="border-color: rgba(14, 165, 233, 0.35);">
+                    <div class="step-icon" style="background: rgba(14, 165, 233, 0.08); color: var(--cyan);">
                         <i class="fa-solid fa-plane-departure"></i>
                     </div>
                     <h3 data-trans="step5-title">5. Despacho Aéreo Global</h3>
@@ -135,8 +154,8 @@
                 </div>
                 
                 <!-- Step 6: Customs Expert -->
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="step-card">
+                    <div class="step-icon">
                         <i class="fa-solid fa-user-shield"></i>
                     </div>
                     <h3 data-trans="step6-title">6. Asesoría Aduanera Experta</h3>
@@ -147,32 +166,50 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         4. WHY CHOOSE US
+         4. WHY CHOOSE US & CORE STATS
          ════════════════════════════════════════════════════════════════ -->
-    <section class="services" id="why-choose-us" style="background: var(--bg-main);">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-trans="why-title">Logística eficiente sin complicaciones</h2>
-                <p data-trans="why-subtitle">Hacemos que exportar desde EE.UU. sea tan simple como un envío local.</p>
+    <section class="section why-section" id="why-choose-us">
+        <div class="container why-grid">
+            <div>
+                <h2 style="font-size:32px; margin-bottom:16px; font-weight:800;" data-trans="why-title">Logística eficiente sin complicaciones</h2>
+                <p style="color:var(--text-muted); margin-bottom:32px;" data-trans="why-subtitle">Hacemos que exportar desde EE.UU. sea tan simple como un envío local.</p>
+                
+                <div style="display:flex; flex-direction:column; gap:20px;">
+                    <div style="display:flex; gap:16px;">
+                        <i class="fa-solid fa-comments" style="color:var(--accent-light); font-size:20px; margin-top:4px;"></i>
+                        <div>
+                            <h4 style="font-size:16px; margin-bottom:4px;" data-trans="why-item1-title">Soporte 24/7 en tu Idioma</h4>
+                            <p style="font-size:13px; color:var(--text-secondary);" data-trans="why-item1-desc">Atención corporativa personalizada por oficiales de cuenta especializados en comercio exterior.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display:flex; gap:16px;">
+                        <i class="fa-solid fa-scale-balanced" style="color:var(--accent-light); font-size:20px; margin-top:4px;"></i>
+                        <div>
+                            <h4 style="font-size:16px; margin-bottom:4px;" data-trans="why-item2-title">Especialistas en Importaciones</h4>
+                            <p style="font-size:13px; color:var(--text-secondary);" data-trans="why-item2-desc">Te ayudamos a elegir el mejor régimen (Courier Simplificado o Carga General) según tu país y tipo de mercadería.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div style="background:#fff; padding:30px; border-radius:var(--radius-md); border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
-                    <i class="fa-solid fa-comments" style="color:var(--accent); font-size:24px; margin-bottom:16px;"></i>
-                    <h4 style="margin-bottom:10px; font-size:18px;" data-trans="why-item1-title">Soporte 24/7 en tu Idioma</h4>
-                    <p style="font-size:14px; color:var(--text-secondary);" data-trans="why-item1-desc">Atención corporativa personalizada por oficiales de cuenta especializados en comercio exterior.</p>
+            <!-- Statistics Block -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2.500 m²</div>
+                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat1-text">M² de Depósito en Miami</div>
                 </div>
-                
-                <div style="background:#fff; padding:30px; border-radius:var(--radius-md); border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
-                    <i class="fa-solid fa-scale-balanced" style="color:var(--accent); font-size:24px; margin-bottom:16px;"></i>
-                    <h4 style="margin-bottom:10px; font-size:18px;" data-trans="why-item2-title">Especialistas en Importaciones</h4>
-                    <p style="font-size:14px; color:var(--text-secondary);" data-trans="why-item2-desc">Te ayudamos a elegir el mejor régimen (Courier Simplificado o Carga General) según tu país y tipo de mercadería.</p>
+                <div class="stat-card">
+                    <div class="stat-number">10.000+</div>
+                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat2-text">Envíos Internacionales Realizados</div>
                 </div>
-                
-                <div style="background:#fff; padding:30px; border-radius:var(--radius-md); border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
-                    <i class="fa-solid fa-shield-halved" style="color:var(--accent); font-size:24px; margin-bottom:16px;"></i>
-                    <h4 style="margin-bottom:10px; font-size:18px;" data-trans="why-item3-title">Despacho Seguro e Inspección</h4>
-                    <p style="font-size:14px; color:var(--text-secondary);" data-trans="why-item3-desc">Minimizamos el riesgo de recibir mercadería defectuosa en destino gracias a nuestros controles en Miami.</p>
+                <div class="stat-card">
+                    <div class="stat-number">18+</div>
+                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat3-text">Países de Destino Activos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99.8%</div>
+                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat4-text">Eficiencia en Aduana</div>
                 </div>
             </div>
         </div>
@@ -181,7 +218,7 @@
     <!-- ════════════════════════════════════════════════════════════════
          5. B2B CONTACT FORM
          ════════════════════════════════════════════════════════════════ -->
-    <section class="contact" id="contact">
+    <section class="section" id="contact" style="background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);">
         <div class="container contact-grid">
             <div class="contact-info">
                 <h2 data-trans="contact-title">Conectemos tu cadena de suministros</h2>
@@ -191,7 +228,7 @@
                     <i class="fa-solid fa-location-dot contact-item-icon"></i>
                     <div>
                         <strong data-trans="contact-hq">Depósito Miami (HQ)</strong>
-                        <p style="font-size:14px; color:var(--text-secondary);">8300 NW 30th Terrace, Suite 28, Doral, FL 33122</p>
+                        <p style="font-size:13px; color:var(--text-secondary);">8300 NW 30th Terrace, Suite 28, Doral, FL 33122</p>
                     </div>
                 </div>
                 
@@ -199,7 +236,7 @@
                     <i class="fa-solid fa-envelope contact-item-icon"></i>
                     <div>
                         <strong>Email</strong>
-                        <p style="font-size:14px; color:var(--text-secondary);">commercial@sarexp.com</p>
+                        <p style="font-size:13px; color:var(--text-secondary);">commercial@sarexp.com</p>
                     </div>
                 </div>
             </div>
@@ -264,21 +301,15 @@
          6. FOOTER
          ════════════════════════════════════════════════════════════════ -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="logo">
-                    <!-- Swallow Logo Footer -->
-                    <svg viewBox="0 0 100 100" style="height:32px; width:32px; fill:#ffffff;">
-                        <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
-                    </svg>
-                    <span class="logo-text" style="color:#ffffff;">SAR EXP</span>
-                </div>
-                <div style="font-size:12px; color:#64748b;">
-                    Miami HQ: 8300 NW 30th Terrace, Suite 28, Doral, FL 33122
-                </div>
+        <div class="container footer-wrap">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" style="height:32px; width:32px; fill:#ffffff;">
+                    <path d="M 50 12 C 47 28, 22 33, 5 36 C 22 43, 44 40, 50 54 C 56 40, 78 43, 95 36 C 78 33, 53 28, 50 12 Z M 50 54 C 46 66, 28 82, 15 88 C 30 81, 46 70, 50 62 C 54 70, 70 81, 85 88 C 72 82, 54 66, 50 54 Z"/>
+                </svg>
+                <span class="logo-text" style="color:#ffffff;">SAR <span>EXP</span></span>
             </div>
-            <div class="footer-copy">
-                &copy; 2026 SAREXP World Courier LLC. All rights reserved.
+            <div style="font-size:12px; color:#64748b;">
+                Miami HQ: 8300 NW 30th Terrace, Suite 28, Doral, FL 33122 | &copy; 2026 SAREXP World Courier LLC.
             </div>
         </div>
     </footer>
