@@ -47,17 +47,18 @@ Para no contaminar bases de datos ni generar alertas de cumplimiento aduanero, l
 El objetivo de SAREXP es vender su capacidad de depósito, consolidación y forwarding en Miami a empresas corporativas, tiendas e-commerce y otros couriers locales en Latinoamérica (Chile, Uruguay, Paraguay, Colombia, etc.), excluyendo el canal masivo en Argentina (donde ya opera Shipairglobal).
 
 ### Estructura de la Web (Single Page):
-1.  **Hero Section:** Imagen real de fondo de ala de avión comercial en las nubes con superposición oscura. Contiene el eslogan B2B, puntos clave de beneficio y el **Estimador de Canal B2B Interactivo** (calculador de regímenes por peso).
-2.  **Bilingual Switcher (ES / EN):** Traducción instantánea de todas las secciones.
-3.  **Flujo Operativo en 6 Pasos:**
-    *   *1. Recepción y Clasificación:* Clasificación del stock en el depósito de Miami.
-    *   *2. Control de Daños y Devoluciones:* Gestión de reembolsos y retornos domésticos en EE.UU.
-    *   *3. Reembalaje y Verificación:* Re-empaque protector y volumétrico.
-    *   *4. Recolección (Pick-up):* Coordinación de retiros en proveedores.
-    *   *5. Despacho Aéreo Global:* Forwarding internacional vía aeropuerto MIA.
-    *   *6. Expertos en Importaciones:* Guía en aduanas y destinación de carga.
-4.  **Por Qué Elegirnos & Estadísticas:** Bloques con métricas operativas (2500m² depósito, 10k+ despachos, 18+ países, 99.8% aduana).
-5.  **Formulario de Contacto B2B:** Captura de prospectos corporativos enviada a la API de n8n.
+1.  **Header (Logotipo Reconstruido):** Recreación vectorial idéntica del logo clásico de `sarexp.com` en tipografía serif (*Georgia Bold Italic*) con **SAR** en azul (`#1e3a8a`), **EXP** en rojo (`#991b1b`) y una representación translúcida del globo terráqueo como fondo del carácter "S".
+2.  **Dropdown Language Switcher:** Menú selectivo desplegable (ES / EN) para un control de traducciones corporativo más flexible.
+3.  **Hero Section:** Imagen real de fondo de ala de avión comercial en las nubes con superposición oscura. Contiene el eslogan B2B, puntos clave de beneficio y el **Estimador de Canal B2B Interactivo** (calculador de regímenes por peso).
+4.  **Flujo Operativo en 6 Pasos (Con Imágenes HD):**
+    *   *1. Recepción y Clasificación:* Banner de operario escaneando bultos en depósito.
+    *   *2. Control de Daños y Devoluciones:* Banner de inspección de cajas para control de daños.
+    *   *3. Reembalaje y Verificación:* Banner de re-empaque de seguridad y consolidación.
+    *   *4. Recolección (Pick-up):* Banner de flota de transporte logístico.
+    *   *5. Despacho Aéreo Global:* Banner de carga aérea cargando contenedores en avión en Miami (MIA).
+    *   *6. Expertos en Importaciones:* Banner de firmas y documentación de aduanas.
+5.  **Por Qué Elegirnos & Estadísticas:** Bloques con métricas operativas (2500m² depósito, 10k+ despachos, 18+ países, 99.8% aduana).
+6.  **Formulario de Contacto B2B & Política de Privacidad:** Captura de leads corporativos sincronizados con n8n, acompañados de un enlace en el pie de página que abre un **modal popup de Política de Privacidad corporativo** (conforme a regulaciones estadounidenses e internacionales).
 
 ---
 
