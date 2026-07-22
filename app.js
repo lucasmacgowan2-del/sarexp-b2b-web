@@ -301,10 +301,13 @@ function calculateB2BRate() {
     const w = parseFloat(weightInput.value) || 0;
     const isSpecial = typeSelect.value === 'special';
 
+    const resCard = resRegime.parentElement;
+
     if (w <= 0) {
         resRegime.textContent = currentLang === 'es' ? 'Tránsito Aéreo' : 'Air Transit';
         resTime.textContent = '—';
         resDesc.textContent = currentLang === 'es' ? 'Ingresá el peso de tu carga para estimar el canal de despacho óptimo.' : 'Input cargo weight to estimate the optimal shipping channel.';
+        if (resCard) resCard.style.borderLeft = '4px solid #cbd5e1';
         return;
     }
 
@@ -314,18 +317,21 @@ function calculateB2BRate() {
         resDesc.textContent = currentLang === 'es' ? 
             'Requiere tratamiento de carga aérea reglamentada por MSDS. Documentación especial y empaque homologado incluidos.' : 
             'Requires regulated cargo treatment based on MSDS. Special documentation and certified packaging included.';
+        if (resCard) resCard.style.borderLeft = '4px solid #f59e0b';
     } else if (w < 50) {
         resRegime.textContent = currentLang === 'es' ? 'Courier Simplificado Aéreo' : 'Simplified Courier Air';
         resTime.textContent = currentLang === 'es' ? 'Tránsito estimado: ~3-5 días' : 'Estimated transit: ~3-5 days';
         resDesc.textContent = currentLang === 'es' ? 
             'El método más ágil para volúmenes pequeños o muestras. Despacho directo con liberación inmediata en aeropuertos de destino.' : 
             'The fastest method for small volumes or samples. Direct dispatch with immediate release at destination airports.';
+        if (resCard) resCard.style.borderLeft = '4px solid #10b981';
     } else {
         resRegime.textContent = currentLang === 'es' ? 'Carga Aérea General (Forwarding)' : 'General Air Cargo (Forwarding)';
         resTime.textContent = currentLang === 'es' ? 'Tránsito estimado: ~5-7 días' : 'Estimated transit: ~5-7 days';
         resDesc.textContent = currentLang === 'es' ? 
             'Óptimo para envíos comerciales de gran escala. Requiere destinación y clearance de despachante de aduanas.' : 
             'Optimal for large-scale commercial shipments. Requires formal declaration and customs broker clearance.';
+        if (resCard) resCard.style.borderLeft = '4px solid #1e3a8a';
     }
 }
 
@@ -344,7 +350,18 @@ function closeModal(id) {
     }
 }
 
-// Initial calculation on page load
+// Initial setup on page load
 window.addEventListener('load', () => {
-    calculateB2BRate();
+    changeLanguage(currentLang);
+    
+    // Close modal on backdrop click
+    const modal = document.getElementById('privacy-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal('privacy-modal');
+            }
+        });
+    }
 });
+

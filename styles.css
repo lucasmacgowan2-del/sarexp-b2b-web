@@ -10,6 +10,8 @@
     --text-muted: #64748b;     /* Slate 500 */
     --accent-blue: #1e3a8a;    /* Deep Blue "SAR" style */
     --accent-red: #991b1b;     /* Dark Red "EXP" style */
+    --cyan: #0ea5e9;           /* Electric Cyan accent */
+    --whatsapp-green: #25d366; /* WhatsApp Brand Color */
     --border-color: #cbd5e1;   /* Slate 300 */
     --radius-sm: 6px;
     --radius-md: 12px;
@@ -482,9 +484,193 @@ footer {
     color: #ffffff;
 }
 
-/* Responsive */
+/* Map Section & Interactive Embed */
+.map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid #cbd5e1;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-info-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius-md);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Image Gallery Showcase */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    height: 240px;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+    padding: 20px;
+    color: #ffffff;
+}
+
+.gallery-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.gallery-sub {
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+/* LATAM Hub Cards */
+.hubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.hub-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.hub-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.hub-flag {
+    font-size: 32px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.hub-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hub-transit {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-top: 4px;
+}
+
+/* WhatsApp Floating CTA Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--whatsapp-green);
+    color: #ffffff;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background: #1eb956;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+    color: #ffffff;
+}
+
+.whatsapp-float i {
+    font-size: 22px;
+}
+
+.btn-whatsapp {
+    background: var(--whatsapp-green);
+    color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+    background: #1eb956;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.btn-outline:hover {
+    background: var(--accent-blue);
+    color: #ffffff;
+}
+
+/* Smooth HTML scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
 @media (max-width: 968px) {
-    .hero-grid, .why-grid, .contact-grid {
+    .hero-grid, .why-grid, .contact-grid, .map-grid {
         grid-template-columns: 1fr;
     }
     .hero {
@@ -493,4 +679,22 @@ footer {
     .hero-content h1 {
         font-size: 32px;
     }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+    .header-wrap {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 12px;
+    }
+    .map-wrapper {
+        height: 280px;
+    }
 }
+
+
+
