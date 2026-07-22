@@ -209,6 +209,13 @@ function changeLanguage(langVal) {
 function handleContactSubmit(event) {
     event.preventDefault();
     
+    // Honeypot bot protection
+    const hp = document.getElementById('lead-hp');
+    if (hp && hp.value) {
+        console.warn('Bot submission blocked.');
+        return;
+    }
+
     const name = document.getElementById('lead-name').value.trim();
     const company = document.getElementById('lead-company').value.trim();
     const email = document.getElementById('lead-email').value.trim();
