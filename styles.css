@@ -95,7 +95,6 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 20px; /* Space for the globe overlay */
 }
 
 /* Globe behind the "S" */
