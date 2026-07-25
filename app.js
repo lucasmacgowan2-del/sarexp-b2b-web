@@ -389,9 +389,67 @@ function showLegalTab(tabName) {
     }
 }
 
+// Scroll-To-Top Function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Cookie Consent Banner Logic
+function acceptCookies() {
+    localStorage.setItem('sarexp_cookie_consent', 'true');
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+        banner.classList.add('hidden');
+    }
+}
+
+// Mobile Navigation Toggle
+function toggleMobileMenu() {
+    const nav = document.getElementById('main-nav');
+    const icon = document.getElementById('toggle-icon');
+    if (nav) {
+        nav.classList.toggle('active');
+        if (icon) {
+            if (nav.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        }
+    }
+}
+
+function closeMobileMenu() {
+    const nav = document.getElementById('main-nav');
+    const icon = document.getElementById('toggle-icon');
+    if (nav && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        if (icon) icon.className = 'fa-solid fa-bars';
+    }
+}
+
 // Initial setup on page load
 window.addEventListener('load', () => {
     changeLanguage(currentLang);
+    
+    // Check Cookie Consent
+    if (localStorage.getItem('sarexp_cookie_consent') === 'true') {
+        const banner = document.getElementById('cookie-banner');
+        if (banner) banner.classList.add('hidden');
+    }
+
+    // Scroll-To-Top Visibility Listener
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            if (scrollTopBtn) scrollTopBtn.classList.add('visible');
+        } else {
+            if (scrollTopBtn) scrollTopBtn.classList.remove('visible');
+        }
+    });
     
     // Close modal on backdrop click
     const modal = document.getElementById('privacy-modal');

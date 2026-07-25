@@ -40,12 +40,16 @@
                 </div>
             </a>
             
-            <nav class="nav-links">
-                <a href="#services" class="nav-link" data-trans="nav-features">Nuestro Servicio</a>
-                <a href="#facility-gallery" class="nav-link">Operación & Fotos</a>
-                <a href="#why-choose-us" class="nav-link" data-trans="nav-why">Por Qué Elegirnos</a>
-                <a href="#location-map" class="nav-link">Ubicación Miami</a>
-                <a href="#contact" class="nav-link" data-trans="nav-contact">Contacto B2B</a>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Abrir Menú">
+                <i class="fa-solid fa-bars" id="toggle-icon"></i>
+            </button>
+
+            <nav class="nav-links" id="main-nav">
+                <a href="#services" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-features">Nuestro Servicio</a>
+                <a href="#facility-gallery" class="nav-link" onclick="closeMobileMenu()">Operación & Fotos</a>
+                <a href="#why-choose-us" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-why">Por Qué Elegirnos</a>
+                <a href="#location-map" class="nav-link" onclick="closeMobileMenu()">Ubicación Miami</a>
+                <a href="#contact" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-contact">Contacto B2B</a>
                 
                 <!-- Dropdown Language Switcher -->
                 <select class="lang-select" onchange="changeLanguage(this.value)">
@@ -335,14 +339,9 @@
             </div>
 
             <div class="map-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px; align-items:center;">
-                <!-- Location Visual Card -->
-                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid #e2e8f0; height:360px;">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000" alt="Depósito y Centro de Carga Miami Doral" style="width:100%; height:100%; object-fit:cover;">
-                    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.3) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#ffffff;">
-                        <span style="background:var(--accent-blue); color:#ffffff; font-size:11px; font-weight:800; text-transform:uppercase; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px; letter-spacing:0.5px;">Doral Hub Logístico (MIA)</span>
-                        <h3 style="font-size:20px; font-weight:800; margin-bottom:4px; color:#ffffff;">6993 NW 82nd Ave, Suite 28</h3>
-                        <p style="font-size:14px; color:#94a3b8;">Miami / Doral, FL 33166, United States</p>
-                    </div>
+                <!-- Interactive Google Map Embed -->
+                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid #cbd5e1; height:380px; background:#e2e8f0;">
+                    <iframe src="https://maps.google.com/maps?q=6993%20NW%2082nd%20Ave%20Suite%2028%2C%20Miami%2C%20FL%2033166&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SAREXP Miami Warehouse Map"></iframe>
                 </div>
 
                 <!-- Logistics Details Panel -->
@@ -569,6 +568,7 @@
             <div class="footer-links" style="display:flex; gap:20px; flex-wrap:wrap;">
                 <a href="privacy.html" class="footer-link" style="color:#94a3b8; text-decoration:none;">Política de Privacidad</a>
                 <a href="terms.html" class="footer-link" style="color:#94a3b8; text-decoration:none;">Términos de Servicio & TSA</a>
+                <a href="cookies.html" class="footer-link" style="color:#94a3b8; text-decoration:none;">Política de Cookies & Caché</a>
             </div>
             
             <div style="color:#64748b; text-align:right;">
@@ -578,11 +578,26 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp CTA -->
+    <!-- Floating Scroll-To-Top CTA (Bottom Left) -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" class="scroll-top-float" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+        <span>Arriba</span>
+    </button>
+
+    <!-- Floating WhatsApp CTA (Bottom Right) -->
     <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20servicios%20B2B%20y%20tarifas%20de%20dep%C3%B3sito%20en%20Miami." target="_blank" class="whatsapp-float" aria-label="Contacto por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span>WhatsApp</span>
     </a>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div style="display:flex; align-items:center; gap:12px; flex:1;">
+            <i class="fa-solid fa-cookie-bite" style="font-size:22px; color:var(--cyan);"></i>
+            <span style="font-size:13px; color:#e2e8f0; line-height:1.4;">Utilizamos cookies esenciales y tecnologías de caché para garantizar la mejor experiencia y velocidad en SAREXP. <a href="cookies.html" style="color:var(--cyan); text-decoration:underline;">Saber más</a>.</span>
+        </div>
+        <button onclick="acceptCookies()" class="btn btn-primary" style="padding:8px 20px; font-size:13px; white-space:nowrap;">Aceptar Cookies</button>
+    </div>
 
     <!-- App Logic -->
     <script src="app.js"></script>
