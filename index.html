@@ -54,7 +54,7 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="hero-badge" data-trans="hero-badge">USA Cargo Forwarding & Hub</span>
+                <span class="hero-badge" data-trans="hero-badge">Depósito & Centro Logístico en Miami</span>
                 <h1 data-trans="hero-title">Tu depósito y gestor de carga en Miami para el mundo</h1>
                 <p data-trans="hero-desc">Recibimos, clasificamos, inspeccionamos y despachamos tu mercadería desde Miami hacia cualquier país de Latinoamérica y el mundo. Un servicio logístico corporativo transparente de punta a punta.</p>
                 
@@ -76,7 +76,7 @@
                 <div style="margin-top:30px; display:flex; gap:16px; flex-wrap:wrap;">
                     <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20tarifas%20de%20consolidaci%C3%B3n%20y%20dep%C3%B3sito%20en%20Miami%20para%20mi%20empresa." target="_blank" class="btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i>
-                        <span>Contactar por WhatsApp (+1 305 468-8404)</span>
+                        <span>Contactar por WhatsApp</span>
                     </a>
                     <a href="mailto:contacto@sarexp.com" class="btn btn-outline" style="border-color:#ffffff; color:#ffffff;">
                         <i class="fa-solid fa-envelope"></i>
@@ -87,7 +87,7 @@
             
             <!-- Dynamic Rate/Regime Estimator Card -->
             <div class="hero-card">
-                <h3 style="font-size:20px; margin-bottom:20px;" data-trans="calc-title">Estimador de Canal B2B</h3>
+                <h3 style="font-size:20px; margin-bottom:20px;" data-trans="calc-title">Estimador de Canal de Envío</h3>
                 
                 <div class="form-group">
                     <label data-trans="calc-lbl-weight">Peso de la Carga (KG)</label>
@@ -317,53 +317,60 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         4.B. LOCATION & INTERACTIVE GOOGLE MAP (DORAL WAREHOUSE HQ)
+         4.B. LOCATION & DORAL WAREHOUSE HQ
          ════════════════════════════════════════════════════════════════ -->
     <section class="section" id="location-map" style="background: #f8fafc;">
         <div class="container">
             <div class="section-header">
                 <h2>Ubicación de Nuestro Hub en Miami</h2>
-                <p>Ubicados estratégicamente en la zona logística industrial de Doral, a minutos del Aeropuerto Internacional de Miami (MIA).</p>
+                <p>Ubicados estratégicamente en el corazón industrial de Doral, a solo 10 minutos del Aeropuerto Internacional de Miami (MIA).</p>
             </div>
 
-            <div class="map-grid">
-                <div class="map-wrapper">
-                    <iframe src="https://maps.google.com/maps?q=8300%20NW%2030th%20Terrace%20Suite%2028%2C%20Doral%2C%20FL%2033122&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SAREXP Miami Warehouse Map"></iframe>
+            <div class="map-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:30px; align-items:center;">
+                <!-- Location Visual Card -->
+                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid #e2e8f0; height:360px;">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1000" alt="Mapa Ubicación Doral Miami" style="width:100%; height:100%; object-fit:cover;">
+                    <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.2) 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#ffffff;">
+                        <span style="background:var(--accent-blue); color:#ffffff; font-size:11px; font-weight:800; text-transform:uppercase; padding:4px 10px; border-radius:20px; align-self:flex-start; margin-bottom:10px; letter-spacing:0.5px;">Doral Industrial Zone</span>
+                        <h3 style="font-size:22px; font-weight:800; margin-bottom:4px; color:#ffffff;">8300 NW 30th Terrace, Suite 28</h3>
+                        <p style="font-size:14px; color:#94a3b8;">Doral, FL 33122, United States</p>
+                    </div>
                 </div>
 
-                <div class="map-info-card">
-                    <span class="hero-badge" style="margin-bottom:12px;">Miami Corporate Headquarters</span>
-                    <h3 style="font-size:24px; margin-bottom:16px;">Depósito Doral Hub (USA)</h3>
+                <!-- Logistics Details Panel -->
+                <div class="map-info-card" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:var(--radius-md); padding:32px; box-shadow:var(--shadow-md);">
+                    <span class="hero-badge" style="margin-bottom:16px;">Miami HQ & Recepción</span>
+                    <h3 style="font-size:24px; margin-bottom:20px; font-weight:800;">Depósito Doral Hub</h3>
                     
-                    <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:24px;">
+                    <div style="display:flex; flex-direction:column; gap:18px; margin-bottom:28px;">
                         <div style="display:flex; gap:14px; align-items:flex-start;">
-                            <i class="fa-solid fa-map-location-dot" style="color:var(--accent-blue); font-size:20px; margin-top:2px;"></i>
+                            <i class="fa-solid fa-map-location-dot" style="color:var(--accent-blue); font-size:22px; margin-top:2px;"></i>
                             <div>
-                                <strong style="display:block; font-size:14px;">Dirección de Entregas y Depósito:</strong>
-                                <span style="font-size:14px; color:var(--text-secondary);">8300 NW 30th Terrace, Suite 28<br>Doral, FL 33122, United States</span>
+                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Dirección de Entregas:</strong>
+                                <span style="font-size:14px; color:var(--text-secondary);">8300 NW 30th Terrace, Suite 28, Doral, FL 33122</span>
                             </div>
                         </div>
 
                         <div style="display:flex; gap:14px; align-items:flex-start;">
-                            <i class="fa-solid fa-clock" style="color:var(--accent-blue); font-size:20px; margin-top:2px;"></i>
+                            <i class="fa-solid fa-clock" style="color:var(--accent-blue); font-size:22px; margin-top:2px;"></i>
                             <div>
-                                <strong style="display:block; font-size:14px;">Horario de Recepción de Carga:</strong>
+                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Horario de Recepción:</strong>
                                 <span style="font-size:14px; color:var(--text-secondary);">Lunes a Viernes: 08:30 HS - 17:30 HS (EST)</span>
                             </div>
                         </div>
 
                         <div style="display:flex; gap:14px; align-items:flex-start;">
-                            <i class="fa-solid fa-plane" style="color:var(--accent-blue); font-size:20px; margin-top:2px;"></i>
+                            <i class="fa-solid fa-plane-departure" style="color:var(--cyan); font-size:22px; margin-top:2px;"></i>
                             <div>
-                                <strong style="display:block; font-size:14px;">Cercanía Logística:</strong>
-                                <span style="font-size:14px; color:var(--text-secondary);">A 10 minutos de las rampas de Carga Aérea de MIA</span>
+                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Acceso Directo Aéreo:</strong>
+                                <span style="font-size:14px; color:var(--text-secondary);">Conexión inmediata con las rampas de carga de MIA</span>
                             </div>
                         </div>
                     </div>
 
-                    <a href="https://maps.google.com/?q=8300+NW+30th+Terrace+Suite+28+Doral+FL+33122" target="_blank" class="btn btn-primary btn-block">
-                        <i class="fa-solid fa-diamond-turn-right"></i>
-                        <span>Abrir en Google Maps</span>
+                    <a href="https://maps.google.com/?q=8300+NW+30th+Terrace+Suite+28+Doral+FL+33122" target="_blank" class="btn btn-primary btn-block" style="display:flex; align-items:center; justify-content:center; gap:10px; font-weight:700;">
+                        <i class="fa-solid fa-diamond-turn-right" style="font-size:18px;"></i>
+                        <span>Abrir Ubicación Exacta en Google Maps</span>
                     </a>
                 </div>
             </div>
@@ -371,18 +378,18 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         5. B2B CONTACT FORM
+         5. COMMERCIAL CONTACT FORM & DIRECT CHANNELS
          ════════════════════════════════════════════════════════════════ -->
     <section class="section" id="contact" style="background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);">
         <div class="container contact-grid">
             <div class="contact-info">
-                <h2 data-trans="contact-title">Conectemos tu cadena de suministros</h2>
-                <p data-trans="contact-desc" style="margin-bottom:30px;">Completá tus datos de contacto corporativo. Un oficial comercial se comunicará contigo en menos de 24 horas para armar un tarifario a tu medida.</p>
+                <h2 data-trans="contact-title">Consultá Tarifas para tu Empresa o Courier</h2>
+                <p data-trans="contact-desc" style="margin-bottom:30px;">Completá el formulario para recibir una cotización personalizada o comunicarte directamente con nuestro equipo comercial por tu carga en Miami.</p>
                 
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot contact-item-icon"></i>
                     <div>
-                        <strong data-trans="contact-hq">Depósito Miami (HQ)</strong>
+                        <strong data-trans="contact-hq">Depósito Miami (Doral Hub)</strong>
                         <p style="font-size:13px; color:var(--text-secondary);">8300 NW 30th Terrace, Suite 28, Doral, FL 33122</p>
                     </div>
                 </div>
@@ -406,13 +413,13 @@
                 <div style="margin-top:15px;">
                     <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20les%20escribo%20desde%20la%20web%20para%20consultar%20tarifas." target="_blank" class="btn btn-whatsapp" style="width:100%; font-size:15px; padding:14px;">
                         <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
-                        <span>Iniciar Chat de Ventas en WhatsApp (+1 305 468-8404)</span>
+                        <span>Cotizar o Hablar por WhatsApp</span>
                     </a>
                 </div>
             </div>
             
             <div class="contact-form-panel">
-                <h3 style="margin-bottom:24px; font-size:22px;" data-trans="contact-form-title">Solicitud de Alianza B2B</h3>
+                <h3 style="margin-bottom:24px; font-size:22px;" data-trans="contact-form-title">Cotizá tu Carga o Almacenaje</h3>
                 
                 <form id="lead-form" onsubmit="handleContactSubmit(event)">
                     <!-- Anti-Spam Honeypot -->
@@ -424,7 +431,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <label data-trans="lbl-company">Empresa</label>
+                        <label data-trans="lbl-company">Empresa / Courier</label>
                         <input type="text" id="lead-company" class="form-input" required data-placeholder="lbl-company">
                     </div>
                     
@@ -449,21 +456,22 @@
                                 <option value="Paraguay" data-trans="opt-paraguay">Paraguay</option>
                                 <option value="Colombia" data-trans="opt-colombia">Colombia</option>
                                 <option value="Peru" data-trans="opt-peru">Perú</option>
-                                <option value="Other" data-trans="opt-other">Otro / Global</option>
+                                <option value="Other" data-trans="opt-other">Otro País / Global</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label data-trans="lbl-volume">Volumen Mensual Estimado</label>
+                            <label data-trans="lbl-volume">Frecuencia / Volumen de Carga</label>
                             <select id="lead-volume" class="form-input">
-                                <option value="50-200">50 - 200 kg</option>
-                                <option value="200-1000">200 - 1.000 kg</option>
-                                <option value="1000+">1.000+ kg (Carga Aérea/Contenedor)</option>
+                                <option value="Envio Ocasional">Envío Ocasional / Muestras</option>
+                                <option value="50-300kg Semanal">50 a 300 kg (Frecuencia Semanal)</option>
+                                <option value="300-1000kg Frecuente">300 a 1.000 kg (Carga Frecuente)</option>
+                                <option value="1000kg+ Aereo/Pallets">1.000+ kg (Carga Aérea / Pallets)</option>
                             </select>
                         </div>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block" style="width:100%; margin-top:10px;" data-trans="btn-submit">
-                        Enviar Solicitud
+                        Enviar Consulta Comercial
                     </button>
 
                     <div style="font-size:11px; text-align:center; color:var(--text-muted); margin-top:12px; display:flex; align-items:center; justify-content:center; gap:6px;">

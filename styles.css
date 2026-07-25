@@ -11,7 +11,7 @@
     --accent-blue: #1e3a8a;    /* Deep Blue "SAR" style */
     --accent-red: #991b1b;     /* Dark Red "EXP" style */
     --cyan: #0ea5e9;           /* Electric Cyan accent */
-    --whatsapp-green: #25d366; /* WhatsApp Brand Color */
+    --whatsapp-green: #10b981; /* Premium Emerald WhatsApp Color */
     --border-color: #cbd5e1;   /* Slate 300 */
     --radius-sm: 6px;
     --radius-md: 12px;
@@ -630,9 +630,9 @@ footer {
 }
 
 .whatsapp-float:hover {
-    background: #1eb956;
+    background: #059669;
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
     color: #ffffff;
 }
 
@@ -646,7 +646,7 @@ footer {
 }
 
 .btn-whatsapp:hover {
-    background: #1eb956;
+    background: #059669;
     color: #ffffff;
     transform: translateY(-1px);
 }
