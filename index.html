@@ -51,13 +51,13 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <span class="hero-badge">Freight Forwarder & Cargo Hub Miami</span>
                 <h1>Tu depósito y gestor de carga en Miami para el mundo</h1>
                 <p class="hero-desc">Recibimos, clasificamos, inspeccionamos, consolidamos y despachamos tu mercadería desde nuestro depósito en Miami hacia tu país. Un servicio logístico internacional transparente de principio a fin.</p>
                 
-                <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
+                <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:32px; align-items:center;">
                     <div style="display:flex; align-items:center; gap:10px; font-size:14px;">
                         <i class="fa-solid fa-circle-check" style="color:#38bdf8;"></i>
                         <span>Depósito Propio en Doral (6993 NW 82nd Ave, Suite 28, Miami)</span>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="hero-ctas">
+                <div class="hero-ctas" style="justify-content:center;">
                     <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20servicios%20de%20dep%C3%B3sito%20y%20env%C3%ADo%20desde%20Miami." target="_blank" class="btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i>
                         <span>Contactar por WhatsApp</span>
@@ -82,28 +82,6 @@
                         <span>contacto@sarexp.com</span>
                     </a>
                 </div>
-            </div>
-            
-            <!-- Quick Estimator Card -->
-            <div class="hero-card">
-                <h3 style="font-size:18px; font-weight:800; color:var(--accent-blue); margin-bottom:16px;">Estimador de Modalidad de Envío</h3>
-                
-                <div class="form-group">
-                    <label>Peso de la Carga (KG)</label>
-                    <input type="number" id="calc-weight" class="form-input" value="45" min="1" oninput="calculateB2BRate()">
-                </div>
-                
-                <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:var(--radius); padding:14px; margin:16px 0;">
-                    <div style="font-size:11px; font-weight:700; color:var(--accent-blue); text-transform:uppercase; margin-bottom:4px;">Modalidad Recomendada</div>
-                    <div id="calc-res-regime" style="font-size:15px; font-weight:800; color:var(--text-primary);">Cargando análisis...</div>
-                    <div id="calc-res-time" style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:6px;">Tránsito estimado: —</div>
-                    <p id="calc-res-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4;">Ingresá el peso de tu carga para estimar la modalidad de despacho más conveniente.</p>
-                </div>
-                
-                <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20tengo%20una%20carga%20y%20quiero%20cotizar%20env%C3%ADo%20desde%20Miami." target="_blank" class="btn btn-whatsapp btn-block">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span>Cotizar por WhatsApp</span>
-                </a>
             </div>
         </div>
     </section>
