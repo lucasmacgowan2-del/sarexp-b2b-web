@@ -43,9 +43,9 @@ sarexp_leads_wf = {
     {
       "parameters": {
         "fromEmail": "avisos@shipairglobal.com",
-        "toEmail": "commercial@sarexp.com",
-        "subject": "=Nuevo Lead B2B: {{ $json.body.company }} ({{ $json.body.country }})",
-        "html": "=<h3>¡Nuevo Prospecto de Alianza B2B Recibido!</h3><p>Se ha registrado una consulta de alianza comercial desde la Landing Page de SAREXP.</p><p><b>Detalles del Lead:</b><br>- Nombre: {{ $json.body.name }}<br>- Empresa: {{ $json.body.company }}<br>- Correo: {{ $json.body.email }}<br>- Teléfono: {{ $json.body.phone }}<br>- País de Destino: {{ $json.body.country }}<br>- Volumen Estimado: {{ $json.body.volume }} kg/mes</p><br><p>Sistema de Captación SAREXP USA</p>"
+        "toEmail": "contacto@sarexp.com",
+        "subject": "=¡Nuevo Prospecto B2B!: {{ $json.body.company }} ({{ $json.body.country }})",
+        "html": "=<h3>¡Nuevo Lead Comercial Recibido en SAREXP.COM!</h3><p>Se ha registrado una consulta de tarifas / depósito desde la landing page de SAREXP.</p><p><b>Detalles del Lead:</b><br>- Nombre: {{ $json.body.name }}<br>- Empresa: {{ $json.body.company }}<br>- Correo: {{ $json.body.email }}<br>- Teléfono: {{ $json.body.phone }}<br>- País de Destino: {{ $json.body.country }}<br>- Frecuencia / Volumen: {{ $json.body.volume }}</p><br><p>Sistema de Captación SAREXP USA &bull; Doral Hub</p>"
       },
       "name": "Send Mail to Commercial",
       "type": "n8n-nodes-base.emailSend",
