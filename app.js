@@ -357,6 +357,38 @@ function closeModal(id) {
     }
 }
 
+// Legal Modal Tab Switcher
+function showLegalTab(tabName) {
+    const privacyTab = document.getElementById('legal-tab-privacy');
+    const termsTab = document.getElementById('legal-tab-terms');
+    const privacyBtn = document.getElementById('tab-btn-privacy');
+    const termsBtn = document.getElementById('tab-btn-terms');
+
+    if (tabName === 'privacy') {
+        if (privacyTab) privacyTab.style.display = 'block';
+        if (termsTab) termsTab.style.display = 'none';
+        if (privacyBtn) {
+            privacyBtn.style.borderBottom = '3px solid var(--accent-blue)';
+            privacyBtn.style.color = 'var(--accent-blue)';
+        }
+        if (termsBtn) {
+            termsBtn.style.borderBottom = '3px solid transparent';
+            termsBtn.style.color = 'var(--text-muted)';
+        }
+    } else {
+        if (privacyTab) privacyTab.style.display = 'none';
+        if (termsTab) termsTab.style.display = 'block';
+        if (termsBtn) {
+            termsBtn.style.borderBottom = '3px solid var(--accent-blue)';
+            termsBtn.style.color = 'var(--accent-blue)';
+        }
+        if (privacyBtn) {
+            privacyBtn.style.borderBottom = '3px solid transparent';
+            privacyBtn.style.color = 'var(--text-muted)';
+        }
+    }
+}
+
 // Initial setup on page load
 window.addEventListener('load', () => {
     changeLanguage(currentLang);
