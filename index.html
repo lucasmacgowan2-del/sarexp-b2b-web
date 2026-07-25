@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAR EXP | USA Cargo Forwarding & Miami Hub</title>
+    <title>SAREXP | Freight Forwarder & Miami Cargo Hub</title>
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,27 +15,27 @@
 <body>
 
     <!-- ════════════════════════════════════════════════════════════════
-         1. CORPORATE HEADER WITH REAL LOGO DESIGN
+         1. CORPORATE HEADER & MOBILE NAVIGATION
          ════════════════════════════════════════════════════════════════ -->
     <header>
         <div class="container header-wrap">
             <a href="#" class="logo">
                 <div style="display:flex; align-items:center; gap:10px;">
                     <svg viewBox="0 0 100 100" style="height:36px; width:36px;" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="8" y="8" width="84" height="84" rx="20" fill="url(#brandGrad)" />
+                        <rect x="8" y="8" width="84" height="84" rx="18" fill="url(#brandGradHeader)" />
                         <path d="M 28 50 L 50 28 L 72 50 L 50 72 Z" fill="#ffffff" opacity="0.95"/>
-                        <path d="M 40 50 L 50 40 L 60 50 L 50 60 Z" fill="var(--accent-blue)"/>
-                        <path d="M 50 18 L 82 50 L 50 82" stroke="var(--cyan)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 40 50 L 50 40 L 60 50 L 50 60 Z" fill="#1e3a8a"/>
+                        <path d="M 50 18 L 82 50 L 50 82" stroke="#dc2626" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                         <defs>
-                            <linearGradient id="brandGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                            <linearGradient id="brandGradHeader" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#1e3a8a"/>
                                 <stop offset="1" stop-color="#0f172a"/>
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="logo-text" style="font-weight:800; font-size:22px; letter-spacing:-0.5px;">
-                        <span class="logo-sar" style="color:var(--accent-blue);">SAR</span>
-                        <span class="logo-exp" style="color:var(--accent-red); margin-left:2px; font-style:italic;">EXP</span>
+                    <span class="logo-text">
+                        <span class="logo-sar">SAR</span>
+                        <span class="logo-exp">EXP</span>
                     </span>
                 </div>
             </a>
@@ -45,11 +45,11 @@
             </button>
 
             <nav class="nav-links" id="main-nav">
-                <a href="#services" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-features">Nuestro Servicio</a>
-                <a href="#facility-gallery" class="nav-link" onclick="closeMobileMenu()">Operación & Fotos</a>
+                <a href="#services" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-features">Nuestros Servicios</a>
+                <a href="#facility-gallery" class="nav-link" onclick="closeMobileMenu()">Operación & Depósito</a>
                 <a href="#why-choose-us" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-why">Por Qué Elegirnos</a>
                 <a href="#location-map" class="nav-link" onclick="closeMobileMenu()">Ubicación Miami</a>
-                <a href="#contact" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-contact">Contacto B2B</a>
+                <a href="#contact" class="nav-link" onclick="closeMobileMenu()" data-trans="nav-contact">Contacto Comercial</a>
                 
                 <!-- Dropdown Language Switcher -->
                 <select class="lang-select" onchange="changeLanguage(this.value)">
@@ -61,45 +61,45 @@
     </header>
 
     <!-- ════════════════════════════════════════════════════════════════
-         2. HERO SECTION WITH HIGH-RES PLANE BACKGROUND
+         2. HERO SECTION WITH RATE ESTIMATOR
          ════════════════════════════════════════════════════════════════ -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="hero-badge" data-trans="hero-badge">Depósito & Centro Logístico en Miami</span>
-                <h1 data-trans="hero-title">Tu depósito y gestor de carga en Miami para el mundo</h1>
-                <p data-trans="hero-desc">Recibimos, clasificamos, inspeccionamos y despachamos tu mercadería desde Miami hacia cualquier país de Latinoamérica y el mundo. Un servicio logístico corporativo transparente de punta a punta.</p>
+                <span class="hero-badge" data-trans="hero-badge">Freight Forwarder & Cargo Hub Miami</span>
+                <h1 class="hero-title" data-trans="hero-title">Tu depósito y gestor de carga en Miami para el mundo</h1>
+                <p class="hero-desc" data-trans="hero-desc">Recibimos, clasificamos, inspeccionamos, consolidamos y despachamos tu mercadería desde nuestro depósito en Miami hacia tu país. Un servicio logístico internacional transparente de principio a fin.</p>
                 
-                <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px;">
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
-                        <span style="font-size:14px; font-weight:600; color:#e2e8f0;">Doral Warehouse Hub (Miami, FL)</span>
+                <div class="hero-features">
+                    <div class="hero-feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Depósito Propio en Doral (6993 NW 82nd Ave, Suite 28, Miami)</span>
                     </div>
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
-                        <span style="font-size:14px; font-weight:600; color:#e2e8f0;">Control de Calidad e Inspección en Origen</span>
+                    <div class="hero-feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Control de Calidad, Inspección en Origen y Reembalaje</span>
                     </div>
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <i class="fa-solid fa-circle-check" style="color:var(--cyan);"></i>
-                        <span style="font-size:14px; font-weight:600; color:#e2e8f0;">Despacho Directo Aéreo y Marítimo a LATAM</span>
+                    <div class="hero-feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Despacho Aéreo/Marítimo o Integraciones Express (FedEx / UPS)</span>
                     </div>
                 </div>
 
-                <div style="margin-top:30px; display:flex; gap:16px; flex-wrap:wrap;">
-                    <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20tarifas%20de%20consolidaci%C3%B3n%20y%20dep%C3%B3sito%20en%20Miami%20para%20mi%20empresa." target="_blank" class="btn btn-whatsapp">
+                <div class="hero-ctas">
+                    <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20servicios%20de%20dep%C3%B3sito%20y%20env%C3%ADo%20desde%20Miami." target="_blank" class="btn btn-whatsapp">
                         <i class="fa-brands fa-whatsapp" style="font-size:18px;"></i>
                         <span>Contactar por WhatsApp</span>
                     </a>
-                    <a href="mailto:contacto@sarexp.com" class="btn btn-outline" style="border-color:#ffffff; color:#ffffff;">
+                    <a href="mailto:contacto@sarexp.com" class="btn btn-outline">
                         <i class="fa-solid fa-envelope"></i>
                         <span>contacto@sarexp.com</span>
                     </a>
                 </div>
             </div>
             
-            <!-- Dynamic Rate/Regime Estimator Card -->
+            <!-- Dynamic Rate Estimator Card -->
             <div class="hero-card">
-                <h3 style="font-size:20px; margin-bottom:20px;" data-trans="calc-title">Estimador de Canal de Envío</h3>
+                <h3 data-trans="calc-title">Estimador de Canal de Envío</h3>
                 
                 <div class="form-group">
                     <label data-trans="calc-lbl-weight">Peso de la Carga (KG)</label>
@@ -109,16 +109,16 @@
                 <div class="form-group">
                     <label data-trans="calc-lbl-type">Tipo de Mercadería</label>
                     <select id="calc-type" class="form-input" onchange="calculateB2BRate()">
-                        <option value="general" data-trans="calc-opt-general">Mercadería General (Electrónicos, Repuestos)</option>
-                        <option value="special" data-trans="calc-opt-special">Mercadería Especial (Hazmat, Químicos)</option>
+                        <option value="general" data-trans="calc-opt-general">Mercadería General (Electrónicos, Repuestos, Indumentaria)</option>
+                        <option value="special" data-trans="calc-opt-special">Mercadería Especial (Hazmat, Químicos, Baterías)</option>
                     </select>
                 </div>
                 
-                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:var(--radius-sm); padding:16px; margin:20px 0;">
+                <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:var(--radius-sm); padding:16px; margin:16px 0;">
                     <div style="font-size:11px; font-weight:700; color:var(--accent-blue); text-transform:uppercase; margin-bottom:4px;" data-trans="calc-res-title">Canal Recomendado</div>
                     <div id="calc-res-regime" style="font-size:16px; font-weight:800; color:var(--text-primary); margin-bottom:2px;">Cargando análisis...</div>
                     <div id="calc-res-time" style="font-size:13px; font-weight:700; color:var(--text-muted); margin-bottom:8px;">Tránsito estimado: —</div>
-                    <p id="calc-res-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4;">Ingresá el peso de tu carga para estimar el canal de despacho óptimo.</p>
+                    <p id="calc-res-desc" style="font-size:12px; color:var(--text-secondary); line-height:1.4;">Ingresá el peso de tu carga para estimar la modalidad de despacho más conveniente.</p>
                 </div>
                 
                 <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20tengo%20una%20carga%20y%20quiero%20cotizar%20env%C3%ADo%20desde%20Miami." target="_blank" class="btn btn-whatsapp btn-block">
@@ -130,13 +130,13 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         3. SERVICE FLOW SECTION (WITH HIGH-RES STEP BANNERS)
+         3. SERVICES & OPERATIONAL FLOW
          ════════════════════════════════════════════════════════════════ -->
     <section class="section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 data-trans="workflow-title">Cómo Gestionamos tu Carga en Miami</h2>
-                <p data-trans="workflow-subtitle">Un proceso simple, riguroso y transparente diseñado para empresas y couriers de Latinoamérica.</p>
+                <h2 data-trans="workflow-title">Cómo Gestionamos tu Mercadería en Miami</h2>
+                <p data-trans="workflow-subtitle">Un proceso logístico transparente y estructurado para empresas, tiendas e importadores.</p>
             </div>
             
             <div class="steps-grid">
@@ -147,132 +147,106 @@
                         <div class="step-icon">
                             <i class="fa-solid fa-boxes-packing"></i>
                         </div>
-                        <h3 data-trans="step1-title">1. Recepción y Clasificación</h3>
-                        <p data-trans="step1-desc">Recibimos tu mercadería en nuestro depósito de Miami y la clasificamos inmediatamente en nuestro inventario digital.</p>
+                        <h3 data-trans="step1-title">1. Recepción y Almacenaje</h3>
+                        <p data-trans="step1-desc">Recibimos tus compras o cargas en nuestro depósito de Miami (6993 NW 82nd Ave, Suite 28, Doral), las verificamos e ingresamos a inventario.</p>
                     </div>
                 </div>
                 
-                <!-- Step 2: Damage & Returns -->
-                <div class="step-card" style="border-color: rgba(239, 68, 68, 0.25);">
-                    <img class="step-img" src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600" alt="Control de Daños">
-                    <div class="step-body">
-                        <div class="step-icon" style="background: rgba(239, 68, 68, 0.08); color: #ef4444;">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                        </div>
-                        <h3 data-trans="step2-title">2. Control de Daños y Devoluciones</h3>
-                        <p data-trans="step2-desc">Inspeccionamos el estado físico. Si tu mercadería llega dañada, rota o incorrecta, gestionamos la devolución al proveedor en EE.UU. por vos. Si está en óptimas condiciones, continúa el proceso.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 3: Special Processing -->
+                <!-- Step 2: Quality Inspection -->
                 <div class="step-card">
-                    <img class="step-img" src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=600" alt="Reembalaje y Consolidación">
+                    <img class="step-img" src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600" alt="Control de Calidad">
                     <div class="step-body">
                         <div class="step-icon">
-                            <i class="fa-solid fa-scissors"></i>
+                            <i class="fa-solid fa-clipboard-check"></i>
                         </div>
-                        <h3 data-trans="step3-title">3. Reembalaje y Verificación Especial</h3>
-                        <p data-trans="step3-desc">Si lo solicitás, abrimos la caja para verificar contenidos, retirar embalajes innecesarios o consolidar múltiples paquetes en una sola caja para reducir el volumen y optimizar el flete.</p>
+                        <h3 data-trans="step2-title">2. Control e Inspección en Origen</h3>
+                        <p data-trans="step2-desc">Inspeccionamos el estado físico. Si la mercadería llega dañada o incorrecta, coordinamos la devolución al proveedor en EE.UU. (gestionado bajo consulta).</p>
                     </div>
                 </div>
                 
-                <!-- Step 4: Pickups -->
+                <!-- Step 3: Consolidation -->
                 <div class="step-card">
-                    <img class="step-img" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=600" alt="Recolección Domestic US">
+                    <img class="step-img" src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=600" alt="Consolidación">
+                    <div class="step-body">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <h3 data-trans="step3-title">3. Reembalaje y Consolidación</h3>
+                        <p data-trans="step3-desc">A tu solicitud, agrupamos múltiples paquetes en un solo envío y retiramos cajas innecesarias para reducir el volumen y optimizar el costo del flete.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Pick-ups -->
+                <div class="step-card">
+                    <img class="step-img" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600" alt="Recolección en EE.UU.">
                     <div class="step-body">
                         <div class="step-icon">
                             <i class="fa-solid fa-truck-ramp-box"></i>
                         </div>
-                        <h3 data-trans="step4-title">4. Recolección de Mercadería (Pick-up)</h3>
-                        <p data-trans="step4-desc">Si tu proveedor en EE.UU. no realiza envíos domésticos, coordinamos la recolección física de la mercadería y su traslado seguro a nuestras dependencias en Miami.</p>
+                        <h3 data-trans="step4-title">4. Recolección Doméstica (Pick-up)</h3>
+                        <p data-trans="step4-desc">Si tu proveedor en EE.UU. no entrega en Miami, coordinamos la recolección física de la carga y su traslado a nuestro hub (servicio bajo consulta previa).</p>
                     </div>
                 </div>
                 
-                <!-- Step 5: Global Shipping -->
-                <div class="step-card" style="border-color: rgba(14, 165, 233, 0.35);">
-                    <img class="step-img" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600" alt="Despacho Aéreo Global">
-                    <div class="step-body">
-                        <div class="step-icon" style="background: rgba(14, 165, 233, 0.08); color: var(--cyan);">
-                            <i class="fa-solid fa-plane-departure"></i>
-                        </div>
-                        <h3 data-trans="step5-title">5. Despacho Aéreo Global</h3>
-                        <p data-trans="step5-desc">Trasladamos tu carga consolidada al Aeropuerto Internacional de Miami (MIA) y coordinamos el despacho aéreo directo hacia el país de Latinoamérica o el mundo que necesites.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 6: Customs Expert -->
+                <!-- Step 5: Global Air/Sea Dispatch -->
                 <div class="step-card">
-                    <img class="step-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600" alt="Asesoría Aduanera">
+                    <img class="step-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=600" alt="Despacho Internacional">
                     <div class="step-body">
                         <div class="step-icon">
-                            <i class="fa-solid fa-user-shield"></i>
+                            <i class="fa-solid fa-plane-departure"></i>
                         </div>
-                        <h3 data-trans="step6-title">6. Asesoría Aduanera Experta</h3>
-                        <p data-trans="step6-desc">Contamos con expertos en importaciones que te asisten con la documentación comercial y aduanera para garantizar un ingreso fluido de tu mercadería en el país de destino.</p>
+                        <h3 data-trans="step5-title">5. Despacho Internacional Multicanal</h3>
+                        <p data-trans="step5-desc">Enviamos tu carga vía fletes aéreos/marítimos consolidados o mediante convenios express con FedEx, UPS o DHL según tu requerimiento de velocidad y costo.</p>
                     </div>
+                </div>
+                
+                <!-- Step 6: Destination Arrival & Customs Clarification -->
+                <div class="step-card">
+                    <img class="step-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600" alt="Llegada a Destino">
+                    <div class="step-body">
+                        <div class="step-icon">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <h3 data-trans="step6-title">6. Arribo a Destino & Despacho Local</h3>
+                        <p data-trans="step6-desc">Entregamos la carga en el puerto/aeropuerto de destino o vía courier express. La nacionalización y trámites aduaneros son gestionados por el comprador o su despachante local.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer Badge -->
+            <div class="disclaimer-badge">
+                <i class="fa-solid fa-circle-info" style="font-size:20px; color:#d97706; margin-top:2px;"></i>
+                <div>
+                    <strong>Aclaración Operativa Importante:</strong> SAREXP opera como Freight Forwarder e intermediario logístico internacional. No somos un courier minorista postal. La liberación aduanera y pago de impuestos locales en el país receptor son gestionados directamente por el consignatario o su despachante de aduana (salvo en operaciones específicas de Argentina coordinadas con Shipairglobal).
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         3.B. FACILITY & OPERATIONS SHOWCASE (2 REAL WAREHOUSE PHOTOS)
+         4. WAREHOUSE GALLERY & INFRASTRUCTURE
          ════════════════════════════════════════════════════════════════ -->
-    <section class="section" id="facility-gallery" style="background: #ffffff;">
+    <section class="section" id="facility-gallery" style="background:#ffffff; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
         <div class="container">
             <div class="section-header">
-                <h2>Nuestra Infraestructura Logística en Miami</h2>
-                <p>Equipamiento de primer nivel en Doral, FL para garantizar la seguridad y velocidad de tu mercadería.</p>
+                <h2>Infraestructura Operativa en Miami</h2>
+                <p>Instalaciones propias en el corazón industrial de Doral, preparadas para almacenamiento y manejo de carga general y comercial.</p>
             </div>
 
-            <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
-                <div class="gallery-item" style="height: 320px;">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000" alt="Portón y Acceso de Depósito en Miami Doral">
-                    <div class="gallery-overlay">
-                        <div class="gallery-title" style="font-size:18px;">1. Portón & Zona de Carga (Doral Hub)</div>
-                        <div class="gallery-sub">Acceso directo para camiones y recepción de bultos en Miami</div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:260px; box-shadow:var(--shadow-sm);">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" alt="Fachada Depósito Doral" style="width:100%; height:100%; object-fit:cover;">
+                    <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(15,23,42,0.9) 0%, transparent 100%); padding:16px; color:#ffffff;">
+                        <strong style="font-size:14px; display:block;">Recepción de Carga & Portón Doral</strong>
+                        <span style="font-size:12px; color:#cbd5e1;">6993 NW 82nd Ave, Suite 28, Miami, FL</span>
                     </div>
                 </div>
 
-                <div class="gallery-item" style="height: 320px;">
-                    <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1000" alt="Interior del Depósito en Doral Miami">
-                    <div class="gallery-overlay">
-                        <div class="gallery-title" style="font-size:18px;">2. Interior del Depósito & Estiba</div>
-                        <div class="gallery-sub">2.500 m² de capacidad para almacenamiento, clasificación y consolidación</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LATAM Hubs Pills -->
-            <div style="margin-top:50px;">
-                <h3 style="font-size:22px; text-align:center; margin-bottom:10px;">Conexiones Directas a Latinoamérica y el Mundo</h3>
-                <p style="text-align:center; color:var(--text-muted); font-size:14px; margin-bottom:20px;">Despachamos tu carga consolidada con frecuencias semanales garantizadas.</p>
-
-                <div class="hubs-grid">
-                    <div class="hub-card">
-                        <img src="https://flagcdn.com/w80/cl.png" alt="Chile" style="height:28px; border-radius:3px; margin-bottom:8px; box-shadow:0 2px 4px rgba(0,0,0,0.15);">
-                        <div class="hub-name">Chile (SCL)</div>
-                        <div class="hub-transit">Tránsito ~3-5 días</div>
-                    </div>
-                    <div class="hub-card">
-                        <img src="https://flagcdn.com/w80/uy.png" alt="Uruguay" style="height:28px; border-radius:3px; margin-bottom:8px; box-shadow:0 2px 4px rgba(0,0,0,0.15);">
-                        <div class="hub-name">Uruguay (MVD)</div>
-                        <div class="hub-transit">Tránsito ~3-5 días</div>
-                    </div>
-                    <div class="hub-card">
-                        <img src="https://flagcdn.com/w80/py.png" alt="Paraguay" style="height:28px; border-radius:3px; margin-bottom:8px; box-shadow:0 2px 4px rgba(0,0,0,0.15);">
-                        <div class="hub-name">Paraguay (ASU)</div>
-                        <div class="hub-transit">Tránsito ~4-6 días</div>
-                    </div>
-                    <div class="hub-card">
-                        <img src="https://flagcdn.com/w80/co.png" alt="Colombia" style="height:28px; border-radius:3px; margin-bottom:8px; box-shadow:0 2px 4px rgba(0,0,0,0.15);">
-                        <div class="hub-name">Colombia (BOG)</div>
-                        <div class="hub-transit">Tránsito ~3-5 días</div>
-                    </div>
-                    <div class="hub-card">
-                        <img src="https://flagcdn.com/w80/pe.png" alt="Perú" style="height:28px; border-radius:3px; margin-bottom:8px; box-shadow:0 2px 4px rgba(0,0,0,0.15);">
-                        <div class="hub-name">Perú (LIM)</div>
-                        <div class="hub-transit">Tránsito ~3-5 días</div>
+                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:260px; box-shadow:var(--shadow-sm);">
+                    <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?q=80&w=800" alt="Interior Depósito Almacenaje" style="width:100%; height:100%; object-fit:cover;">
+                    <div style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(15,23,42,0.9) 0%, transparent 100%); padding:16px; color:#ffffff;">
+                        <strong style="font-size:14px; display:block;">Área de Almacenaje & Racks</strong>
+                        <span style="font-size:12px; color:#cbd5e1;">Clasificación e Inventario Digitalizado</span>
                     </div>
                 </div>
             </div>
@@ -280,56 +254,7 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         4. WHY CHOOSE US & CORE STATS
-         ════════════════════════════════════════════════════════════════ -->
-    <section class="section why-section" id="why-choose-us">
-        <div class="container why-grid">
-            <div>
-                <h2 style="font-size:32px; margin-bottom:16px; font-weight:800;" data-trans="why-title">Logística eficiente sin complicaciones</h2>
-                <p style="color:var(--text-muted); margin-bottom:32px;" data-trans="why-subtitle">Hacemos que exportar desde EE.UU. sea tan simple como un envío local.</p>
-                
-                <div style="display:flex; flex-direction:column; gap:20px;">
-                    <div style="display:flex; gap:16px;">
-                        <i class="fa-solid fa-comments" style="color:var(--accent-blue); font-size:20px; margin-top:4px;"></i>
-                        <div>
-                            <h4 style="font-size:16px; margin-bottom:4px;" data-trans="why-item1-title">Soporte 24/7 en tu Idioma</h4>
-                            <p style="font-size:13px; color:var(--text-secondary);" data-trans="why-item1-desc">Atención corporativa personalizada por oficiales de cuenta especializados en comercio exterior.</p>
-                        </div>
-                    </div>
-                    
-                    <div style="display:flex; gap:16px;">
-                        <i class="fa-solid fa-scale-balanced" style="color:var(--accent-blue); font-size:20px; margin-top:4px;"></i>
-                        <div>
-                            <h4 style="font-size:16px; margin-bottom:4px;" data-trans="why-item2-title">Especialistas en Importaciones</h4>
-                            <p style="font-size:13px; color:var(--text-secondary);" data-trans="why-item2-desc">Te ayudamos a elegir el mejor régimen (Courier Simplificado o Carga General) según tu país y tipo de mercadería.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">2.500 m²</div>
-                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat1-text">M² de Depósito en Miami</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10.000+</div>
-                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat2-text">Envíos Internacionales Realizados</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">18+</div>
-                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat3-text">Países de Destino Activos</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">99.8%</div>
-                    <div style="font-size:12px; font-weight:700; color:var(--text-muted); text-transform:uppercase;" data-trans="stat4-text">Eficiencia en Aduana</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ════════════════════════════════════════════════════════════════
-         4.B. LOCATION & DORAL WAREHOUSE HQ
+         5. LOCATION & GOOGLE MAPS EMBED
          ════════════════════════════════════════════════════════════════ -->
     <section class="section" id="location-map" style="background: #f8fafc;">
         <div class="container">
@@ -338,46 +263,46 @@
                 <p>Ubicados estratégicamente en la zona logística industrial de Doral/Miami, a solo 10 minutos del Aeropuerto Internacional de Miami (MIA).</p>
             </div>
 
-            <div class="map-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px; align-items:center;">
+            <div class="map-grid">
                 <!-- Interactive Google Map Embed -->
-                <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); border:1px solid #cbd5e1; height:380px; background:#e2e8f0;">
+                <div class="map-wrapper">
                     <iframe src="https://maps.google.com/maps?q=6993%20NW%2082nd%20Ave%20Suite%2028%2C%20Miami%2C%20FL%2033166&t=&z=15&ie=UTF8&iwloc=&output=embed" style="width:100%; height:100%; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SAREXP Miami Warehouse Map"></iframe>
                 </div>
 
                 <!-- Logistics Details Panel -->
-                <div class="map-info-card" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:var(--radius-md); padding:32px; box-shadow:var(--shadow-md);">
+                <div class="map-info-card">
                     <span class="hero-badge" style="margin-bottom:16px;">Miami HQ & Recepción de Carga</span>
-                    <h3 style="font-size:24px; margin-bottom:20px; font-weight:800;">Depósito Doral Hub</h3>
+                    <h3 style="font-size:22px; margin-bottom:18px; font-weight:800; color:var(--accent-blue);">Depósito Doral Hub</h3>
                     
-                    <div style="display:flex; flex-direction:column; gap:18px; margin-bottom:28px;">
-                        <div style="display:flex; gap:14px; align-items:flex-start;">
-                            <i class="fa-solid fa-map-location-dot" style="color:var(--accent-blue); font-size:22px; margin-top:2px;"></i>
+                    <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:24px;">
+                        <div style="display:flex; gap:12px; align-items:flex-start;">
+                            <i class="fa-solid fa-map-location-dot" style="color:var(--accent-blue); font-size:20px; margin-top:2px;"></i>
                             <div>
-                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Dirección Física de Recepción:</strong>
+                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Dirección Física:</strong>
                                 <span style="font-size:14px; color:var(--text-secondary);">6993 NW 82nd Ave, Suite 28, Miami, FL 33166, USA</span>
                             </div>
                         </div>
 
-                        <div style="display:flex; gap:14px; align-items:flex-start;">
-                            <i class="fa-solid fa-clock" style="color:var(--accent-blue); font-size:22px; margin-top:2px;"></i>
+                        <div style="display:flex; gap:12px; align-items:flex-start;">
+                            <i class="fa-solid fa-clock" style="color:var(--accent-blue); font-size:20px; margin-top:2px;"></i>
                             <div>
-                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Horario Operativo de Carga:</strong>
+                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Horario de Recepción:</strong>
                                 <span style="font-size:14px; color:var(--text-secondary);">Lunes a Viernes: 08:30 HS - 17:30 HS (EST)</span>
                             </div>
                         </div>
 
-                        <div style="display:flex; gap:14px; align-items:flex-start;">
-                            <i class="fa-solid fa-plane-departure" style="color:var(--cyan); font-size:22px; margin-top:2px;"></i>
+                        <div style="display:flex; gap:12px; align-items:flex-start;">
+                            <i class="fa-solid fa-plane-departure" style="color:var(--cyan); font-size:20px; margin-top:2px;"></i>
                             <div>
-                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Conectividad Aérea:</strong>
-                                <span style="font-size:14px; color:var(--text-secondary);">A minutos de las rampas de carga del Aeropuerto de Miami (MIA)</span>
+                                <strong style="display:block; font-size:14px; color:var(--text-primary);">Cercanía Logística:</strong>
+                                <span style="font-size:14px; color:var(--text-secondary);">A 10 minutos de las rampas de carga de MIA</span>
                             </div>
                         </div>
                     </div>
 
-                    <a href="https://maps.google.com/?q=6993+NW+82nd+Ave+Suite+28+Miami+FL+33166" target="_blank" class="btn btn-primary btn-block" style="display:flex; align-items:center; justify-content:center; gap:10px; font-weight:700;">
+                    <a href="https://maps.google.com/?q=6993+NW+82nd+Ave+Suite+28+Miami+FL+33166" target="_blank" class="btn btn-primary btn-block">
                         <i class="fa-solid fa-diamond-turn-right" style="font-size:18px;"></i>
-                        <span>Abrir en Google Maps</span>
+                        <span>Abrir Ubicación en Google Maps</span>
                     </a>
                 </div>
             </div>
@@ -385,18 +310,18 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         5. COMMERCIAL CONTACT FORM & DIRECT CHANNELS
+         6. CONTACT FORM & DIRECT CHANNELS
          ════════════════════════════════════════════════════════════════ -->
-    <section class="section" id="contact" style="background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.03) 0%, transparent 60%);">
+    <section class="section" id="contact" style="background:#ffffff; border-top:1px solid #e2e8f0;">
         <div class="container contact-grid">
             <div class="contact-info">
-                <h2 data-trans="contact-title">Consultá Tarifas para tu Empresa o Courier</h2>
-                <p data-trans="contact-desc" style="margin-bottom:30px;">Completá el formulario para recibir una cotización personalizada o comunicarte directamente con nuestro equipo comercial por tu carga en Miami.</p>
+                <h2 data-trans="contact-title">Cotizá tu Envío o Almacenaje en Miami</h2>
+                <p data-trans="contact-desc" style="margin-bottom:24px; color:var(--text-secondary);">Completá el formulario o comunicate directamente por WhatsApp. Te responderemos a la brevedad con tarifarios a medida.</p>
                 
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot contact-item-icon"></i>
                     <div>
-                        <strong data-trans="contact-hq">Depósito Miami (Doral Hub)</strong>
+                        <strong>Depósito Miami (Doral Hub)</strong>
                         <p style="font-size:13px; color:var(--text-secondary);">6993 NW 82nd Ave, Suite 28, Miami, FL 33166</p>
                     </div>
                 </div>
@@ -405,7 +330,7 @@
                     <i class="fa-solid fa-phone contact-item-icon"></i>
                     <div>
                         <strong>Teléfono / WhatsApp Directo</strong>
-                        <p style="font-size:14px; font-weight:700;"><a href="https://wa.me/13054688404" target="_blank" style="color:var(--accent-blue);">+1 (305) 468-8404</a></p>
+                        <p style="font-size:14px; font-weight:700;"><a href="https://wa.me/13054688404" target="_blank" style="color:var(--accent-blue); text-decoration:none;">+1 (305) 468-8404</a></p>
                     </div>
                 </div>
                 
@@ -417,8 +342,8 @@
                     </div>
                 </div>
 
-                <div style="margin-top:15px;">
-                    <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20les%20escribo%20desde%20la%20web%20para%20consultar%20tarifas." target="_blank" class="btn btn-whatsapp" style="width:100%; font-size:15px; padding:14px;">
+                <div style="margin-top:20px;">
+                    <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20les%20escribo%20desde%20la%20web%20para%20consultar%20tarifas." target="_blank" class="btn btn-whatsapp btn-block">
                         <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i>
                         <span>Cotizar o Hablar por WhatsApp</span>
                     </a>
@@ -426,7 +351,7 @@
             </div>
             
             <div class="contact-form-panel">
-                <h3 style="margin-bottom:24px; font-size:22px;" data-trans="contact-form-title">Cotizá tu Carga o Almacenaje</h3>
+                <h3 style="margin-bottom:20px; font-size:20px; font-weight:800; color:var(--accent-blue);" data-trans="contact-form-title">Consulta de Tarifas & Carga</h3>
                 
                 <form id="lead-form" onsubmit="handleContactSubmit(event)">
                     <!-- Anti-Spam Honeypot -->
@@ -434,18 +359,18 @@
 
                     <div class="form-group">
                         <label data-trans="lbl-name">Nombre de Contacto</label>
-                        <input type="text" id="lead-name" class="form-input" required data-placeholder="lbl-name">
+                        <input type="text" id="lead-name" class="form-input" required placeholder="Tu Nombre completo">
                     </div>
                     
                     <div class="form-group">
-                        <label data-trans="lbl-company">Empresa / Courier</label>
-                        <input type="text" id="lead-company" class="form-input" required data-placeholder="lbl-company">
+                        <label data-trans="lbl-company">Empresa / Nombre Comercial</label>
+                        <input type="text" id="lead-company" class="form-input" required placeholder="Nombre de tu empresa o marca">
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label data-trans="lbl-email">Correo Corporativo</label>
-                            <input type="email" id="lead-email" class="form-input" required data-placeholder="lbl-email">
+                            <input type="email" id="lead-email" class="form-input" required placeholder="tuemail@empresa.com">
                         </div>
                         <div class="form-group">
                             <label data-trans="lbl-phone">Teléfono / WhatsApp</label>
@@ -467,7 +392,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label data-trans="lbl-volume">Frecuencia / Volumen de Carga</label>
+                            <label data-trans="lbl-volume">Frecuencia / Volumen Estimado</label>
                             <select id="lead-volume" class="form-input">
                                 <option value="Envio Ocasional">Envío Ocasional / Muestras</option>
                                 <option value="50-300kg Semanal">50 a 300 kg (Frecuencia Semanal)</option>
@@ -477,13 +402,13 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-block" style="width:100%; margin-top:10px;" data-trans="btn-submit">
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px;" data-trans="btn-submit">
                         Enviar Consulta Comercial
                     </button>
 
                     <div style="font-size:11px; text-align:center; color:var(--text-muted); margin-top:12px; display:flex; align-items:center; justify-content:center; gap:6px;">
                         <i class="fa-solid fa-lock" style="color:#10b981;"></i>
-                        <span>Encriptación SSL 256-Bit. Protección de datos conforme a regulaciones de EE.UU.</span>
+                        <span>Encriptación SSL 256-Bit. Datos protegidos conforme a regulaciones de EE.UU.</span>
                     </div>
                 </form>
             </div>
@@ -491,69 +416,17 @@
     </section>
 
     <!-- ════════════════════════════════════════════════════════════════
-         6. COMPREHENSIVE FORMAL LEGAL MODAL (PRIVACY & TERMS OF SERVICE)
-         ════════════════════════════════════════════════════════════════ -->
-    <div id="privacy-modal" class="modal">
-        <div class="modal-content" style="max-width:820px; max-height:85vh; overflow-y:auto; border-radius:var(--radius-md); padding:36px;">
-            <span class="modal-close" onclick="closeModal('privacy-modal')" style="font-size:28px; font-weight:700; color:#64748b; cursor:pointer;">&times;</span>
-            
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px; border-bottom:2px solid #f1f5f9; padding-bottom:16px;">
-                <i class="fa-solid fa-scale-balanced" style="font-size:28px; color:var(--accent-blue);"></i>
-                <div>
-                    <h3 style="font-size:22px; font-weight:800; color:var(--text-primary); margin:0;">Marco Legal, Privacidad & Regulaciones B2B</h3>
-                    <p style="font-size:12px; color:var(--text-muted); margin:0;">SAREXP WORLD COURIER LLC &bull; Estado de Florida, EE.UU.</p>
-                </div>
-            </div>
-
-            <!-- Tab Buttons -->
-            <div style="display:flex; gap:12px; margin-bottom:24px; border-bottom:1px solid #e2e8f0;">
-                <button onclick="showLegalTab('privacy')" id="tab-btn-privacy" style="padding:10px 16px; border:none; background:none; font-weight:700; font-size:14px; border-bottom:3px solid var(--accent-blue); color:var(--accent-blue); cursor:pointer;">1. Política de Privacidad de Datos</button>
-                <button onclick="showLegalTab('terms')" id="tab-btn-terms" style="padding:10px 16px; border:none; background:none; font-weight:700; font-size:14px; border-bottom:3px solid transparent; color:var(--text-muted); cursor:pointer;">2. Términos de Servicio Logístico & TSA</button>
-            </div>
-
-            <!-- Tab 1: Privacy Policy -->
-            <div id="legal-tab-privacy" style="display:block; font-size:13px; line-height:1.7; color:var(--text-secondary);">
-                <h4 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">1.1 Declaración de Confidencialidad y Tratamiento de Información Comercial</h4>
-                <p style="margin-bottom:14px;">SAREXP WORLD COURIER LLC (en adelante, "LA COMPAÑÍA"), constituida y operante bajo las leyes del Estado de Florida, Estados Unidos de América, con sede operativa en 6993 NW 82nd Ave, Suite 28, Miami, FL 33166, garantiza el tratamiento estrictamente confidencial de toda la información corporativa, listas de clientes, volúmenes de carga y datos de contacto recolectados a través de este portal web.</p>
-
-                <h4 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">1.2 Estándares de Encriptación y Seguridad Tecnológica</h4>
-                <p style="margin-bottom:14px;">Toda transmisión de datos comerciales realizada mediante nuestros formularios de cotización se procesa bajo protocolos de seguridad SSL/TLS con encriptación de grado bancario de 256 bits. Cumplimos rigurosamente con los estándares federales de protección de datos de EE.UU. y las disposiciones aplicables del <em>Florida Digital Bill of Rights</em> (FDBR).</p>
-
-                <h4 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">1.3 Uso Exclusivo y Prohibición de Cesión a Terceros</h4>
-                <p style="margin-bottom:14px;">Los datos recopilados serán utilizados de forma exclusiva para: (a) emitir cotizaciones aduaneras y logísticas personalizadas; (b) calificar la viabilidad de apertura de cuenta corporativa; y (c) coordinar la recepción y despacho de mercadería en nuestro depósito de Miami. LA COMPAÑÍA prohíbe de manera tajante la venta, alquiler, divulgación o comercialización de información de clientes a terceros sin consentimiento previo por escrito.</p>
-            </div>
-
-            <!-- Tab 2: Terms of Service & TSA -->
-            <div id="legal-tab-terms" style="display:none; font-size:13px; line-height:1.7; color:var(--text-secondary);">
-                <h4 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">2.1 Regulaciones de Seguridad Federal TSA e Inspección en Origen</h4>
-                <p style="margin-bottom:14px;">De conformidad con las normativas federales de la Administración de Seguridad en el Transporte de EE.UU. (TSA - <em>Transportation Security Administration</em>) y el Departamento de Aduanas y Protección Fronteriza (CBP), toda carga recibida en nuestro Hub de Doral (6993 NW 82nd Ave, Suite 28, Miami, FL 33166) está sujeta a inspección física, pesaje y verificación de contenido antes de su consolidación o embarque aéreo/marítimo.</p>
-
-                <h4 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">2.2 Responsabilidad de Declaración de Mercancías Peligrosas (HAZMAT)</h4>
-                <p style="margin-bottom:14px;">El cliente o remitente es único responsable de declarar la naturaleza exacta de la mercadería enviada a nuestras instalaciones. Queda estrictamente prohibido el envío de sustancias no autorizadas, material explosivo, biológico o contrabando. Las mercancías catalogadas como HAZMAT o peligrosas bajo regulaciones IATA requieren notificación previa y documentación de seguridad aprobada.</p>
-
-                <h4 style="font-size:15px; font-weight:800; color:var(--text-primary); margin-bottom:8px;">2.3 Jurisdicción y Ley Aplicable</h4>
-                <p style="margin-bottom:14px;">Cualquier controversia derivada de la prestación de servicios logísticos, almacenaje o manipulación de carga será regida exclusivamente por las leyes del Estado de Florida, EE.UU., sometiéndose las partes a la jurisdicción de los tribunales del Condado de Miami-Dade, Florida.</p>
-            </div>
-
-            <div style="margin-top:24px; padding-top:16px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
-                <span style="font-size:11px; color:var(--text-muted);">Última actualización jurídica: Julio 2026 &bull; SAREXP Legal Dept.</span>
-                <button class="btn btn-primary" onclick="closeModal('privacy-modal')" style="padding:10px 24px; font-size:14px;" data-trans="privacy-btn-close">Entendido y Cerrar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ════════════════════════════════════════════════════════════════
-         7. FOOTER
+         7. FOOTER & INDEPENDENT LEGAL PAGES
          ════════════════════════════════════════════════════════════════ -->
     <footer>
         <div class="container footer-wrap">
             <div class="logo">
                 <div style="display:flex; align-items:center; gap:10px;">
                     <svg viewBox="0 0 100 100" style="height:32px; width:32px;" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="8" y="8" width="84" height="84" rx="20" fill="url(#footerBrandGrad)" />
+                        <rect x="8" y="8" width="84" height="84" rx="18" fill="url(#footerBrandGrad)" />
                         <path d="M 28 50 L 50 28 L 72 50 L 50 72 Z" fill="#ffffff" opacity="0.95"/>
-                        <path d="M 40 50 L 50 40 L 60 50 L 50 60 Z" fill="#0ea5e9"/>
-                        <path d="M 50 18 L 82 50 L 50 82" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 40 50 L 50 40 L 60 50 L 50 60 Z" fill="#1e3a8a"/>
+                        <path d="M 50 18 L 82 50 L 50 82" stroke="#dc2626" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
                         <defs>
                             <linearGradient id="footerBrandGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
                                 <stop stop-color="#3b82f6"/>
@@ -561,31 +434,31 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="logo-text" style="color:#ffffff; font-weight:800; font-size:20px;">SAR <span style="color:#ef4444; font-style:italic;">EXP</span></span>
+                    <span class="logo-text" style="color:#ffffff; font-weight:800; font-size:20px;">SAR <span style="color:#dc2626; font-style:italic;">EXP</span></span>
                 </div>
             </div>
             
-            <div class="footer-links" style="display:flex; gap:20px; flex-wrap:wrap;">
-                <a href="privacy.html" class="footer-link" style="color:#94a3b8; text-decoration:none;">Política de Privacidad</a>
-                <a href="terms.html" class="footer-link" style="color:#94a3b8; text-decoration:none;">Términos de Servicio & TSA</a>
-                <a href="cookies.html" class="footer-link" style="color:#94a3b8; text-decoration:none;">Política de Cookies & Caché</a>
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Política de Privacidad</a>
+                <a href="terms.html" class="footer-link">Términos de Servicio & TSA</a>
+                <a href="cookies.html" class="footer-link">Política de Cookies & Caché</a>
             </div>
             
             <div style="color:#64748b; text-align:right;">
                 <div>SAREXP WORLD COURIER LLC | Miami Hub: 6993 NW 82nd Ave, Suite 28, Miami, FL 33166</div>
-                <div style="font-size:11px; margin-top:4px;">Operaciones Co-Loading Hub MIA &bull; &copy; 2026 SAREXP. Todos los derechos reservados.</div>
+                <div style="font-size:11px; margin-top:4px;">Operaciones Forwarding Hub MIA &bull; &copy; 2026 SAREXP. Todos los derechos reservados.</div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Scroll-To-Top CTA (Bottom Left) -->
+    <!-- Floating Scroll-To-Top Button (Fixed Bottom Left) -->
     <button onclick="scrollToTop()" id="scrollTopBtn" class="scroll-top-float" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
         <span>Arriba</span>
     </button>
 
-    <!-- Floating WhatsApp CTA (Bottom Right) -->
-    <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20servicios%20B2B%20y%20tarifas%20de%20dep%C3%B3sito%20en%20Miami." target="_blank" class="whatsapp-float" aria-label="Contacto por WhatsApp">
+    <!-- Floating WhatsApp CTA (Fixed Bottom Right) -->
+    <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20consultar%20por%20servicios%20de%20dep%C3%B3sito%20y%20env%C3%ADo%20desde%20Miami." target="_blank" class="whatsapp-float" aria-label="Contacto por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span>WhatsApp</span>
     </a>
