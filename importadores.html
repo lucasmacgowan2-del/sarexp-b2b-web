@@ -9,56 +9,155 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #334155; line-height: 1.6; }
-.wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
-header { background: #fff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
-.hdr-inner { max-width: 1140px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: 22px; font-weight: 800; }
-.btn-back { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #1e3a8a; text-decoration: none; padding: 8px 16px; border: 1.5px solid #cbd5e1; border-radius: 6px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+header.navbar { background: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+.nav-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 74px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: 20px; flex-shrink: 0; }
+.logo-text { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.logo-sar { color: #1e3a8a; }
+.logo-exp { color: #dc2626; font-style: italic; }
+
+nav.nav-links { display: flex; align-items: center; gap: 20px; }
+nav.nav-links a { text-decoration: none; font-size: 13.5px; font-weight: 600; color: #1e293b; transition: color 0.2s; white-space: nowrap; }
+nav.nav-links a:hover { color: #1e3a8a; }
+
+.nav-item { position: relative; }
+.nav-link-dropdown { text-decoration: none; font-size: 13.5px; font-weight: 600; color: #1e293b; display: flex; align-items: center; gap: 5px; cursor: pointer; padding: 8px 0; }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; min-width: 250px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); padding: 8px 0; z-index: 1000; }
+.nav-item:hover .dropdown-menu { display: block; }
+.dropdown-menu a { display: block; padding: 10px 16px; font-size: 13px; font-weight: 600; color: #334155; text-decoration: none; }
+.dropdown-menu a:hover { background: #f8fafc; color: #1e3a8a; }
+
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.btn-login { display: inline-flex; align-items: center; gap: 7px; border: 1.5px solid #cbd5e1; background: #f8fafc; color: #1e293b; padding: 9px 16px; border-radius: 7px; font-size: 13.5px; font-weight: 700; text-decoration: none; }
+.btn-cta { background: #1e3a8a; color: #ffffff !important; padding: 10px 20px; border-radius: 7px; font-weight: 700; font-size: 13.5px; text-decoration: none; }
+
+.ham-btn { display: none; background: transparent; border: none; font-size: 24px; cursor: pointer; color: #1e293b; padding: 6px; }
+
+.mobile-drawer { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 2000; flex-direction: column; padding: 20px 24px; overflow-y: auto; }
+.mobile-drawer.open { display: flex; }
+.drawer-hdr { display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; margin-bottom: 20px; }
+.drawer-close { background: #f1f5f9; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; color: #0f172a; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.drawer-links { display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
+.drawer-links a { text-decoration: none; font-size: 15px; font-weight: 700; color: #0f172a; padding: 10px 0; border-bottom: 1px solid #f8fafc; text-transform: uppercase; }
+.drawer-sublink { font-size: 14px !important; font-weight: 600 !important; color: #475569 !important; padding-left: 14px !important; text-transform: none !important; }
+.drawer-actions { margin-top: auto; display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+.btn-mobile-portal { display: flex; align-items: center; justify-content: center; gap: 8px; background: #0f172a; color: #ffffff; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; text-transform: uppercase; }
+.btn-mobile-cta { display: flex; align-items: center; justify-content: center; gap: 8px; background: #1e3a8a; color: #ffffff; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; text-transform: uppercase; }
+
+@media (max-width: 992px) {
+  nav.nav-links, .nav-actions { display: none; }
+  .ham-btn { display: block; }
+}
+
 .hero-page { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: #fff; padding: 60px 0; }
 .hero-page h1 { font-size: clamp(26px, 4vw, 42px); font-weight: 800; margin-bottom: 16px; }
 .hero-page p { font-size: 16px; color: #cbd5e1; max-width: 720px; line-height: 1.6; }
+
 .section { padding: 60px 0; }
 .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
 .card h2 { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
 .card p { font-size: 14.5px; color: #475569; margin-bottom: 16px; }
 ul { margin-left: 20px; margin-bottom: 20px; font-size: 14px; color: #334155; }
 li { margin-bottom: 8px; }
-.btn-cta { display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; }
+.btn-wa-action { display: inline-flex; align-items: gap: 8px; background: #10b981; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; }
+
 footer { background: #0f172a; color: #94a3b8; padding: 30px 0; font-size: 13px; text-align: center; margin-top: 40px; }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="hdr-inner">
-    <a href="index.html" class="brand">
-      <svg width="36" height="36" viewBox="0 0 100 100" fill="none"><rect x="8" y="8" width="84" height="84" rx="18" fill="#1e3a8a"/><path d="M28 50 L50 28 L72 50 L50 72Z" fill="#fff" opacity=".95"/><path d="M50 18 L82 50 L50 82" stroke="#dc2626" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span><span style="color:#1e3a8a;">SAR</span><span style="color:#dc2626;font-style:italic;">EXP</span></span>
+<header class="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <svg width="38" height="38" viewBox="0 0 100 100" fill="none">
+        <rect x="8" y="8" width="84" height="84" rx="18" fill="url(#gBrand)"/>
+        <path d="M28 50 L50 28 L72 50 L50 72Z" fill="#ffffff" opacity=".95"/>
+        <path d="M40 50 L50 40 L60 50 L50 60Z" fill="#1e3a8a"/>
+        <path d="M50 18 L82 50 L50 82" stroke="#dc2626" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="gBrand" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+      </svg>
+      <span class="logo-text"><span class="logo-sar">SAR</span><span class="logo-exp">EXP</span></span>
     </a>
-    <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a la Web Principal</a>
+    
+    <nav class="nav-links">
+      <div class="nav-item">
+        <span class="nav-link-dropdown">Soluciones por Sector <i class="fa-solid fa-chevron-down" style="font-size:11px;"></i></span>
+        <div class="dropdown-menu">
+          <a href="couriers.html">Para Couriers & Mensajerías</a>
+          <a href="prep-amazon.html">Amazon Prep & FBA Reetiquetado</a>
+          <a href="importadores.html">Importadores Mayoristas & Empresas</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-link-dropdown">Servicios Logísticos <i class="fa-solid fa-chevron-down" style="font-size:11px;"></i></span>
+        <div class="dropdown-menu">
+          <a href="almacenaje-miami.html">Almacenaje en Miami (Doral)</a>
+          <a href="pickups-usa.html">Pick-ups & Recolecciones EE.UU.</a>
+          <a href="consolidacion.html">Reembalaje & Consolidación</a>
+          <a href="despacho-aereo-maritimo.html">Despacho Aéreo / Marítimo</a>
+          <a href="envios-express.html">Envíos Express via FedEx / UPS</a>
+        </div>
+      </div>
+      <a href="index.html#deposito">Doral Hub</a>
+      <a href="index.html#faq">FAQs</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="portal.html" class="btn-login"><i class="fa-solid fa-user-lock"></i> Acceso Portal</a>
+      <a href="index.html#contacto" class="btn-cta">Solicitar Cuenta</a>
+    </div>
+
+    <button class="ham-btn" onclick="openDrawer()"><i class="fa-solid fa-bars"></i></button>
   </div>
 </header>
+
+<div class="mobile-drawer" id="mobile-drawer">
+  <div class="drawer-hdr">
+    <a href="index.html" class="logo" onclick="closeDrawer()">
+      <svg width="34" height="34" viewBox="0 0 100 100" fill="none"><rect x="8" y="8" width="84" height="84" rx="18" fill="#1e3a8a"/><path d="M28 50 L50 28 L72 50 L50 72Z" fill="#ffffff" opacity=".95"/><path d="M40 50 L50 40 L60 50 L50 60Z" fill="#1e3a8a"/><path d="M50 18 L82 50 L50 82" stroke="#dc2626" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="logo-text"><span class="logo-sar">SAR</span><span class="logo-exp">EXP</span></span>
+    </a>
+    <button class="drawer-close" onclick="closeDrawer()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="drawer-links">
+    <a href="index.html" onclick="closeDrawer()">INICIO</a>
+    <a href="couriers.html" class="drawer-sublink" onclick="closeDrawer()">• Para Couriers</a>
+    <a href="prep-amazon.html" class="drawer-sublink" onclick="closeDrawer()">• Amazon Prep</a>
+    <a href="importadores.html" class="drawer-sublink" onclick="closeDrawer()">• Importadores Mayoristas</a>
+    <a href="almacenaje-miami.html" class="drawer-sublink" onclick="closeDrawer()">• Almacenaje en Miami</a>
+    <a href="pickups-usa.html" class="drawer-sublink" onclick="closeDrawer()">• Pick-ups EE.UU.</a>
+    <a href="consolidacion.html" class="drawer-sublink" onclick="closeDrawer()">• Consolidación</a>
+    <a href="despacho-aereo-maritimo.html" class="drawer-sublink" onclick="closeDrawer()">• Despacho Aéreo/Marítimo</a>
+    <a href="envios-express.html" class="drawer-sublink" onclick="closeDrawer()">• Envíos Express</a>
+  </div>
+  <div class="drawer-actions">
+    <a href="portal.html" class="btn-mobile-portal" onclick="closeDrawer()"><i class="fa-solid fa-user-lock"></i> INGRESAR AL PORTAL</a>
+    <a href="index.html#contacto" class="btn-mobile-cta" onclick="closeDrawer()"><i class="fa-solid fa-paper-plane"></i> SOLICITAR CUENTA</a>
+  </div>
+</div>
 
 <section class="hero-page">
   <div class="wrap">
     <h1>Soluciones para Importadores Mayoristas & Empresas</h1>
-    <p>Consolidación de carga comercial, almacenaje en Doral, recolección de proveedores en cualquier estado de EE.UU. y fletes aéreos o marítimos flexibles.</p>
+    <p>Centralización de carga en Miami para empresas, comercios y distribuidores que importan repuestos, tecnología, indumentaria o insumos industriales desde EE.UU. y Asia.</p>
   </div>
 </section>
 
 <main class="section">
   <div class="wrap">
     <div class="card">
-      <h2>Logística de Consolidación y Depósito Comercial</h2>
-      <p>Gestión a medida para empresas compradoras de maquinaria, repuestos, insumos industriales, electrónicos o indumentaria que compran en EE.UU. e importan hacia Latinoamérica.</p>
+      <h2>Logística Integral de Hub & Consolidación Comercial</h2>
+      <p>Optimizá tu cadena de abastecimiento concentrando todas tus compras en una única Suite de depósito.</p>
       <ul>
-        <li><strong>Consolidación de Carga Comercial:</strong> Juntamos mercancías de múltiples fabricantes en una sola guía aérea o pallet marítimo.</li>
-        <li><strong>Recolección Doméstica (*Pick-ups*):</strong> Retiramos carga física en almacenes de cualquier estado de EE.UU. y coordinamos el traslado a Miami.</li>
-        <li><strong>Reducción Volumétrica:</strong> Reembalaje experto para eliminar espacio sobrante y bajar las tarifas de flete.</li>
-        <li><strong>Flexibilidad de Salida:</strong> Flete aéreo tradicional, marítimo LCL/FCL o convenios express con FedEx, UPS o DHL según la prisa de la entrega.</li>
+        <li><strong>Consolidación de Proveedores Múltiples:</strong> Recibimos compras de 5, 10 o más vendedores diferentes y las juntamos en un solo despacho.</li>
+        <li><strong>Pick-ups Domésticos en EE.UU.:</strong> Coordinación de fletes internos si tu proveedor no entrega en Miami.</li>
+        <li><strong>Reembalaje de Reducción Volumétrica:</strong> Retiro de cajas de cartón innecesarias para bajar el peso volumétrico.</li>
+        <li><strong>Salidas Aéreas y Marítimas Directas:</strong> Despachos hacia tu aeropuerto o puerto local para nacionalización con tu despachante.</li>
       </ul>
-      <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20cotizar%20consolidaci%C3%B3n%20y%20env%C3%ADo%20de%20carga%20mayorista%20desde%20Miami." target="_blank" class="btn-cta">
-        <i class="fa-brands fa-whatsapp fa-lg"></i> Cotizar Carga Mayorista
+      <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20cotizar%20servicios%20de%20hub%20log%C3%ADstico%20para%20mi%20empresa." target="_blank" class="btn-wa-action">
+        <i class="fa-brands fa-whatsapp fa-lg"></i> Solicitar Cuenta de Importador
       </a>
     </div>
   </div>
@@ -68,5 +167,9 @@ footer { background: #0f172a; color: #94a3b8; padding: 30px 0; font-size: 13px; 
   &copy; 2003–2026 SAREXP WORLDWIDE COURIER, INC. &bull; Miami Hub: 6993 NW 82nd Ave, Suite 28, Miami, FL 33166
 </footer>
 
+<script>
+function openDrawer() { document.getElementById('mobile-drawer').classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeDrawer() { document.getElementById('mobile-drawer').classList.remove('open'); document.body.style.overflow = 'auto'; }
+</script>
 </body>
 </html>
