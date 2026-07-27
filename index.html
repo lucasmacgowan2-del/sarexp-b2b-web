@@ -25,7 +25,7 @@ header { background: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky
 .nav-link:hover { color: #1e3a8a; }
 
 /* DROPDOWN MENUS (FedEx / DHL Style) */
-.dropdown { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; min-width: 240px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); padding: 8px 0; z-index: 1000; }
+.dropdown { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; min-width: 260px; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); padding: 8px 0; z-index: 1000; }
 .nav-item:hover .dropdown { display: block; }
 .dropdown a { display: block; padding: 10px 16px; font-size: 13px; font-weight: 600; color: #334155; text-decoration: none; transition: background 0.15s, color 0.15s; }
 .dropdown a:hover { background: #f8fafc; color: #1e3a8a; }
@@ -38,12 +38,18 @@ header { background: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky
 
 /* MOBILE HAMBURGER & MENU */
 .ham { display: none; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; width: 42px; height: 42px; font-size: 18px; cursor: pointer; color: #1e293b; }
-.mobile-menu { display: none; flex-direction: column; background: #ffffff; border-bottom: 3px solid #1e3a8a; padding: 20px; gap: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.mobile-menu { display: none; flex-direction: column; background: #ffffff; border-bottom: 3px solid #1e3a8a; padding: 20px; gap: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 .mobile-menu a { text-decoration: none; font-size: 14.5px; font-weight: 600; color: #1e293b; padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
 
-/* FIX DE RESIZE: Oculta el menú móvil estrictamente en pantallas > 960px sin importar el JS */
+/* FIX DE RESIZE: Oculta el menú móvil en desktop */
 @media (min-width: 961px) {
   .mobile-menu { display: none !important; }
+}
+
+/* RESPONSIVE HEADER EN CELULARES */
+@media (max-width: 960px) {
+  .ham { display: flex; align-items: center; justify-content: center; }
+  .nav-menu, .hdr-btns { display: none; }
 }
 
 /* HERO SECTION */
@@ -88,7 +94,8 @@ header { background: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky
 .card-body { padding: 22px; }
 .card-tag { display: inline-block; font-size: 11px; font-weight: 800; text-transform: uppercase; color: #1e3a8a; background: #eff6ff; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px; }
 .card-body h3 { font-size: 17px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
-.card-body p { font-size: 13.5px; color: #475569; line-height: 1.6; }
+.card-body p { font-size: 13.5px; color: #475569; line-height: 1.6; margin-bottom: 14px; }
+.card-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #1e3a8a; text-decoration: none; }
 
 /* DISCLAIMER BOX */
 .disclaimer { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 20px; display: flex; gap: 16px; align-items: flex-start; margin-top: 36px; font-size: 13.5px; color: #92400e; line-height: 1.6; }
@@ -146,7 +153,7 @@ header { background: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky
 footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size: 13px; border-top: 1px solid #1e293b; }
 .footer-inner { max-width: 1180px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
 .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; }
-.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
 .footer-links a { color: #94a3b8; text-decoration: none; }
 .footer-links a:hover { color: #ffffff; }
 .footer-copy { font-size: 12px; color: #64748b; line-height: 1.5; }
@@ -163,8 +170,6 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
 
 /* RESPONSIVE BREAKPOINT */
 @media (max-width: 960px) {
-  .ham { display: flex; align-items: center; justify-content: center; }
-  .nav-menu { display: none; }
   .map-grid, .contact-grid { grid-template-columns: 1fr; }
   .map-frame { height: 300px; }
   .field-row { grid-template-columns: 1fr; }
@@ -206,11 +211,11 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
       <div class="nav-item">
         <span class="nav-link">Servicios Logísticos <i class="fa-solid fa-chevron-down" style="font-size:11px;"></i></span>
         <div class="dropdown">
-          <a href="#servicios">Almacenaje en Miami (Doral)</a>
-          <a href="#servicios">Pick-ups & Recolecciones en EE.UU.</a>
-          <a href="#servicios">Reembalaje & Consolidación</a>
-          <a href="#servicios">Despacho Aéreo / Marítimo</a>
-          <a href="#servicios">Envíos Express via FedEx / UPS</a>
+          <a href="almacenaje-miami.html"><i class="fa-solid fa-warehouse" style="margin-right:8px; color:#1e3a8a;"></i> Almacenaje en Miami (Doral)</a>
+          <a href="pickups-usa.html"><i class="fa-solid fa-truck-pickup" style="margin-right:8px; color:#1e3a8a;"></i> Pick-ups & Recolecciones en EE.UU.</a>
+          <a href="consolidacion.html"><i class="fa-solid fa-boxes-stacked" style="margin-right:8px; color:#1e3a8a;"></i> Reembalaje & Consolidación</a>
+          <a href="despacho-aereo-maritimo.html"><i class="fa-solid fa-plane-departure" style="margin-right:8px; color:#1e3a8a;"></i> Despacho Aéreo / Marítimo</a>
+          <a href="envios-express.html"><i class="fa-solid fa-bolt" style="margin-right:8px; color:#1e3a8a;"></i> Envíos Express via FedEx / UPS</a>
         </div>
       </div>
 
@@ -227,7 +232,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
 
     </div>
 
-    <!-- HEADER ACTION BUTTONS -->
+    <!-- HEADER ACTION BUTTONS (DESKTOP) -->
     <div class="hdr-btns">
       <a href="portal.html" class="btn-portal-login">
         <i class="fa-solid fa-user-lock"></i> Acceso Portal / Clientes
@@ -235,22 +240,33 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
       <a href="#contacto" class="btn-nav-cta">Solicitar Cuenta / Cotizar</a>
     </div>
 
+    <!-- HAMBURGER BUTTON (MOBILE ONLY) -->
     <button class="ham" onclick="toggleMenu()" aria-label="Menú">
       <i class="fa-solid fa-bars" id="ham-icon"></i>
     </button>
   </div>
 
-  <!-- MOBILE MENU (COLLAPSIBLE) -->
+  <!-- MOBILE MENU (DESPLEGABLE LIMPIO) -->
   <div class="mobile-menu" id="mobile-menu">
-    <a href="portal.html" onclick="closeMenu()"><i class="fa-solid fa-user-lock" style="margin-right:6px; color:#1e3a8a;"></i> Acceso Portal / Clientes</a>
-    <a href="couriers.html" onclick="closeMenu()">Solución para Couriers & Operadores</a>
-    <a href="prep-amazon.html" onclick="closeMenu()">Amazon Prep & FBA Reetiquetado</a>
-    <a href="importadores.html" onclick="closeMenu()">Importadores Mayoristas & Empresas</a>
-    <a href="#servicios" onclick="closeMenu()">Servicios Logísticos</a>
-    <a href="#operativa" onclick="closeMenu()">Cómo Operar paso a paso</a>
-    <a href="#deposito" onclick="closeMenu()">Depósito Miami (Doral Hub)</a>
-    <a href="#faq" onclick="closeMenu()">Preguntas Frecuentes (FAQ)</a>
-    <a href="#contacto" onclick="closeMenu()">Solicitar Cuenta o Cotización</a>
+    <a href="portal.html" onclick="closeMenu()" style="background:#eff6ff; color:#1e3a8a; font-weight:800; border-radius:6px; padding:10px 12px;"><i class="fa-solid fa-user-lock" style="margin-right:6px;"></i> Acceso Portal / Clientes</a>
+    <a href="#contacto" onclick="closeMenu()" style="background:#1e3a8a; color:#fff; font-weight:800; border-radius:6px; padding:10px 12px;"><i class="fa-solid fa-paper-plane" style="margin-right:6px;"></i> Solicitar Cuenta o Cotización</a>
+    
+    <div style="font-size:11px; font-weight:800; color:#94a3b8; text-transform:uppercase; margin-top:10px;">Soluciones por Sector</div>
+    <a href="couriers.html" onclick="closeMenu()">• Para Couriers & Mensajerías</a>
+    <a href="prep-amazon.html" onclick="closeMenu()">• Amazon Prep & FBA Reetiquetado</a>
+    <a href="importadores.html" onclick="closeMenu()">• Importadores Mayoristas & Empresas</a>
+
+    <div style="font-size:11px; font-weight:800; color:#94a3b8; text-transform:uppercase; margin-top:10px;">Servicios Logísticos</div>
+    <a href="almacenaje-miami.html" onclick="closeMenu()">• Almacenaje en Miami (Doral)</a>
+    <a href="pickups-usa.html" onclick="closeMenu()">• Pick-ups & Recolecciones en EE.UU.</a>
+    <a href="consolidacion.html" onclick="closeMenu()">• Reembalaje & Consolidación</a>
+    <a href="despacho-aereo-maritimo.html" onclick="closeMenu()">• Despacho Aéreo / Marítimo</a>
+    <a href="envios-express.html" onclick="closeMenu()">• Envíos Express via FedEx / UPS</a>
+
+    <div style="font-size:11px; font-weight:800; color:#94a3b8; text-transform:uppercase; margin-top:10px;">Información & FAQ</div>
+    <a href="#deposito" onclick="closeMenu()">• Hub Doral Miami</a>
+    <a href="#operativa" onclick="closeMenu()">• Cómo Operar paso a paso</a>
+    <a href="#faq" onclick="closeMenu()">• Preguntas Frecuentes (FAQ)</a>
   </div>
 </header>
 
@@ -266,7 +282,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
     
     <p>Más de 22 años de trayectoria continua recepcionando, almacenando, consolidando y despachando carga comercial desde nuestro Hub industrial en Doral, Miami hacia Latinoamérica y el mundo.</p>
 
-    <!-- Stat Indicators (No B2B jargon) -->
+    <!-- Stat Indicators -->
     <div class="hero-stats">
       <div class="stat-card">
         <div class="stat-num">+22 Años</div>
@@ -339,7 +355,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
   </div>
 </section>
 
-<!-- SERVICIOS LOGÍSTICOS -->
+<!-- SERVICIOS LOGÍSTICOS (CON LINKS A SUS PÁGINAS DEDICADAS) -->
 <section class="section section-alt" id="servicios">
   <div class="wrap">
     <h2 class="section-title">Servicios de Freight Forwarding en Miami</h2>
@@ -354,6 +370,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <span class="card-tag">Almacenaje Comercial</span>
           <h3>1. Recepción y Almacenamiento en Doral</h3>
           <p>Recibimos tus compras de proveedores de EE.UU. o China en nuestro Hub de Miami (6993 NW 82nd Ave, Suite 28, Doral), las ingresamos a inventario y las resguardamos en depósito industrial.</p>
+          <a href="almacenaje-miami.html" class="card-link">Ver Detalles de Almacenaje <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -364,6 +381,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <span class="card-tag">Logística Doméstica</span>
           <h3>2. Pick-ups y Recolección en EE.UU.</h3>
           <p>Si tu proveedor en EE.UU. no entrega en Miami, coordinamos la recolección física de la carga (*pick-up*) en origen y su traslado a nuestro depósito principal.</p>
+          <a href="pickups-usa.html" class="card-link">Ver Detalles de Pick-ups <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -374,6 +392,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <span class="card-tag">Optimización de Flete</span>
           <h3>3. Reembalaje y Consolidación</h3>
           <p>Juntamos múltiples paquetes en un solo envío y retiramos cajas innecesarias para reducir el volumen de empaque y disminuir considerablemente el costo del flete internacional.</p>
+          <a href="consolidacion.html" class="card-link">Ver Detalles de Consolidación <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -384,6 +403,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <span class="card-tag">A Solicitud del Cliente</span>
           <h3>4. Control de Daños & Fotos Opcionales</h3>
           <p>Si lo solicitás expresamente, inspeccionamos el estado físico al arribar y tomamos fotografías de la mercadería antes del despacho internacional o tramitamos devoluciones al proveedor.</p>
+          <a href="#contacto" class="card-link">Solicitar Inspección de Carga <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -394,6 +414,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <span class="card-tag">Transporte Internacional</span>
           <h3>5. Despacho Aéreo y Marítimo Consolidado</h3>
           <p>Despachamos tu carga consolidada vía flete aéreo o contenedor marítimo hacia el aeropuerto o puerto de tu país bajo esquemas corporativos de *Co-Loading*.</p>
+          <a href="despacho-aereo-maritimo.html" class="card-link">Ver Detalles de Fletes <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -404,6 +425,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <span class="card-tag">Flexibilidad Express</span>
           <h3>6. Soluciones Directas vía FedEx / UPS</h3>
           <p>Para clientes que no cuentan con despachante local o requieren entrega directa a puerta, ofrecemos despachos express acordados vía integraciones con FedEx, UPS o DHL.</p>
+          <a href="envios-express.html" class="card-link">Ver Envíos Express FedEx/UPS <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
 
@@ -547,7 +569,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-ans">
-          Nos adaptamos a las necesidades de cada cliente. Si no contás con un despachante local o requerís una entrega simplificada puerta a puerta, podemos despachar tu carga mediante nuestras cuentas corporativas integradas con FedEx, UPS o DHL express, o evaluar la mejor alternativa disponible según el país de destino.
+          Nos adaptamos a las necesidades de cada cliente. Si no contás con un despachante local o requerís una entrega simplificada puerta a puerta, podemos despachar tu carga mediante nuestras cuentas corporativas integradas con FedEx, UPS o DHL express, o evaluar la mejor alternativa disponible según el país de destino. Visitá la sección de <a href="envios-express.html" style="color:#1e3a8a; font-weight:700;">Envíos Express FedEx/UPS</a>.
         </div>
       </div>
 
@@ -557,7 +579,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-ans">
-          Sí. Si tu proveedor o fabricante en EE.UU. no realiza envíos hasta nuestro depósito en Miami, coordinamos el retiro físico de la carga en origen (*pick-up*) mediante transportistas terrestres aliados y su traslado consolidado a nuestro Hub en Doral.
+          Sí. Si tu proveedor o fabricante en EE.UU. no realiza envíos hasta nuestro depósito en Miami, coordinamos el retiro físico de la carga en origen (*pick-up*) mediante transportistas terrestres aliados y su traslado consolidado a nuestro Hub en Doral. Ver más información en <a href="pickups-usa.html" style="color:#1e3a8a; font-weight:700;">Pick-ups EE.UU.</a>.
         </div>
       </div>
 
@@ -690,6 +712,9 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
       <a href="couriers.html">Para Couriers</a>
       <a href="prep-amazon.html">Amazon Prep</a>
       <a href="importadores.html">Importadores</a>
+      <a href="almacenaje-miami.html">Almacenaje</a>
+      <a href="pickups-usa.html">Pick-ups</a>
+      <a href="consolidacion.html">Consolidación</a>
       <a href="portal.html">Portal Clientes</a>
       <a href="privacy.html">Privacidad</a>
       <a href="terms.html">Términos & TSA</a>
