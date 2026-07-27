@@ -69,7 +69,6 @@ nav.nav-links a:hover { color: #1e3a8a; }
 .hero h1 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #ffffff; }
 .hero p { font-size: 16px; color: #cbd5e1; line-height: 1.65; max-width: 700px; margin-bottom: 32px; }
 
-/* HERO STATS (CLEANED - NO FEDEX/UPS AS MAIN STAT) */
 .hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 36px; max-width: 840px; }
 .stat-card { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; padding: 14px 18px; }
 .stat-num { font-size: 22px; font-weight: 800; color: #38bdf8; }
@@ -664,13 +663,14 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
         </a>
       </div>
 
-      <!-- FORM -->
+      <!-- FORM CON OPCIÓN OTRO Y PROTECCIÓN TEMPORAL ANTI-BOT -->
       <div class="form-card">
         <h3>Calificación Comercial de Carga</h3>
         <p>Ingresá tus datos corporativos para evaluar tu operación.</p>
         
         <form id="form" onsubmit="sendForm(event)">
-          <input type="text" id="hp" style="display:none" tabindex="-1">
+          <!-- HONEYPOT ANTI-BOT -->
+          <input type="text" id="hp" style="display:none" tabindex="-1" autocomplete="off">
           
           <div class="field-row">
             <div class="field">
@@ -707,7 +707,8 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
                 <option value="Amazon Prep & Reetiquetado FBA">Amazon Prep & Reetiquetado FBA</option>
                 <option value="Servicios para Couriers (Co-Loading)">Servicios para Couriers (Co-Loading)</option>
                 <option value="Pick-ups en EE.UU.">Pick-ups / Recolección en EE.UU.</option>
-                <option value="Envío Express via FedEx/UPS">Envío Express directo (FedEx / UPS)</option>
+                <option value="Envío Express directo (FedEx / UPS)">Envío Express directo (FedEx / UPS)</option>
+                <option value="Otro / Consulta General">Otro / Consulta General</option>
               </select>
             </div>
           </div>
@@ -776,6 +777,8 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
 </div>
 
 <script>
+var pageLoadTime = Date.now();
+
 function openDrawer() {
   document.getElementById('mobile-drawer').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -806,7 +809,26 @@ window.addEventListener('load', function() {
 
 function sendForm(e) {
   e.preventDefault();
-  if (document.getElementById('hp').value) return;
+  
+  // 1. HONEYPOT CHECK (BOT TRAP)
+  if (document.getElementById('hp').value !== "") {
+    console.warn("Bot submission detected.");
+    return false;
+  }
+
+  // 2. TIME TRAP (SI TARDA MENOS DE 2.5 SEGUNDOS ES UN BOT)
+  if (Date.now() - pageLoadTime < 2500) {
+    alert("Por favor completá los datos con calma.");
+    return false;
+  }
+
+  // 3. RATE LIMITING EN LOCALSTORAGE (MÁXIMO 1 ENVÍO CADA 60 SEGUNDOS)
+  var lastSent = localStorage.getItem('sarexp_last_lead');
+  if (lastSent && (Date.now() - parseInt(lastSent, 10)) < 60000) {
+    alert("Ya recibimos tu consulta. Por favor aguardá 1 minuto antes de enviar otra solicitud.");
+    return false;
+  }
+
   var btn = e.target.querySelector('.btn-submit');
   btn.textContent = 'Enviando Solicitud...';
   btn.disabled = true;
@@ -826,6 +848,7 @@ function sendForm(e) {
       timestamp: new Date().toISOString()
     })
   }).then(function() {
+    localStorage.setItem('sarexp_last_lead', Date.now().toString());
     btn.textContent = '✓ Solicitud Enviada. Te contactamos a la brevedad.';
     btn.style.background = '#10b981';
     document.getElementById('form').reset();
