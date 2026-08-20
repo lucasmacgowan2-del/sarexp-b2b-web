@@ -1,7 +1,7 @@
-# Plan Estratégico de Negocio & Operaciones B2B: SAREXP WORLD COURIER LLC
+# Plan Estratégico de Negocio & Operaciones B2B: SAREXP WORLDWIDE COURIER LLC
 
 ## 1. Resumen Ejecutivo & Estructura Corporativa
-* **Razón Social:** SAREXP WORLD COURIER LLC
+* **Razón Social:** SAREXP WORLDWIDE COURIER LLC
 * **Jurisdicción de Registro:** Estado de Florida, Estados Unidos de América.
 * **Sede Operativa (Miami Hub):** 6993 NW 82nd Ave, Suite 28, Miami, FL 33166.
 * **Correo Corporativo Oficial:** `contacto@sarexp.com` (Microsoft 365 Business Basic).

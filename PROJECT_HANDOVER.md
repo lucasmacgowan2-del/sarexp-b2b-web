@@ -1,6 +1,6 @@
 # SAREXP B2B LOGISTICS: PROJECT HANDOVER & MASTER SPECIFICATION
 
-Este documento sirve como el **Prompt de Inicialización Absoluto (Handover)** para que cualquier nuevo asistente de IA configure, entienda y desarrolle el ecosistema logístico de **SAREXP WORLD COURIER** y su sitio web B2B.
+Este documento sirve como el **Prompt de Inicialización Absoluto (Handover)** para que cualquier nuevo asistente de IA configure, entienda y desarrolle el ecosistema logístico de **SAREXP WORLDWIDE COURIER** y su sitio web B2B.
 
 ---
 
@@ -24,7 +24,7 @@ Para no contaminar bases de datos ni generar alertas de cumplimiento aduanero, l
     └──────────────────────────────┘                └──────────────────────────────┘
 ```
 
-1.  **SAREXP WORLD COURIER (USA):** Compañía radicada en Miami. Es el *Hub* físico receptor de mercadería mundial (Miami Suite Warehouse). Posee los permisos para exportar carga aérea desde EE.UU. a nivel global.
+1.  **SAREXP WORLDWIDE COURIER (USA):** Compañía radicada en Miami. Es el *Hub* físico receptor de mercadería mundial (Miami Suite Warehouse). Posee los permisos para exportar carga aérea desde EE.UU. a nivel global.
 2.  **SHIPAIRGLOBAL / FM EXPRESS (Argentina):** Empresa argentina autorizada bajo la licencia activa del prestador postal **FM Express S.A.** (CUIT 30-71694375-1). Es el canal de nacionalización local exclusivo para Argentina.
 3.  **SAREXPRESS (Argentina):** Marca y sistema heredado (antigua licencia de Courier suspendida). **Opera estrictamente sobre el sistema antiguo** y no se mezcla bajo ninguna circunstancia con la base de datos ni los clientes de Shipairglobal o la nueva línea B2B.
 
