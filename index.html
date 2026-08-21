@@ -784,7 +784,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 44px 0 36px 0; font-size:
 
 <!-- COOKIE BANNER -->
 <div id="cookie-bar">
-  <p>Utilizamos cookies esenciales y tecnología de control de caché para optimizar la velocidad y seguridad. <a href="cookies.html">Saber más</a>.</p>
+  <p>Utilizamos cookies esenciales, de análisis (Google Analytics) y tecnología de control de caché para optimizar la velocidad y seguridad. <a href="cookies.html">Saber más</a>.</p>
   <button id="btn-cookie" onclick="acceptCookies()">Aceptar Cookies</button>
 </div>
 
@@ -860,6 +860,12 @@ function sendForm(e) {
     localStorage.setItem('sarexp_last_lead', Date.now().toString());
     btn.textContent = '✓ Solicitud Enviada. Te contactamos a la brevedad.';
     btn.style.background = '#10b981';
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        form_name: 'contacto_b2b',
+        lead_country: document.getElementById('f-country').value
+      });
+    }
     document.getElementById('form').reset();
   }).catch(function() {
     btn.textContent = 'Error. Escribinos directamente por WhatsApp.';
