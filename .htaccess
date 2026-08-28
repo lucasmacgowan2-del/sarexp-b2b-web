@@ -36,5 +36,27 @@
     Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 
+# 5. Nada que no sea el sitio se sirve (28/08/2026)
+#
+# ACA LA CARPETA DEL REPO ES LA RAIZ DEL SITIO. El 28/08 se comprobo que estaban
+# publicos, sin login y con codigo 200:
+#
+#   /deploy_sarexp_lead_workflow.py  -> CON EL TOKEN DE LA API DE n8n ADENTRO
+#   /BUSINESS_STRATEGY.md            -> la estrategia comercial
+#   /PROJECT_HANDOVER.md             -> como esta armado todo
+#   /sarexp-b2b-web-build.zip        -> el sitio empaquetado
+#   /CLAUDE.md                       -> notas internas
+#
+# Los archivos ya se sacaron del repo, pero esto es la red de seguridad: el dia
+# que alguien vuelva a dejar un .md o un script en la raiz, no se sirve.
+<FilesMatch "\.(md|py|sh|ps1|zip|tar|gz|bak|sql|env|log|json|yml|yaml)$">
+    Require all denied
+</FilesMatch>
+
+# Los dotfiles tampoco (.git, .env, .htaccess mismo)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
 # 3. Prevent Directory Listing for security
 Options -Indexes

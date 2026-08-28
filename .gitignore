@@ -1,2 +1,13 @@
 # graphify: grafo local
 graphify-out/
+
+# ACA LA CARPETA DEL REPO ES LA RAIZ DEL SITIO: todo lo que se commitea queda
+# PUBLICO en sarexp.com. El 28/08/2026 se descubrio que
+# `deploy_sarexp_lead_workflow.py` estaba servido en
+# https://sarexp.com/deploy_sarexp_lead_workflow.py CON EL TOKEN DE LA API DE
+# n8n adentro -- cualquiera podia leer y modificar todos los workflows de VPS1.
+#
+# Nada que no sea el sitio va al repo. Lo interno vive en .interno/.
+.interno/
+*.zip
+*.py
