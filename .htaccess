@@ -16,5 +16,25 @@
     </FilesMatch>
 </IfModule>
 
+# 4. Cabeceras de seguridad (28/08/2026)
+#
+# El sitio no mandaba NINGUNA: ni HSTS, ni nosniff, ni X-Frame-Options, ni
+# Referrer-Policy (comprobado con `curl -I https://sarexp.com/`). El ERP y el
+# portal del grupo las tienen desde el 27/08.
+#
+# Que mod_headers funciona en este hosting esta comprobado, no asumido: las
+# cabeceras de cache del bloque 2 de arriba SI llegan al navegador.
+#
+# NO hay Content-Security-Policy a proposito: una CSP mal puesta rompe el sitio
+# de formas que solo se ven en un navegador (GA4, fuentes, el formulario de
+# leads), y esa verificacion necesita ojos humanos.
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
 # 3. Prevent Directory Listing for security
 Options -Indexes
