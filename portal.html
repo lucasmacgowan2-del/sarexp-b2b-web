@@ -11,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acceso a Portal & Tracking | SAREXP Miami</title>
+<title>Portal de Clientes | SAREXP Miami</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -65,23 +65,26 @@ nav.nav-links a:hover { color: #1e3a8a; }
 
 .section { padding: 60px 0; }
 .portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
-.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
 .card h2 { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-.card p { font-size: 14px; color: #475569; margin-bottom: 20px; }
-
-.field { margin-bottom: 16px; }
-.field label { display: block; font-size: 13px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
-.field input { width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; }
-.field input:focus { outline: none; border-color: #1e3a8a; }
-
-.btn-login-submit { width: 100%; background: #1e3a8a; color: #fff; border: none; padding: 13px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; margin-top: 6px; }
-.btn-login-submit:hover { background: #1d4ed8; }
+.card p { font-size: 14.5px; color: #475569; margin-bottom: 16px; }
+ul { margin-left: 20px; margin-bottom: 20px; font-size: 14px; color: #334155; }
+li { margin-bottom: 8px; }
 
 .feature-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
 .feat-item { display: flex; gap: 14px; align-items: flex-start; }
 .feat-item i { color: #1e3a8a; font-size: 20px; margin-top: 2px; flex-shrink: 0; }
 .feat-item strong { display: block; font-size: 14.5px; color: #0f172a; margin-bottom: 2px; }
 .feat-item span { font-size: 13.5px; color: #475569; }
+
+.btn-wa-action { display: inline-flex; align-items: center; gap: 8px; background: #10b981; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; box-shadow: 0 4px 12px rgba(16,185,129,0.3); transition: transform 0.2s; }
+.btn-wa-action:hover { transform: translateY(-2px); }
+
+.addr-sample { background: #0f172a; color: #e2e8f0; border-radius: 8px; padding: 18px 20px; font-family: 'Courier New', Courier, monospace; font-size: 14px; line-height: 1.8; margin: 16px 0; }
+.addr-sample .prefijo { color: #fbbf24; font-weight: 700; }
+
+.login-note { border-top: 1px solid #e2e8f0; margin-top: 28px; padding-top: 20px; font-size: 14px; color: #64748b; }
+.login-note a.portal-link { color: #1e3a8a; font-weight: 700; text-decoration: underline; }
 
 footer { background: #0f172a; color: #94a3b8; padding: 30px 0; font-size: 13px; text-align: center; margin-top: 40px; }
 
@@ -104,7 +107,7 @@ footer { background: #0f172a; color: #94a3b8; padding: 30px 0; font-size: 13px; 
       </svg>
       <span class="logo-text"><span class="logo-sar">SAR</span><span class="logo-exp">EXP</span></span>
     </a>
-    
+
     <nav class="nav-links">
       <div class="nav-item">
         <span class="nav-link-dropdown">Soluciones por Sector <i class="fa-solid fa-chevron-down" style="font-size:11px;"></i></span>
@@ -164,89 +167,113 @@ footer { background: #0f172a; color: #94a3b8; padding: 30px 0; font-size: 13px; 
 
 <section class="hero-page">
   <div class="wrap">
-    <h1>Portal de Gestión & Seguimiento de Clientes</h1>
-    <p>El centro de control digital de tu carga en Miami. Diseñado para clientes corporativos, importadores y couriers registrados con SAREXP.</p>
+    <h1>Portal de Clientes SAREXP</h1>
+    <p>Tu depósito de Miami, a la vista. Los clientes de SAREXP tienen una cuenta propia para ver qué llegó a su nombre, revisar las fotos de control, consultar sus facturas y dar la orden de despacho, sin depender de un llamado ni de un mail.</p>
   </div>
 </section>
 
 <main class="section">
   <div class="wrap">
+
+    <div class="card">
+      <h2>¿Para quién es?</h2>
+      <p>Es la cuenta de trabajo de las empresas que ya operan con nuestro Hub en Doral. Si tu carga pasa por Miami, el portal es donde la seguís.</p>
+      <ul>
+        <li><strong>Importadores y empresas:</strong> compras de varios proveedores que se juntan en el deposito, bajo tu prefijo, antes de salir. <a href="importadores.html" style="color:#1e3a8a; font-weight:700;">Ver el servicio</a>.</li>
+        <li><strong>Couriers y operadores logísticos:</strong> recepción contra manifiesto y consolidados armados desde Miami. <a href="couriers.html" style="color:#1e3a8a; font-weight:700;">Ver el servicio</a>.</li>
+        <li><strong>Vendedores de e-commerce:</strong> mercadería que entra, se acondiciona y se reetiqueta antes de despacharse. <a href="prep-amazon.html" style="color:#1e3a8a; font-weight:700;">Ver el servicio</a>.</li>
+      </ul>
+      <p style="margin-bottom:0;">Las cuentas las damos de alta nosotros. No es un casillero minorista para compras personales.</p>
+    </div>
+
     <div class="portal-grid">
-      
-      <!-- Box 1: Iniciar Sesión / Tracking -->
-      <div class="card">
-        <h2>Acceso a tu Cuenta Corporativa</h2>
-        <p>Ingresá tus credenciales asignadas para ver tu inventario en Miami y autorizar despachos.</p>
-        
-        <form onsubmit="event.preventDefault(); alert('Si ya contás con una cuenta activa, tu ejecutivo de ventas te enviará la clave de acceso directo. Si sos nuevo, solicitá tu alta en el formulario principal.');">
-          <div class="field">
-            <label>Código de Cuenta / Email</label>
-            <input type="text" placeholder="Ej. ACC-10492 o tuemail@empresa.com" required>
-          </div>
-          <div class="field">
-            <label>Contraseña</label>
-            <input type="password" placeholder="••••••••" required>
-          </div>
-          <button type="submit" class="btn-login-submit"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión en Portal</button>
-        </form>
 
-        <div style="border-top: 1px solid #e2e8f0; margin-top:28px; padding-top:24px;">
-          <h3 style="font-size:16px; font-weight:800; color:#0f172a; margin-bottom:8px;">¿Querés consultar una Guía / Tracking público?</h3>
-          <p style="font-size:13px; color:#64748b; margin-bottom:14px;">Podés verificar el estado de tu despacho o consolidado ingresando el número de seguimiento asignado.</p>
-          
-          <div style="display:flex; gap:10px;">
-            <input type="text" id="track-input" placeholder="Ej. AWB-920412" style="flex:1; padding:10px 12px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px;">
-            <button onclick="alert('El número de guía ' + (document.getElementById('track-input').value || 'ingresado') + ' está en proceso de verificación operativa con el Hub de Miami.');" style="background:#10b981; color:#fff; border:none; padding:10px 18px; border-radius:6px; font-size:13px; font-weight:700; cursor:pointer;">Buscar</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Box 2: ¿Para qué sirve el portal? -->
+      <!-- Qué se hace adentro -->
       <div class="card">
-        <h2>¿Qué podés hacer desde el Portal de SAREXP?</h2>
-        <p>Una plataforma pensada para agilizar el flujo de tu mercadería sin demoras telefónicas.</p>
+        <h2>Qué podés hacer adentro</h2>
+        <p>Esto es lo que ya está funcionando hoy en el portal.</p>
 
         <div class="feature-list">
           <div class="feat-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Tu dirección de Miami con tu prefijo</strong>
+              <span>La tenés siempre a mano para pasársela a tus proveedores, con el prefijo de casillero que te asignamos.</span>
+            </div>
+          </div>
+
+          <div class="feat-item">
             <i class="fa-solid fa-boxes-stacked"></i>
             <div>
-              <strong>Control de Inventario en Depósito</strong>
-              <span>Visualizá en tiempo real todos los paquetes y pallets que arriban a tu Suite en Doral, Miami.</span>
+              <strong>El inventario de lo que hay en depósito</strong>
+              <span>Los paquetes y pallets que están a tu nombre en el Hub de Doral, listados uno por uno.</span>
             </div>
           </div>
 
           <div class="feat-item">
             <i class="fa-solid fa-camera"></i>
             <div>
-              <strong>Verificación Visual (Fotos a Solicitud)</strong>
-              <span>Accedé a las imágenes de control de cajas y etiquetas cargadas por el equipo de depósito si solicitaste inspección.</span>
+              <strong>Fotos de control de las cajas</strong>
+              <span>Cuando pediste inspección, las imágenes que tomó el equipo de depósito quedan cargadas en tu cuenta.</span>
             </div>
           </div>
 
           <div class="feat-item">
-            <i class="fa-solid fa-box-open"></i>
+            <i class="fa-solid fa-file-invoice-dollar"></i>
             <div>
-              <strong>Instrucciones de Consolidación & Reembalaje</strong>
-              <span>Seleccioná qué bultos juntar en un solo envío para reducir volumen antes del despacho.</span>
+              <strong>Tus facturas</strong>
+              <span>Consultá lo facturado a tu empresa desde el mismo lugar, sin pedirlo por mail.</span>
             </div>
           </div>
 
           <div class="feat-item">
             <i class="fa-solid fa-plane-departure"></i>
             <div>
-              <strong>Autorización de Salida y Guías de Embarque</strong>
-              <span>Dá la orden de despacho aéreo o marítimo y descarga las facturas comerciales y manifiestos de exportación.</span>
+              <strong>Pedir un retiro y dar instrucciones de despacho</strong>
+              <span>Decinos qué bultos sacar y cómo, y queda registrado por escrito en tu cuenta.</span>
             </div>
           </div>
         </div>
+      </div>
 
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin-top:24px; font-size:13px; color:#475569;">
-          <strong>¿Todavía no tenés una cuenta activa?</strong><br>
-          Comunícate con nuestro equipo comercial a <a href="mailto:contacto@sarexp.com" style="color:#1e3a8a; font-weight:700;">contacto@sarexp.com</a> o por <a href="https://wa.me/13054688404" target="_blank" style="color:#10b981; font-weight:700;">WhatsApp (+1 305 468-8404)</a> para dar de alta tu empresa.
+      <!-- Cómo funciona el prefijo -->
+      <div class="card">
+        <h2>Una sola dirección, tu prefijo adelante</h2>
+        <p>Todos nuestros clientes reciben en la misma dirección de Doral. Lo que identifica tu carga es el <strong>prefijo de tracking</strong> (3 o 4 letras) que te asigna el sistema y que va al lado del nombre del destinatario.</p>
+
+        <div class="addr-sample">
+          Nombre Apellido <span class="prefijo">ABCD</span><br>
+          6993 NW 82nd Ave, Suite 28<br>
+          Miami, FL 33166
         </div>
+
+        <p>Ese prefijo es el que hace que la caja aparezca en tu inventario y no en el de otro. Lo ves en el portal apenas entrás, así se lo pasás a tu proveedor tal cual.</p>
+        <p style="margin-bottom:0;">Si un paquete llega sin el prefijo, puede no quedar asociado a tu cuenta. Por eso vale la pena copiarlo exacto.</p>
       </div>
 
     </div>
+
+    <!-- Alta de cuenta -->
+    <div class="card">
+      <h2>¿Todavía no tenés cuenta?</h2>
+      <p>Las cuentas se piden por WhatsApp. Escribinos contando qué tipo de mercadería movés y desde dónde, y te damos el alta con tu prefijo de casillero.</p>
+
+      <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20quisiera%20abrir%20una%20cuenta%20para%20operar%20con%20el%20dep%C3%B3sito%20de%20Miami%20y%20acceder%20al%20portal%20de%20clientes." target="_blank" class="btn-wa-action">
+        <i class="fa-brands fa-whatsapp fa-lg"></i> Pedir mi cuenta por WhatsApp
+      </a>
+
+      <p style="margin-top:18px; margin-bottom:0; font-size:13.5px; color:#64748b;">
+        También podés escribirnos a <a href="mailto:contacto@sarexp.com" style="color:#1e3a8a; font-weight:700;">contacto@sarexp.com</a> o por teléfono al <strong>+1 305 468-8404</strong>.
+      </p>
+
+      <div class="login-note">
+        <i class="fa-solid fa-user-lock" style="margin-right:6px;"></i>
+        ¿Ya sos cliente? <a href="https://portal.sarexp.com/portal/login.html" target="_blank" rel="noopener" class="portal-link">Ingresá al portal</a>.
+        Entrás con tu email y contraseña, o pidiendo un enlace de acceso que te llega por mail.
+        Si perdiste el acceso, escribinos por <a href="https://wa.me/13054688404?text=Hola%20SAREXP%2C%20ya%20soy%20cliente%20y%20necesito%20recuperar%20el%20acceso%20al%20portal." target="_blank" style="color:#10b981; font-weight:700;">WhatsApp</a>.
+      </div>
+    </div>
+
   </div>
 </main>
 
