@@ -17,18 +17,27 @@ ShipAirGlobal todavía no). Vive fuera del monorepo, en su propio repo
 ## ⚠️ Antes de pushear: acá el repo ES el sitio
 
 No hay build ni carpeta `dist/`: los archivos del repo son los que se sirven.
-El `PROJECT_HANDOVER.md` dice que el deploy puede ser **subida manual por
-hPanel/FTP** o el **auto-deploy de Git de Hostinger** en cada push a `main`, y
-**no está confirmado cuál de los dos está activo**. El 28/08/2026 se comprobó
-que el sitio vivo coincide byte a byte con el repo y que `main` está al día con
-`origin/main` — consistente con las dos hipótesis.
 
-**Hasta que se confirme: tratar `git push` como un deploy a producción.**
-Commitear local sí; pushear solo con OK explícito del dueño, mismo criterio que
-la web de ShipAirGlobal.
+**CONFIRMADO el 20/09/2026: un `git push origin main` PUBLICA el sitio solo.**
+Hostinger tiene este repo conectado con despliegue automático activo (rama
+`main`, app de GitHub instalada el 13/07/2026). Se verificó con su API oficial:
+`GET https://developers.hostinger.com/api/hosting/v1/accounts/{usuario}/websites/sarexp.com/git/auto-deployments/settings`
+→ `is_enabled: true`. **Ojo con la trampa**: Hostinger despliega por una *app de
+GitHub*, que no figura entre los webhooks del repo ni como GitHub Action; mirar
+esas dos cosas hace creer que "un push no publica" (pasó el 20/09).
 
-Para confirmarlo alcanza con mirar hPanel → Hosting → sarexp.com → pestaña
-**Git**: si hay un repo conectado con Auto-Deploy, es la segunda.
+**Commitear local sí; pushear solo cuando el dueño dice "deploy sarexp".**
+Después del push: esperar ~1 minuto y comparar las páginas en vivo contra el
+repo (`Grupo-ShipAirGlobal/.claude/handoff/sarexp-servidor-leer.mjs`, solo lee).
+
+**No usar** el endpoint "Deploy static site archive" de esa API: la doc oficial
+avisa que pisa todo el contenido del sitio y no se puede deshacer.
+
+El despliegue copia el repo ENTERO a la raíz pública, así que en el servidor
+también están `.git/`, `.claude/`, los `.md` y dos sobrantes viejos
+(`deploy_sarexp_lead_workflow.py`, `sarexp-b2b-web-build.zip`). El `.htaccess`
+los bloquea (todos dan 403, verificado el 20/09). **No aflojar esas reglas del
+`.htaccess`** y no agregar al repo nada que no pueda estar en un servidor web.
 
 ## Reglas de contenido
 
