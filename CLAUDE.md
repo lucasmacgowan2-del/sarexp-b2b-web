@@ -40,6 +40,24 @@ testimonios.
 
 Datos reales de clientes (DNI/CUIT, PDFs de órdenes) nunca a un commit.
 
+**No decir "somos TSA"** (regla del dueño, 17/09/2026): el programa de Indirect Air
+Carrier está en hold voluntario y la carga aérea sale a través de otro agente. En
+material comercial se dice que **nos especializamos en carga aérea**. Nada de
+"Conformidad TSA", "TSA Compliance" ni citar el 49 CFR 1548 como propio. La
+cláusula de inspección de los Términos se conserva (es consentimiento del cliente,
+no una credencial nuestra) y la Política de Privacidad puede nombrar a TSA y CBP
+como autoridades. Todo cambio de redacción regulatoria lo valida antes el dueño.
+
+## La visual no se toca (directiva del dueño, 20/09/2026)
+
+El sitio "no está mal": **se mantiene como se ve**. Acá se cambia TEXTO; no se
+rediseña, no se toca `styles.css`, ni la estructura de las páginas, ni las
+imágenes, salvo pedido explícito. Antes de commitear:
+`git diff --name-only origin/main..HEAD` no debería listar `.css` ni imágenes.
+El **logo va a cambiar** para parecerse al de Sarexpress y ya existe una versión:
+no proponer logos; cuando el dueño la pase se reemplaza el archivo y se revisan
+favicon, `og:image` y el pie.
+
 ## Cabeceras de seguridad
 
 El `.htaccess` las manda desde el 28/08/2026 (nosniff, X-Frame-Options, HSTS,
