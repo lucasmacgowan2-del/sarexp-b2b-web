@@ -25,7 +25,7 @@ function handleContactSubmit(event) {
     showToast('✓ Consulta enviada. Te responderemos a la brevedad.', 'success');
 
     if (navigator.onLine) {
-        fetch("https://auto.shipairglobal.com/webhook/sarexp-b2b-leads", {
+        fetch("https://formularios.sarexp.com/webhook/sarexp-b2b-leads", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

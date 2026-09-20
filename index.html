@@ -842,7 +842,7 @@ function sendForm(e) {
   btn.textContent = 'Enviando Solicitud...';
   btn.disabled = true;
 
-  fetch('https://auto.shipairglobal.com/webhook/sarexp-b2b-leads', {
+  fetch('https://formularios.sarexp.com/webhook/sarexp-b2b-leads', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify({
