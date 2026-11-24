@@ -60,3 +60,14 @@
 
 # 3. Prevent Directory Listing for security
 Options -Indexes
+
+# 6. Fuera de los buscadores (24/11/2026, pedido del dueño)
+#
+# El sitio no tiene que aparecer en Google ni en ningún buscador. Se dice de dos
+# maneras: esta cabecera (vale para todo lo que se sirve) y la etiqueta
+# <meta name="robots"> de cada página. robots.txt sigue dejando pasar a los
+# buscadores A PROPOSITO: si se les cierra el paso no llegan a leer el
+# "noindex" y las páginas ya listadas no se borran nunca.
+<IfModule mod_headers.c>
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+</IfModule>
